@@ -51,7 +51,7 @@ def main():
                     "prices": {}
                 }
 
-    print(f"Stationen in Südtirol: {len(bz_stations)}")
+    print(f"Gefundene Stationen in Südtirol: {len(bz_stations)}")
 
     print("2. Lade aktuelle Preise...")
     lines_prez = get_lines(URL_PREZZI)
@@ -66,19 +66,38 @@ def main():
 
     p_reader = csv.DictReader(lines_prez[p_header_idx:], delimiter=p_delimiter)
     
+    # Teure Premium-Treibstoffe ausschließen
+    EXCLUDE_KEYWORDS = ["special", "100", "plus", "optima", "v-power", "additiv", "hi-q", "supreme", "excellium"]
+
     for row in p_reader:
         c = {k.strip(): (v.strip() if v else "") for k, v in row.items() if k}
         sid = c.get("idImpianto")
         if sid in bz_stations:
-            fuel = c.get("descCarburante", "").strip()
+            fuel_raw = c.get("descCarburante", "").strip()
+            fuel_lower = fuel_raw.lower()
             price_raw = c.get("prezzo", "").replace(",", ".").strip()
             is_self = str(c.get("isSelf", "0")).strip() == "1"
             mode = "Self" if is_self else "Servito"
 
+            # Ausschluss von Spezialkraftstoffen (z. B. 100 Oktan)
+            if any(k in fuel_lower for k in EXCLUDE_KEYWORDS):
+                continue
+
+            # Standard-Kategorisierung
+            fuel_type = None
+            if "gasolio" in fuel_lower or "diesel" in fuel_lower:
+                fuel_type = "Gasolio"
+            elif "benzina" in fuel_lower or "super" in fuel_lower:
+                fuel_type = "Benzina"
+
+            if not fuel_type:
+                continue
+
             try:
                 pval = float(price_raw)
                 if pval > 0.5:
-                    key = f"{fuel} ({mode})"
+                    key = f"{fuel_type} ({mode})"
+                    # Falls mehrere Preise vorhanden sind, den günstigsten Standardpreis nehmen
                     if key in bz_stations[sid]["prices"]:
                         bz_stations[sid]["prices"][key] = min(bz_stations[sid]["prices"][key], pval)
                     else:
@@ -87,7 +106,7 @@ def main():
                 pass
 
     final_list = [s for s in bz_stations.values() if len(s["prices"]) > 0]
-    print(f"Fertig: {len(final_list)} Stationen mit Preisen.")
+    print(f"Gültige Tankstellen mit Preisen: {len(final_list)}")
 
     with open("spritpreise_bz.json", "w", encoding="utf-8") as f:
         json.dump(final_list, f, ensure_ascii=False, indent=2)
