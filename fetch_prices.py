@@ -21,7 +21,7 @@ def get_lines(url):
     return [line.strip() for line in content.splitlines() if line.strip()]
 
 def main():
-    print("1. Lade Stammdaten...")
+    print("Lade Stammdaten...")
     lines_ana = get_lines(URL_ANAGRAFICA)
     
     header_idx = 0
@@ -48,15 +48,10 @@ def main():
                     "city": c.get("Comune", ""),
                     "lat": c.get("Latitudine", "").replace(",", "."),
                     "lon": c.get("Longitudine", "").replace(",", "."),
-                    "self_gasolio": [],
-                    "serv_gasolio": [],
-                    "self_benzina": [],
-                    "serv_benzina": []
+                    "prices": {}
                 }
 
-    print(f"Stationen BZ: {len(bz_stations)}")
-
-    print("2. Lade Preise...")
+    print("Lade Preise...")
     lines_prez = get_lines(URL_PREZZI)
     
     p_header_idx = 0
@@ -69,82 +64,49 @@ def main():
 
     p_reader = csv.DictReader(lines_prez[p_header_idx:], delimiter=p_delimiter)
     
-    # Unerwünschte Additive / Luxussorten ignorieren
-    EXCLUDE_KEYWORDS = ["100", "plus", "optima", "v-power", "racing", "additiv", "supreme", "excellium", "special", "hi-q"]
+    EXCLUDE = ["100", "plus", "optima", "v-power", "racing", "additiv", "supreme", "excellium", "special", "hi-q"]
 
     for row in p_reader:
         c = {k.strip(): (v.strip() if v else "") for k, v in row.items() if k}
         sid = c.get("idImpianto")
         if sid in bz_stations:
-            fuel_desc = c.get("descCarburante", "").lower().strip()
-            price_raw = c.get("prezzo", "").replace(",", ".").strip()
+            fuel_raw = c.get("descCarburante", "").lower()
+            price_str = c.get("prezzo", "").replace(",", ".").strip()
             is_self = str(c.get("isSelf", "0")).strip() in ["1", "true", "True"]
 
-            # Luxustreibstoffe überspringen
-            if any(term in fuel_desc for term in EXCLUDE_KEYWORDS):
+            # Luxussorten ignorieren
+            if any(x in fuel_raw for x in EXCLUDE):
                 continue
 
             try:
-                pval = float(price_raw)
+                price = float(price_str)
             except ValueError:
                 continue
 
-            if not (1.0 < pval < 2.80):
+            if not (0.80 < price < 2.70):
                 continue
 
-            # Zuordnung Diesel
-            if "diesel" in fuel_desc or "gasolio" in fuel_desc:
-                if is_self:
-                    bz_stations[sid]["self_gasolio"].append(pval)
+            # Kategorie bestimmen
+            cat = None
+            if "diesel" in fuel_raw or "gasolio" in fuel_raw:
+                cat = "Gasolio"
+            elif "benzina" in fuel_raw or "senza piombo" in fuel_raw:
+                cat = "Benzina"
+
+            if cat:
+                mode = "Self" if is_self else "Servito"
+                key = f"{cat} ({mode})"
+                
+                # Immer den billigsten Preis für diese Kategorie behalten
+                if key in bz_stations[sid]["prices"]:
+                    bz_stations[sid]["prices"][key] = min(bz_stations[sid]["prices"][key], price)
                 else:
-                    bz_stations[sid]["serv_gasolio"].append(pval)
+                    bz_stations[sid]["prices"][key] = price
 
-            # Zuordnung Benzin
-            elif "benzina" in fuel_desc or "senza piombo" in fuel_desc:
-                if is_self:
-                    bz_stations[sid]["self_benzina"].append(pval)
-                else:
-                    bz_stations[sid]["serv_benzina"].append(pval)
-
-    final_list = []
-    for sid, s in bz_stations.items():
-        prices = {}
-
-        # Günstigster gefundener Preis für Self, teurerer für Servito
-        # 1. Diesel
-        if s["self_gasolio"]:
-            prices["Gasolio (Self)"] = min(s["self_gasolio"])
-        elif s["serv_gasolio"]:
-            prices["Gasolio (Self)"] = min(s["serv_gasolio"])
-
-        if s["serv_gasolio"]:
-            prices["Gasolio (Servito)"] = max(s["serv_gasolio"])
-
-        # 2. Benzin
-        if s["self_benzina"]:
-            prices["Benzina (Self)"] = min(s["self_benzina"])
-        elif s["serv_benzina"]:
-            prices["Benzina (Self)"] = min(s["serv_benzina"])
-
-        if s["serv_benzina"]:
-            prices["Benzina (Servito)"] = max(s["serv_benzina"])
-
-        if len(prices) > 0:
-            final_list.append({
-                "id": s["id"],
-                "name": s["name"],
-                "brand": s["brand"],
-                "address": s["address"],
-                "city": s["city"],
-                "lat": s["lat"],
-                "lon": s["lon"],
-                "prices": prices
-            })
-
-    print(f"Fertige Stationen mit Preisen: {len(final_list)}")
-
+    # Speichern
+    result = [s for s in bz_stations.values() if len(s["prices"]) > 0]
     with open("spritpreise_bz.json", "w", encoding="utf-8") as f:
-        json.dump(final_list, f, ensure_ascii=False, indent=2)
+        json.dump(result, f, ensure_ascii=False, indent=2)
 
 if __name__ == "__main__":
     main()
