@@ -16,7 +16,7 @@ HEADERS = {
 
 def get_csv_lines(url):
     req = urllib.request.Request(url, headers=HEADERS)
-    with urllib.request.urlopen(req, timeout=120, context=ctx) as resp:
+    with urllib.request.urlopen(req, timeout=180, context=ctx) as resp:
         content = resp.read().decode('utf-8', errors='ignore')
     return [line.strip() for line in content.splitlines() if line.strip()]
 
@@ -24,16 +24,12 @@ def main():
     print("1. Lade Tankstellen-Stammdaten...")
     anagrafica_lines = get_csv_lines(URL_ANAGRAFICA)
     
-    # Erste Zeile (Metadaten wie 'Estrazione del...') überspringen, Header finden
     start_idx = 0
     delimiter = '|'
     for idx, line in enumerate(anagrafica_lines[:5]):
         if "idImpianto" in line:
             start_idx = idx
-            if ';' in line:
-                delimiter = ';'
-            elif '|' in line:
-                delimiter = '|'
+            delimiter = ';' if ';' in line else '|'
             break
 
     reader = csv.DictReader(anagrafica_lines[start_idx:], delimiter=delimiter)
@@ -41,8 +37,6 @@ def main():
     bz_stations = {}
     for row in reader:
         clean = {k.strip(): (v.strip() if v else "") for k, v in row.items() if k}
-        
-        # Provinz Südtirol prüfen (BZ)
         if clean.get("Provincia", "").upper() == "BZ":
             s_id = clean.get("idImpianto")
             if s_id:
@@ -67,10 +61,7 @@ def main():
     for idx, line in enumerate(prezzi_lines[:5]):
         if "idImpianto" in line:
             start_idx_p = idx
-            if ';' in line:
-                p_delimiter = ';'
-            elif '|' in line:
-                p_delimiter = '|'
+            p_delimiter = ';' if ';' in line else '|'
             break
 
     p_reader = csv.DictReader(prezzi_lines[start_idx_p:], delimiter=p_delimiter)
@@ -81,18 +72,34 @@ def main():
         if s_id in bz_stations:
             fuel = clean.get("descCarburante", "").strip()
             price_str = clean.get("prezzo", "").replace(",", ".").strip()
-            is_self = clean.get("isSelf", "0").strip() == "1"
+            
+            # Robuste Self/Servito Erkennung: '1', 'true', 's' bedeutet Self-Service
+            is_self_val = str(clean.get("isSelf", "0")).strip().lower()
+            is_self = is_self_val in ["1", "true", "s", "si", "self"]
 
             try:
                 price_val = float(price_str)
-                mode = "Self" if is_self else "Servito"
-                bz_stations[s_id]["prices"][f"{fuel} ({mode})"] = price_val
+                # Unplausible Ausreißer oder Testpreise unter 1.00 € ignorieren
+                if price_val < 1.0:
+                    continue
+
+                mode_key = "Self" if is_self else "Servito"
+                full_key = f"{fuel} ({mode_key})"
+
+                # Falls mehrere Preise für dieselbe Sorte gemeldet sind (z.B. Normal vs Additiv),
+                # speichern wir für Self-Service immer den GÜNSTIGEREN Preis!
+                if full_key not in bz_stations[s_id]["prices"]:
+                    bz_stations[s_id]["prices"][full_key] = price_val
+                else:
+                    if is_self:
+                        bz_stations[s_id]["prices"][full_key] = min(bz_stations[s_id]["prices"][full_key], price_val)
+                    else:
+                        bz_stations[s_id]["prices"][full_key] = price_val
             except ValueError:
                 continue
 
-    # Nur Tankstellen behalten, für die heute Preise vorliegen
     output = [s for s in bz_stations.values() if len(s["prices"]) > 0]
-    print(f"Ergebnis: {len(output)} Südtiroler Tankstellen mit Preisen gefunden.")
+    print(f"Ergebnis: {len(output)} Stationen mit gültigen Preisen.")
 
     with open("spritpreise_bz.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
