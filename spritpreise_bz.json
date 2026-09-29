@@ -1,1 +1,2591 @@
-[]
+[
+  {
+    "id": "43168",
+    "name": "dorftanstelle aldein",
+    "brand": "San Marco Petroli",
+    "address": "WILDEICH 25 39040",
+    "city": "ALDINO",
+    "lat": "46.36743243995823",
+    "lon": "11.347024085080307",
+    "prices": {
+      "Benzina (Self)": 2.188,
+      "Gasolio (Self)": 2.386,
+      "F101 (Self)": 2.279
+    }
+  },
+  {
+    "id": "20435",
+    "name": "Casal Maria Sivlia",
+    "brand": "San Marco Petroli",
+    "address": "VIA CAN.MICHAEL GAMPER 2 39040",
+    "city": "ANTERIVO",
+    "lat": "46.27912448945478",
+    "lon": "11.369249771596856",
+    "prices": {
+      "Benzina (Servito)": 2.189,
+      "Benzina (Self)": 2.189,
+      "Gasolio (Servito)": 2.299,
+      "Gasolio (Self)": 2.299
+    }
+  },
+  {
+    "id": "59135",
+    "name": "51043 Appiano sulla Strada del Vino",
+    "brand": "Agip Eni",
+    "address": "VIA CIRCONVALLAZIONE  4",
+    "city": "APPIANO SULLA STRADA DEL VINO",
+    "lat": "46.4566",
+    "lon": "11.26901",
+    "prices": {
+      "Benzina (Servito)": 2.379,
+      "Benzina (Self)": 2.159,
+      "Gasolio (Servito)": 2.63,
+      "Gasolio (Self)": 2.41,
+      "Blue Super (Servito)": 2.159,
+      "Blue Super (Self)": 1.939,
+      "Blue Diesel (Servito)": 2.73,
+      "Blue Diesel (Self)": 2.51
+    }
+  },
+  {
+    "id": "49587",
+    "name": "MEBORAST",
+    "brand": "Agip Eni",
+    "address": "238 delle Palade, Km. 221, SUD - 39057",
+    "city": "APPIANO SULLA STRADA DEL VINO",
+    "lat": "46.49455618666404",
+    "lon": "11.281309351569483",
+    "prices": {
+      "Benzina (Self)": 1.99,
+      "Gasolio (Self)": 2.19,
+      "Metano (Servito)": 2.099,
+      "Metano (Self)": 2.099,
+      "GPL (Servito)": 0.898,
+      "GPL (Self)": 0.898,
+      "Blue Super (Self)": 2.398,
+      "Blue Diesel (Self)": 2.598
+    }
+  },
+  {
+    "id": "9080",
+    "name": "Q8 des Karl Pichler",
+    "brand": "Q8",
+    "address": "VIA CALDARO 8 39057",
+    "city": "APPIANO SULLA STRADA DEL VINO",
+    "lat": "46.4447876594024",
+    "lon": "11.260645687580109",
+    "prices": {
+      "Benzina (Servito)": 2.217,
+      "Benzina (Self)": 2.217,
+      "Gasolio (Servito)": 2.439,
+      "Gasolio (Self)": 2.439,
+      "Hi-Q Diesel (Servito)": 2.557,
+      "Hi-Q Diesel (Self)": 2.557,
+      "Gasolio artico (Servito)": 2.439,
+      "Gasolio artico (Self)": 2.439
+    }
+  },
+  {
+    "id": "27263",
+    "name": "TSCHIGG HELMUT",
+    "brand": "Esso",
+    "address": "VIA BOLZANO 5 39057",
+    "city": "APPIANO SULLA STRADA DEL VINO",
+    "lat": "46.4586399954298",
+    "lon": "11.261109908598314",
+    "prices": {
+      "Benzina (Servito)": 2.199,
+      "Gasolio (Servito)": 2.45,
+      "Gasolio artico (Servito)": 2.45
+    }
+  },
+  {
+    "id": "19890",
+    "name": "Auto Alta Badia - Tamoil - Badia",
+    "brand": "Tamoil",
+    "address": "Statale 244 della Val Badia, Km. 25,5, dir. Corvara - 39036",
+    "city": "BADIA",
+    "lat": "46.6049239391747",
+    "lon": "11.895854962268686",
+    "prices": {
+      "Benzina (Servito)": 2.319,
+      "Benzina (Self)": 2.319,
+      "Gasolio (Servito)": 2.459,
+      "Gasolio (Self)": 2.459,
+      "Metano (Servito)": 1.95,
+      "Benzina WR 100 (Servito)": 2.519,
+      "Benzina WR 100 (Self)": 2.519,
+      "Gasolio Gelo (Servito)": 2.459,
+      "Gasolio Gelo (Self)": 2.459
+    }
+  },
+  {
+    "id": "56736",
+    "name": "Enistation 3156",
+    "brand": "Agip Eni",
+    "address": "Strada Colz  39036",
+    "city": "BADIA",
+    "lat": "46.5879",
+    "lon": "11.90316",
+    "prices": {
+      "Benzina (Servito)": 2.179,
+      "Benzina (Self)": 2.179,
+      "Gasolio (Servito)": 2.384,
+      "Gasolio (Self)": 2.384,
+      "Blue Super (Servito)": 2.329,
+      "Blue Super (Self)": 2.329,
+      "Blue Diesel (Servito)": 2.484,
+      "Blue Diesel (Self)": 2.484
+    }
+  },
+  {
+    "id": "63733",
+    "name": "ESSO 2",
+    "brand": "Esso",
+    "address": "Via Kunter 19  39040",
+    "city": "BARBIANO",
+    "lat": "46.57996493810871",
+    "lon": "11.522804477909832",
+    "prices": {
+      "Benzina (Servito)": 2.389,
+      "Benzina (Self)": 2.199,
+      "Gasolio (Servito)": 2.65,
+      "Gasolio (Self)": 2.46,
+      "Gasolio Premium (Servito)": 2.83,
+      "Gasolio Premium (Self)": 2.64
+    }
+  },
+  {
+    "id": "61063",
+    "name": "3169 BOLZANO",
+    "brand": "Agip Eni",
+    "address": "Via Roma 96  39100",
+    "city": "BOLZANO",
+    "lat": "46.48756",
+    "lon": "11.34316",
+    "prices": {
+      "Benzina (Servito)": 2.379,
+      "Benzina (Self)": 2.159,
+      "Gasolio (Servito)": 2.63,
+      "Gasolio (Self)": 2.41,
+      "Blue Super (Servito)": 2.529,
+      "Blue Diesel (Servito)": 2.73,
+      "Blue Diesel (Self)": 2.51,
+      "HVOlution (Self)": 2.41
+    }
+  },
+  {
+    "id": "25117",
+    "name": "BOLZANO VIA VOLTA LOC.PONTERESIA",
+    "brand": "Q8",
+    "address": "VIA VOLTA LOC.PONTERESIA - -",
+    "city": "BOLZANO",
+    "lat": "46.48121502416606",
+    "lon": "11.324265003204346",
+    "prices": {
+      "Benzina (Self)": 2.149,
+      "Gasolio (Self)": 2.379
+    }
+  },
+  {
+    "id": "21853",
+    "name": "BOLZANO VIALE RESIA",
+    "brand": "Api-Ip",
+    "address": "VIALE RESIA 7",
+    "city": "BOLZANO",
+    "lat": "46.492518465651976",
+    "lon": "11.315421457672073",
+    "prices": {
+      "Benzina (Self)": 2.119,
+      "Gasolio (Self)": 2.329
+    }
+  },
+  {
+    "id": "8686",
+    "name": "ENI",
+    "brand": "Agip Eni",
+    "address": "Via Merano 90 39100",
+    "city": "BOLZANO",
+    "lat": "46.503859071801095",
+    "lon": "11.296142041683197",
+    "prices": {
+      "Benzina (Self)": 2.229,
+      "Gasolio (Self)": 2.439,
+      "Blue Diesel (Self)": 2.539
+    }
+  },
+  {
+    "id": "34578",
+    "name": "eni",
+    "brand": "Agip Eni",
+    "address": "via cl. augusta 116 39100",
+    "city": "BOLZANO",
+    "lat": "46.477396693284966",
+    "lon": "11.338259428739548",
+    "prices": {
+      "Benzina (Servito)": 2.379,
+      "Benzina (Self)": 2.159,
+      "Gasolio (Servito)": 2.63,
+      "Gasolio (Self)": 2.41,
+      "Blue Diesel (Servito)": 2.73,
+      "Blue Diesel (Self)": 2.51
+    }
+  },
+  {
+    "id": "62156",
+    "name": "Esso Gostner Attila",
+    "brand": "Retitalia",
+    "address": "VIA DEL MACELLO 36/A 39100",
+    "city": "BOLZANO",
+    "lat": "46.6483",
+    "lon": "11.2196",
+    "prices": {
+      "Benzina (Self)": 2.239,
+      "Gasolio (Self)": 2.429,
+      "Benzina speciale (Self)": 2.399
+    }
+  },
+  {
+    "id": "53409",
+    "name": "FUEL STATION di De Curtis Mauro & C. S.A.S.",
+    "brand": "Agip Eni",
+    "address": "VIA VITTORIO VENETO 35/A 39100",
+    "city": "BOLZANO",
+    "lat": "46.50296514419775",
+    "lon": "11.327220797538757",
+    "prices": {
+      "Benzina (Servito)": 2.379,
+      "Benzina (Self)": 2.159,
+      "Gasolio (Servito)": 2.63,
+      "Gasolio (Self)": 2.41,
+      "HVOlution (Servito)": 2.63,
+      "HVOlution (Self)": 2.41
+    }
+  },
+  {
+    "id": "42277",
+    "name": "g.p. oil",
+    "brand": "Agip Eni",
+    "address": "VIA RESIA 18 39100",
+    "city": "BOLZANO",
+    "lat": "46.48984439192596",
+    "lon": "11.316667646169662",
+    "prices": {
+      "Benzina (Servito)": 2.379,
+      "Benzina (Self)": 2.159,
+      "Gasolio (Servito)": 2.63,
+      "Gasolio (Self)": 2.41,
+      "Blue Diesel (Servito)": 2.73,
+      "Blue Diesel (Self)": 2.51
+    }
+  },
+  {
+    "id": "35197",
+    "name": "GNP CLAUDIA AUGUSTA",
+    "brand": "GNP",
+    "address": "VIA CLAUDIA AUGUSTA 96 39100, BOLZANO (BZ) 96 39100",
+    "city": "BOLZANO",
+    "lat": "46.48005704902418",
+    "lon": "11.340146602437699",
+    "prices": {
+      "Benzina (Self)": 2.167,
+      "Gasolio (Self)": 2.347
+    }
+  },
+  {
+    "id": "4397",
+    "name": "GNP S. GELTRUDE",
+    "brand": "GNP",
+    "address": "VIA S.GELTRUDE 32 39100, BOLZANO (BZ) 32 39100",
+    "city": "BOLZANO",
+    "lat": "46.48728878697027",
+    "lon": "11.347757981614677",
+    "prices": {
+      "Benzina (Self)": 2.167,
+      "Gasolio (Self)": 2.347
+    }
+  },
+  {
+    "id": "39657",
+    "name": "IP",
+    "brand": "Api-Ip",
+    "address": "via gaismaeir 15 39100",
+    "city": "BOLZANO",
+    "lat": "46.49658264051916",
+    "lon": "11.335836668717207",
+    "prices": {
+      "Benzina (Servito)": 2.429,
+      "Benzina (Self)": 2.179,
+      "Gasolio (Servito)": 2.619,
+      "Gasolio (Self)": 2.369
+    }
+  },
+  {
+    "id": "10727",
+    "name": "Mion Mauro",
+    "brand": "Q8",
+    "address": "via Roen 3 39100",
+    "city": "BOLZANO",
+    "lat": "46.49800122465863",
+    "lon": "11.337797857256874",
+    "prices": {
+      "Benzina (Servito)": 2.249,
+      "Benzina (Self)": 2.249,
+      "Gasolio (Servito)": 2.469,
+      "Gasolio (Self)": 2.469
+    }
+  },
+  {
+    "id": "58702",
+    "name": "PV 13118 BOLZANO",
+    "brand": "Agip Eni",
+    "address": "VIA LUIGI CADORNA 21 39100",
+    "city": "BOLZANO",
+    "lat": "46.5056469",
+    "lon": "11.3470886",
+    "prices": {
+      "Benzina (Servito)": 2.349,
+      "Benzina (Self)": 2.149,
+      "Gasolio (Servito)": 2.459,
+      "Gasolio (Self)": 2.339,
+      "Blue Diesel (Servito)": 2.559,
+      "Blue Diesel (Self)": 2.439
+    }
+  },
+  {
+    "id": "20257",
+    "name": "Q8 Eisenstecken Mebo 20",
+    "brand": "Q8",
+    "address": "MeBo 20  39100",
+    "city": "BOLZANO",
+    "lat": "46.4787913",
+    "lon": "11.3066031",
+    "prices": {
+      "Benzina (Servito)": 2.269,
+      "Benzina (Self)": 2.179,
+      "Gasolio (Servito)": 2.529,
+      "Gasolio (Self)": 2.439,
+      "Metano (Servito)": 2.099,
+      "Metano (Self)": 2.099,
+      "HVO (Servito)": 2.379,
+      "HVO (Self)": 2.289
+    }
+  },
+  {
+    "id": "53024",
+    "name": "Q8 Notdurfter C. & L. OHG",
+    "brand": "Q8",
+    "address": "Statale 42 del Tonale e della Mendola, Km. 241,5, dir. Bolzano  39100",
+    "city": "BOLZANO",
+    "lat": "46.4913810831268",
+    "lon": "11.306723356246948",
+    "prices": {
+      "Benzina (Self)": 2.169,
+      "Gasolio (Self)": 2.399,
+      "Hi-Q Diesel (Self)": 2.649
+    }
+  },
+  {
+    "id": "54780",
+    "name": "SHELL  IT 1041",
+    "brand": "Shell",
+    "address": "VIA GIOVANNI KEPLERO 1 39100",
+    "city": "BOLZANO",
+    "lat": "46.471597000121335",
+    "lon": "11.31678127485744",
+    "prices": {
+      "Benzina (Servito)": 2.34,
+      "Benzina (Self)": 2.3,
+      "Gasolio (Servito)": 2.54,
+      "Gasolio (Self)": 2.5,
+      "Metano (Servito)": 2.04,
+      "Metano (Self)": 2.0,
+      "Benzina Shell V Power (Servito)": 2.44,
+      "Benzina Shell V Power (Self)": 2.4,
+      "Diesel Shell V Power (Servito)": 2.64,
+      "Diesel Shell V Power (Self)": 2.6,
+      "GNL (Servito)": 1.35,
+      "Gasolio Bio HVO (Servito)": 2.0
+    }
+  },
+  {
+    "id": "61740",
+    "name": "SMP BOLZANO",
+    "brand": "San Marco Petroli",
+    "address": "Via Innsbruck 14  39100",
+    "city": "BOLZANO",
+    "lat": "46.491688",
+    "lon": "11.368114",
+    "prices": {
+      "Benzina (Self)": 2.239,
+      "Gasolio (Self)": 2.439,
+      "F101 (Self)": 2.439
+    }
+  },
+  {
+    "id": "26120",
+    "name": "soppera manuel",
+    "brand": "Esso",
+    "address": "Via Innsbruck 15 39100",
+    "city": "BOLZANO",
+    "lat": "46.49245712861247",
+    "lon": "11.370766768164003",
+    "prices": {
+      "Benzina (Self)": 2.219,
+      "Gasolio (Self)": 2.46,
+      "GPL (Self)": 0.799,
+      "Gasolio Premium (Self)": 2.64,
+      "HVO (Self)": 2.46
+    }
+  },
+  {
+    "id": "24362",
+    "name": "soppera walter",
+    "brand": "Esso",
+    "address": "via maso della pieve 6 39100",
+    "city": "BOLZANO",
+    "lat": "46.473692621159714",
+    "lon": "11.337214708328247",
+    "prices": {
+      "Benzina (Self)": 2.199,
+      "Gasolio (Self)": 2.44,
+      "Gasolio Premium (Self)": 2.62
+    }
+  },
+  {
+    "id": "52125",
+    "name": "STAZIONE DI SERVIZIO ENI 13155 - PRIMERANO CARMELO",
+    "brand": "Agip Eni",
+    "address": "VIA OLTRADIGE 20 39100",
+    "city": "BOLZANO",
+    "lat": "46.488757100961166",
+    "lon": "11.299329578941979",
+    "prices": {
+      "Benzina (Servito)": 2.379,
+      "Benzina (Self)": 2.159,
+      "Gasolio (Servito)": 2.63,
+      "Gasolio (Self)": 2.41,
+      "GPL (Servito)": 0.884,
+      "Blue Diesel (Servito)": 2.73,
+      "Blue Diesel (Self)": 2.51,
+      "HVOlution (Self)": 2.41
+    }
+  },
+  {
+    "id": "58145",
+    "name": "STAZIONE IP",
+    "brand": "Api-Ip",
+    "address": "Via Claudia Augusta 114 39100",
+    "city": "BOLZANO",
+    "lat": "46.4837235",
+    "lon": "11.3434728",
+    "prices": {
+      "Benzina (Servito)": 2.179,
+      "Benzina (Self)": 2.179,
+      "Gasolio (Servito)": 2.359,
+      "Gasolio (Self)": 2.359
+    }
+  },
+  {
+    "id": "62355",
+    "name": "TREFF.LAIMER -BOLZANO",
+    "brand": "Pompe Bianche",
+    "address": "VIA MERANO 32 39100",
+    "city": "BOLZANO",
+    "lat": "46.495953",
+    "lon": "11.3075538",
+    "prices": {
+      "Benzina (Self)": 2.169,
+      "Gasolio (Self)": 2.419,
+      "GPL (Self)": 0.899,
+      "Benzina speciale (Self)": 2.469,
+      "HVO (Self)": 2.419
+    }
+  },
+  {
+    "id": "52234",
+    "name": "ENI 3144 Pit Stop",
+    "brand": "Agip Eni",
+    "address": "via Peter Mayr 16 39042",
+    "city": "BRESSANONE",
+    "lat": "46.720299139720424",
+    "lon": "11.655217409133911",
+    "prices": {
+      "Benzina (Servito)": 2.189,
+      "Benzina (Self)": 2.189,
+      "Gasolio (Servito)": 2.455,
+      "Gasolio (Self)": 2.455,
+      "Blue Diesel (Servito)": 2.555,
+      "Blue Diesel (Self)": 2.555,
+      "HVOlution (Servito)": 2.455,
+      "HVOlution (Self)": 2.455
+    }
+  },
+  {
+    "id": "53567",
+    "name": "ENI Station La Mara",
+    "brand": "Agip Eni",
+    "address": "Via Lahner  39 39042",
+    "city": "BRESSANONE",
+    "lat": "46.687079",
+    "lon": "11.631142",
+    "prices": {
+      "Benzina (Servito)": 2.189,
+      "Benzina (Self)": 2.189,
+      "Gasolio (Servito)": 2.455,
+      "Gasolio (Self)": 2.455,
+      "GPL (Servito)": 0.894,
+      "Blue Diesel (Servito)": 2.555,
+      "Blue Diesel (Self)": 2.555,
+      "HVOlution (Servito)": 2.455,
+      "HVOlution (Self)": 2.455
+    }
+  },
+  {
+    "id": "33041",
+    "name": "Esso",
+    "brand": "Esso",
+    "address": "VIA VITTORIO VENETO 57/A 39042",
+    "city": "BRESSANONE",
+    "lat": "46.70453577576298",
+    "lon": "11.649184841391957",
+    "prices": {
+      "Benzina (Servito)": 2.389,
+      "Benzina (Self)": 2.199,
+      "Gasolio (Servito)": 2.65,
+      "Gasolio (Self)": 2.46,
+      "HVO (Servito)": 2.65,
+      "HVO (Self)": 2.46
+    }
+  },
+  {
+    "id": "50023",
+    "name": "Q8 Bressanone",
+    "brand": "Q8",
+    "address": "Via Vittorio Veneto  37 39042",
+    "city": "BRESSANONE",
+    "lat": "46.70864322745706",
+    "lon": "11.65183554330825",
+    "prices": {
+      "Benzina (Self)": 2.199,
+      "Gasolio (Self)": 2.469,
+      "Hi-Q Diesel (Self)": 2.719
+    }
+  },
+  {
+    "id": "16252",
+    "name": "SELFAREA ANGERER",
+    "brand": "Agip Eni",
+    "address": "VIA PLOSE 13/D 39042",
+    "city": "BRESSANONE",
+    "lat": "46.709992517136044",
+    "lon": "11.661811475393733",
+    "prices": {
+      "Benzina (Servito)": 2.189,
+      "Benzina (Self)": 2.189,
+      "Gasolio (Servito)": 2.455,
+      "Gasolio (Self)": 2.455,
+      "Blue Super (Servito)": 2.339,
+      "Blue Super (Self)": 2.339,
+      "Blue Diesel (Servito)": 2.555,
+      "Blue Diesel (Self)": 2.555,
+      "Gasolio Alpino (Servito)": 1.759
+    }
+  },
+  {
+    "id": "7802",
+    "name": "Q8",
+    "brand": "Q8",
+    "address": "Statale 12 dell'Abetone e del Brennero, Km. 425, dir. SÜD - 39051",
+    "city": "BRONZOLO",
+    "lat": "46.39200049692552",
+    "lon": "11.315306425094604",
+    "prices": {
+      "Benzina (Self)": 2.199,
+      "Gasolio (Self)": 2.439,
+      "GPL (Servito)": 0.899,
+      "Hi-Q Diesel (Self)": 2.689,
+      "HVO (Self)": 2.439
+    }
+  },
+  {
+    "id": "23495",
+    "name": "Nordoil",
+    "brand": "Agip Eni",
+    "address": "ANELLO NORD 3 39031",
+    "city": "BRUNICO",
+    "lat": "46.79797994470147",
+    "lon": "11.92449166137692",
+    "prices": {
+      "Benzina (Self)": 2.259,
+      "Gasolio (Self)": 2.479,
+      "Blue Super (Self)": 2.409,
+      "Blue Diesel (Self)": 2.579
+    }
+  },
+  {
+    "id": "58726",
+    "name": "PV 3138 BRUNICO",
+    "brand": "Agip Eni",
+    "address": "VIA SAN LORENZO 11 39031",
+    "city": "BRUNICO",
+    "lat": "46.79325",
+    "lon": "11.93093",
+    "prices": {
+      "Benzina (Servito)": 2.189,
+      "Benzina (Self)": 2.189,
+      "Gasolio (Servito)": 2.455,
+      "Gasolio (Self)": 2.455,
+      "Blue Diesel (Servito)": 2.555,
+      "Blue Diesel (Self)": 2.555,
+      "HVOlution (Servito)": 2.455,
+      "HVOlution (Self)": 2.455
+    }
+  },
+  {
+    "id": "45603",
+    "name": "PV Q8 2624",
+    "brand": "Q8",
+    "address": "VIA DANTE 18 39031",
+    "city": "BRUNICO",
+    "lat": "46.79793578618181",
+    "lon": "11.946831941604614",
+    "prices": {
+      "Benzina (Servito)": 2.199,
+      "Benzina (Self)": 2.199,
+      "Gasolio (Servito)": 2.479,
+      "Gasolio (Self)": 2.479,
+      "Hi-Q Diesel (Servito)": 2.729,
+      "Hi-Q Diesel (Self)": 2.729
+    }
+  },
+  {
+    "id": "50274",
+    "name": "TanKing",
+    "brand": "Agip Eni",
+    "address": "VIA SAN LORENZO 37 39031",
+    "city": "BRUNICO",
+    "lat": "46.79075330560733",
+    "lon": "11.927236318588257",
+    "prices": {
+      "Benzina (Servito)": 2.189,
+      "Benzina (Self)": 2.189,
+      "Gasolio (Servito)": 2.455,
+      "Gasolio (Self)": 2.455,
+      "Blue Super (Servito)": 2.339,
+      "Blue Super (Self)": 2.339,
+      "Blue Diesel (Servito)": 2.555,
+      "Blue Diesel (Self)": 2.555
+    }
+  },
+  {
+    "id": "61889",
+    "name": "SHELL CALDARO SP 127 KM.3+030 - LOC. PALUDE DI CALDARO",
+    "brand": "Shell",
+    "address": "SP 127 KM.3+030 - LOC. PALUDE DI CALDARO SN 39052",
+    "city": "CALDARO SULLA STRADA DEL VINO",
+    "lat": "46.348026",
+    "lon": "11.265630",
+    "prices": {
+      "Benzina (Self)": 2.169,
+      "Gasolio (Self)": 2.399,
+      "GPL (Servito)": 0.799
+    }
+  },
+  {
+    "id": "61690",
+    "name": "SMP CALDARO",
+    "brand": "San Marco Petroli",
+    "address": "VIA VIA CIRCONVALLAZIONE 1 39052, CALDARO SULLA STRADA DEL VINO (BZ) 2 39052",
+    "city": "CALDARO SULLA STRADA DEL VINO",
+    "lat": "46.41616987536346",
+    "lon": "11.249281167984009",
+    "prices": {
+      "Benzina (Self)": 2.189,
+      "Gasolio (Self)": 2.389,
+      "F101 (Self)": 2.389
+    }
+  },
+  {
+    "id": "13445",
+    "name": "tankstelle FLORIAN KG",
+    "brand": "Agip Eni",
+    "address": "frazione PIANIZZA DI SOTTO 6/A,  39052 - -",
+    "city": "CALDARO SULLA STRADA DEL VINO",
+    "lat": "46.42510751993162",
+    "lon": "11.252122750815374",
+    "prices": {
+      "Benzina (Servito)": 2.479,
+      "Benzina (Self)": 2.269,
+      "Gasolio (Servito)": 2.659,
+      "Gasolio (Self)": 2.449,
+      "Blue Super (Servito)": 2.459,
+      "Blue Super (Self)": 2.249,
+      "Blue Diesel (Servito)": 2.729,
+      "Blue Diesel (Self)": 2.519
+    }
+  },
+  {
+    "id": "51972",
+    "name": "SADOBRE",
+    "brand": "Agip Eni",
+    "address": "A22 BRENNERO-MODENA, Km. 15,75, Sud - 39040",
+    "city": "CAMPO DI TRENS",
+    "lat": "46.8804343676398",
+    "lon": "11.435335263489796",
+    "prices": {
+      "Benzina (Self)": 2.278,
+      "Gasolio (Self)": 2.448,
+      "L-GNC (Servito)": 1.899,
+      "GNL (Servito)": 1.899,
+      "HVOlution (Self)": 2.448
+    }
+  },
+  {
+    "id": "51973",
+    "name": "TRENS EST",
+    "brand": "Esso",
+    "address": "A22 BRENNERO-MODENA, Km. 20,06, Nord - 39040",
+    "city": "CAMPO DI TRENS",
+    "lat": "46.8688019917313",
+    "lon": "11.483927013521702",
+    "prices": {
+      "Benzina (Self)": 2.278,
+      "Gasolio (Self)": 2.448
+    }
+  },
+  {
+    "id": "51974",
+    "name": "TRENS OVEST",
+    "brand": "Esso",
+    "address": "A22 BRENNERO-MODENA, Km. 20,06, Sud - 39040",
+    "city": "CAMPO DI TRENS",
+    "lat": "46.867925619238655",
+    "lon": "11.484362302828256",
+    "prices": {
+      "Benzina (Self)": 2.278,
+      "Gasolio (Self)": 2.448
+    }
+  },
+  {
+    "id": "58747",
+    "name": "13150  CAMPO TURES",
+    "brand": "Agip Eni",
+    "address": "LOC. MOLINI 133, S.S. 621  11+240",
+    "city": "CAMPO TURES",
+    "lat": "46.898403",
+    "lon": "11.942931",
+    "prices": {
+      "Benzina (Servito)": 2.379,
+      "Benzina (Self)": 2.159,
+      "Gasolio (Servito)": 2.63,
+      "Gasolio (Self)": 2.41,
+      "HVOlution (Servito)": 2.63,
+      "HVOlution (Self)": 2.41
+    }
+  },
+  {
+    "id": "61912",
+    "name": "ESSO",
+    "brand": "Esso",
+    "address": "VIA VALLE AURINA 7 39032",
+    "city": "CAMPO TURES",
+    "lat": "46.870669357995205",
+    "lon": "11.490202059661856",
+    "prices": {
+      "Benzina (Servito)": 2.369,
+      "Benzina (Self)": 2.179,
+      "Gasolio (Servito)": 2.619,
+      "Gasolio (Self)": 2.429,
+      "HVO (Servito)": 2.619,
+      "HVO (Self)": 2.429
+    }
+  },
+  {
+    "id": "22103",
+    "name": "Q82660",
+    "brand": "Q8",
+    "address": "Strada Statale 38 dir. SUD  39020",
+    "city": "CASTELBELLO-CIARDES",
+    "lat": "46.63082622744132",
+    "lon": "10.917266607284546",
+    "prices": {
+      "Benzina (Self)": 2.199,
+      "Gasolio (Self)": 2.439
+    }
+  },
+  {
+    "id": "57472",
+    "name": "Castelrotto Azzalini Energie",
+    "brand": "AZZALINI ENERGIE",
+    "address": "VIA ARNARIA- FRAZ. RONCADIZZA 25/A 39040",
+    "city": "CASTELROTTO",
+    "lat": "46.5734892118721",
+    "lon": "11.654889169342043",
+    "prices": {
+      "Benzina (Servito)": 2.187,
+      "Benzina (Self)": 2.187,
+      "Gasolio (Servito)": 2.429,
+      "Gasolio (Self)": 2.429
+    }
+  },
+  {
+    "id": "11543",
+    "name": "CASTELROTTO-PONTIVES SS 242",
+    "brand": "Q8",
+    "address": "PONTIVES SS 242 S/N 39040",
+    "city": "CASTELROTTO",
+    "lat": "46.5801188821698",
+    "lon": "11.639565889549203",
+    "prices": {
+      "Benzina (Self)": 2.229,
+      "Gasolio (Self)": 2.479
+    }
+  },
+  {
+    "id": "7806",
+    "name": "ESSO",
+    "brand": "Esso",
+    "address": "VIA SCHLERN 3 39040",
+    "city": "CASTELROTTO",
+    "lat": "46.54477951368642",
+    "lon": "11.562425488845747",
+    "prices": {
+      "Benzina (Self)": 2.259,
+      "Gasolio (Self)": 2.439,
+      "Gasolio Premium (Self)": 2.599,
+      "Gasolio artico (Self)": 2.439
+    }
+  },
+  {
+    "id": "35174",
+    "name": "GNP CASTELROTTO",
+    "brand": "GNP",
+    "address": "VIA OSWALD VON WOLKENSTEIN 51 39040, CASTELROTTO (BZ) 51 39040",
+    "city": "CASTELROTTO",
+    "lat": "46.56339306167539",
+    "lon": "11.556902378797531",
+    "prices": {
+      "Benzina (Self)": 2.177,
+      "Gasolio (Self)": 2.417
+    }
+  },
+  {
+    "id": "62759",
+    "name": "ISARCO EST",
+    "brand": "Agip Eni",
+    "address": "A22 BRENNERO-MODENA, Km. 63.55, nord - 39040",
+    "city": "CASTELROTTO",
+    "lat": "46.570284457571574",
+    "lon": "11.523084983243393",
+    "prices": {
+      "Benzina (Self)": 1.999,
+      "Gasolio (Self)": 2.199,
+      "Blue Diesel (Self)": 2.598
+    }
+  },
+  {
+    "id": "62758",
+    "name": "ISARCO EST",
+    "brand": "Agip Eni",
+    "address": "A22 BRENNERO-MODENA, Km. 63.55, nord - 39040",
+    "city": "CASTELROTTO",
+    "lat": "46.570284457571574",
+    "lon": "11.523084983243393",
+    "prices": {
+      "Gasolio (Self)": 2.199
+    }
+  },
+  {
+    "id": "45903",
+    "name": "ISARCO EST",
+    "brand": "Agip Eni",
+    "address": "A22 BRENNERO-MODENA, Km. 63.55, nord - 39040",
+    "city": "CASTELROTTO",
+    "lat": "46.570284457571574",
+    "lon": "11.523084983243393",
+    "prices": {
+      "Benzina (Servito)": 2.299,
+      "Benzina (Self)": 2.099,
+      "Gasolio (Servito)": 2.419,
+      "Gasolio (Self)": 2.299,
+      "Blue Super (Servito)": 2.199,
+      "Blue Super (Self)": 2.099,
+      "Blue Diesel (Servito)": 2.798,
+      "Blue Diesel (Self)": 2.698
+    }
+  },
+  {
+    "id": "59656",
+    "name": "52574  BOLZANO",
+    "brand": "Agip Eni",
+    "address": "Viale Druso 73  39100",
+    "city": "CERMES",
+    "lat": "46.495003",
+    "lon": "11.337799",
+    "prices": {
+      "Benzina (Servito)": 2.379,
+      "Benzina (Self)": 2.159,
+      "Gasolio (Servito)": 2.63,
+      "Gasolio (Self)": 2.41,
+      "Blue Super (Servito)": 2.529,
+      "Blue Super (Self)": 2.309,
+      "Blue Diesel (Servito)": 2.73,
+      "Blue Diesel (Self)": 2.51
+    }
+  },
+  {
+    "id": "41821",
+    "name": "Eni Nr. 13148",
+    "brand": "Agip Eni",
+    "address": "VIA VALLE PUSTERIA 30 39030",
+    "city": "CHIENES",
+    "lat": "46.803231696141864",
+    "lon": "11.842818819079639",
+    "prices": {
+      "Benzina (Servito)": 2.189,
+      "Benzina (Self)": 2.189,
+      "Gasolio (Servito)": 2.455,
+      "Gasolio (Self)": 2.455,
+      "Blue Diesel (Servito)": 2.555,
+      "Blue Diesel (Self)": 2.555,
+      "HVOlution (Servito)": 2.455,
+      "HVOlution (Self)": 2.455
+    }
+  },
+  {
+    "id": "38788",
+    "name": "52575 CHIUSA",
+    "brand": "Agip Eni",
+    "address": "PIAZZA FRAGES 5  39043",
+    "city": "CHIUSA",
+    "lat": "46.637713253933285",
+    "lon": "11.561108082532883",
+    "prices": {
+      "Benzina (Servito)": 2.189,
+      "Benzina (Self)": 2.189,
+      "Gasolio (Servito)": 2.455,
+      "Gasolio (Self)": 2.455,
+      "Blue Diesel (Servito)": 2.555,
+      "Blue Diesel (Self)": 2.555
+    }
+  },
+  {
+    "id": "8134",
+    "name": "Q8 Finktankstelle",
+    "brand": "Q8",
+    "address": "LOC. S.GIUSEPPE 24 39043",
+    "city": "CHIUSA",
+    "lat": "46.645249780557016",
+    "lon": "11.573125720024109",
+    "prices": {
+      "Benzina (Servito)": 2.199,
+      "Benzina (Self)": 2.199,
+      "Gasolio (Servito)": 2.479,
+      "Gasolio (Self)": 2.479,
+      "Hi-Q Diesel (Servito)": 2.729,
+      "Hi-Q Diesel (Self)": 2.729,
+      "Gasolio artico (Servito)": 2.479,
+      "Gasolio artico (Self)": 2.479
+    }
+  },
+  {
+    "id": "63290",
+    "name": "Cornedo all'Isarco",
+    "brand": "Q8",
+    "address": "VIA BRENNERO 6 39053",
+    "city": "CORNEDO ALL'ISARCO",
+    "lat": "46.49477485396204",
+    "lon": "11.392884315357952",
+    "prices": {
+      "Benzina (Self)": 2.199,
+      "Gasolio (Self)": 2.399
+    }
+  },
+  {
+    "id": "45459",
+    "name": "SCAPIN MARCO",
+    "brand": "Agip Eni",
+    "address": "VIA BRENNERO 7 39053",
+    "city": "CORNEDO ALL'ISARCO",
+    "lat": "46.49328866502679",
+    "lon": "11.403701305389404",
+    "prices": {
+      "Benzina (Servito)": 2.2,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.4,
+      "Gasolio (Self)": 2.19,
+      "Metano (Servito)": 1.684,
+      "Blue Diesel (Servito)": 2.5,
+      "Blue Diesel (Self)": 2.29
+    }
+  },
+  {
+    "id": "56440",
+    "name": "Q8 Corvara di Rigo Gottfried",
+    "brand": "Q8",
+    "address": "S.da La Siëia   16 39033",
+    "city": "CORVARA IN BADIA",
+    "lat": "46.551371883210834",
+    "lon": "11.867187023162842",
+    "prices": {
+      "Benzina (Servito)": 2.199,
+      "Benzina (Self)": 2.199,
+      "Gasolio (Servito)": 2.479,
+      "Gasolio (Self)": 2.479
+    }
+  },
+  {
+    "id": "35533",
+    "name": "ENI",
+    "brand": "Agip Eni",
+    "address": "49 della Pusteria, Km. 59, EST - 39034",
+    "city": "DOBBIACO",
+    "lat": "46.72887048784625",
+    "lon": "12.218756228685379",
+    "prices": {
+      "Benzina (Servito)": 1.99,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.19,
+      "Gasolio (Self)": 2.19,
+      "GPL (Servito)": 0.934,
+      "HVOlution (Servito)": 2.19,
+      "HVOlution (Self)": 2.19
+    }
+  },
+  {
+    "id": "35524",
+    "name": "ROLAND SANTER & C. SNC",
+    "brand": "Firmin",
+    "address": "Via Alemagna 5 39034",
+    "city": "DOBBIACO",
+    "lat": "46.72157423059709",
+    "lon": "12.224705889549227",
+    "prices": {
+      "Benzina (Servito)": 2.234,
+      "Benzina (Self)": 2.234,
+      "Gasolio (Servito)": 2.455,
+      "Gasolio (Self)": 2.455,
+      "Gasolio speciale (Servito)": 2.579,
+      "Gasolio speciale (Self)": 2.579
+    }
+  },
+  {
+    "id": "55901",
+    "name": "ENI EGNA",
+    "brand": "Agip Eni",
+    "address": "VIA VILLA 26 39044",
+    "city": "EGNA",
+    "lat": "46.32470",
+    "lon": "11.28087",
+    "prices": {
+      "Benzina (Servito)": 2.379,
+      "Benzina (Self)": 2.159,
+      "Gasolio (Servito)": 2.63,
+      "Gasolio (Self)": 2.41,
+      "Blue Diesel (Servito)": 2.73,
+      "Blue Diesel (Self)": 2.51
+    }
+  },
+  {
+    "id": "11142",
+    "name": "ESSO SAN FLORIANO",
+    "brand": "Esso",
+    "address": "Statale 12 dell'Abetone e del Brennero, Km. 411, dir. BRENNERO - 39044",
+    "city": "EGNA",
+    "lat": "46.28352952101621",
+    "lon": "11.240644454956055",
+    "prices": {
+      "Benzina (Self)": 2.199,
+      "Gasolio (Self)": 2.46,
+      "Gasolio Premium (Self)": 2.449,
+      "Gasolio artico (Self)": 2.46
+    }
+  },
+  {
+    "id": "20255",
+    "name": "Q8 Egna",
+    "brand": "Q8",
+    "address": "VIA TRENTO 2 39044",
+    "city": "EGNA",
+    "lat": "46.3113181936087",
+    "lon": "11.272401253967246",
+    "prices": {
+      "Benzina (Servito)": 2.199,
+      "Gasolio (Servito)": 2.449,
+      "Hi-Q Diesel (Servito)": 2.699
+    }
+  },
+  {
+    "id": "61770",
+    "name": "ESSO",
+    "brand": "Esso",
+    "address": "Via Falzes  39030",
+    "city": "FALZES",
+    "lat": "46.810349",
+    "lon": "11.881986",
+    "prices": {
+      "Benzina (Servito)": 2.389,
+      "Benzina (Self)": 2.199,
+      "Gasolio (Servito)": 2.629,
+      "Gasolio (Self)": 2.439,
+      "Supreme Diesel (Servito)": 2.809,
+      "Supreme Diesel (Self)": 2.619
+    }
+  },
+  {
+    "id": "32811",
+    "name": "Q8",
+    "brand": "Q8",
+    "address": "VIA BOLZANO  7 39050",
+    "city": "FIÈ ALLO SCILIAR",
+    "lat": "46.51777969679279",
+    "lon": "11.504451338623085",
+    "prices": {
+      "Benzina (Servito)": 2.199,
+      "Benzina (Self)": 2.199,
+      "Gasolio (Servito)": 2.479,
+      "Gasolio (Self)": 2.479,
+      "Hi-Q Diesel (Servito)": 2.729,
+      "Hi-Q Diesel (Self)": 2.729
+    }
+  },
+  {
+    "id": "62752",
+    "name": "SCILIAR OVEST",
+    "brand": "Sarni Oil",
+    "address": "A22 BRENNERO-MODENA, Km. 68.85, sud - 39050",
+    "city": "FIÈ ALLO SCILIAR",
+    "lat": "46.531348000123",
+    "lon": "11.490676000123",
+    "prices": {
+      "Gasolio (Self)": 2.469
+    }
+  },
+  {
+    "id": "45898",
+    "name": "SCILIAR OVEST",
+    "brand": "Sarni Oil",
+    "address": "A22 BRENNERO-MODENA, Km. 68.85, sud - 39050",
+    "city": "FIÈ ALLO SCILIAR",
+    "lat": "46.531348000123",
+    "lon": "11.490676000123",
+    "prices": {
+      "Benzina (Servito)": 2.499,
+      "Benzina (Self)": 2.299,
+      "Gasolio (Servito)": 2.699,
+      "Gasolio (Self)": 2.499,
+      "Gasolio speciale (Servito)": 2.798,
+      "Gasolio speciale (Self)": 2.698
+    }
+  },
+  {
+    "id": "13692",
+    "name": "Firmin - OSCARS",
+    "brand": "Firmin",
+    "address": "Pizack 5 39040",
+    "city": "FUNES",
+    "lat": "46.64035997862306",
+    "lon": "11.675036251544952",
+    "prices": {
+      "Benzina (Self)": 2.199,
+      "Gasolio (Self)": 2.449
+    }
+  },
+  {
+    "id": "18852",
+    "name": "HAR´RY`S TANKSTELLE",
+    "brand": "Agip Eni",
+    "address": "VIA NAZIONALE 2 39021",
+    "city": "LACES",
+    "lat": "46.622258673815445",
+    "lon": "10.86322009563446",
+    "prices": {
+      "Benzina (Servito)": 2.229,
+      "Benzina (Self)": 2.229,
+      "Gasolio (Servito)": 2.419,
+      "Gasolio (Self)": 2.419,
+      "GPL (Servito)": 0.859,
+      "Blue Super (Self)": 2.379,
+      "Blue Diesel (Servito)": 2.499,
+      "Blue Diesel (Self)": 2.499
+    }
+  },
+  {
+    "id": "11544",
+    "name": "LACES-SS 38 KM 171+970",
+    "brand": "Q8",
+    "address": "SS 38 KM 171+970 S/N  39021",
+    "city": "LACES",
+    "lat": "46.62013535083936",
+    "lon": "10.84369881107341",
+    "prices": {
+      "Benzina (Self)": 2.209,
+      "Gasolio (Self)": 2.439,
+      "Gasolio artico (Self)": 1.759
+    }
+  },
+  {
+    "id": "61693",
+    "name": "SMP LAGUNDO",
+    "brand": "San Marco Petroli",
+    "address": "SS38  39022",
+    "city": "LAGUNDO",
+    "lat": "46.671631",
+    "lon": "11.134912",
+    "prices": {
+      "Benzina (Self)": 2.249,
+      "Gasolio (Self)": 2.439,
+      "REHVO (Self)": 2.424
+    }
+  },
+  {
+    "id": "35960",
+    "name": "GNP LAION",
+    "brand": "GNP",
+    "address": "VIA NOVALE 118 39040, LAION (BZ) 118 39040",
+    "city": "LAION",
+    "lat": "46.60201743626545",
+    "lon": "11.559184938669205",
+    "prices": {
+      "Benzina (Self)": 2.177,
+      "Gasolio (Self)": 2.417
+    }
+  },
+  {
+    "id": "61707",
+    "name": "SMP LAIVES",
+    "brand": "San Marco Petroli",
+    "address": "Via Kennedy 29  39055",
+    "city": "LAIVES",
+    "lat": "46.42864285158048",
+    "lon": "11.342284083366394",
+    "prices": {
+      "Benzina (Self)": 2.159,
+      "Gasolio (Self)": 2.349,
+      "REHVO (Self)": 2.334
+    }
+  },
+  {
+    "id": "63625",
+    "name": "Stazione di Servizio Esso",
+    "brand": "Esso",
+    "address": "VIA SAN GIACOMO 165/B 39055",
+    "city": "LAIVES",
+    "lat": "46.45076",
+    "lon": "11.33644",
+    "prices": {
+      "Benzina (Servito)": 2.339,
+      "Benzina (Self)": 2.199,
+      "Gasolio (Servito)": 2.489,
+      "Gasolio (Self)": 2.399,
+      "Supreme Diesel (Servito)": 2.669,
+      "Supreme Diesel (Self)": 2.579
+    }
+  },
+  {
+    "id": "32602",
+    "name": "Stazione di servizio Esso di Zucol Pietro",
+    "brand": "Esso",
+    "address": "VIA SAN GIACOMO 165/B 39055",
+    "city": "LAIVES",
+    "lat": "46.45076251330254",
+    "lon": "11.336439549922943",
+    "prices": {
+      "Benzina (Self)": 1.999,
+      "Gasolio artico (Self)": 2.139,
+      "Supreme Diesel (Self)": 2.319
+    }
+  },
+  {
+    "id": "37263",
+    "name": "AUTO ARQUIN - Q8",
+    "brand": "Q8",
+    "address": "VIA MERANO 23 39011",
+    "city": "LANA",
+    "lat": "46.62107099922663",
+    "lon": "11.143401470730964",
+    "prices": {
+      "Benzina (Servito)": 2.199,
+      "Benzina (Self)": 2.199,
+      "Gasolio (Servito)": 2.489,
+      "Gasolio (Self)": 2.489,
+      "Hi-Q Diesel (Servito)": 2.739,
+      "Hi-Q Diesel (Self)": 2.739,
+      "Gasolio artico (Servito)": 2.489,
+      "Gasolio artico (Self)": 2.489
+    }
+  },
+  {
+    "id": "50864",
+    "name": "Esso Soppera Lana",
+    "brand": "Esso",
+    "address": "via bolzano 74 39011",
+    "city": "LANA",
+    "lat": "46.60875078692754",
+    "lon": "11.169355976686477",
+    "prices": {
+      "Benzina (Servito)": 2.389,
+      "Benzina (Self)": 2.199,
+      "Gasolio (Servito)": 2.67,
+      "Gasolio (Self)": 2.48,
+      "Supreme Diesel (Servito)": 2.85,
+      "Supreme Diesel (Self)": 2.66
+    }
+  },
+  {
+    "id": "5321",
+    "name": "Kostner - Lana",
+    "brand": "Kostner",
+    "address": "Max-Valier-Straße 9 39011",
+    "city": "LANA",
+    "lat": "46.62855206078613",
+    "lon": "11.171120889801955",
+    "prices": {
+      "Benzina (Servito)": 2.249,
+      "Benzina (Self)": 2.249,
+      "Gasolio (Servito)": 2.459,
+      "Gasolio (Self)": 2.459,
+      "Benzina speciale (Servito)": 2.389,
+      "Benzina speciale (Self)": 2.389,
+      "HVO eco diesel (Servito)": 2.519,
+      "HVO eco diesel (Self)": 2.519
+    }
+  },
+  {
+    "id": "62303",
+    "name": "DISTRIBUTORE IP LASA",
+    "brand": "Api-Ip",
+    "address": "Via Venosta 9  39023",
+    "city": "LASA",
+    "lat": "46.61695989883505",
+    "lon": "10.706814861279286",
+    "prices": {
+      "Benzina (Self)": 2.219,
+      "Gasolio (Self)": 2.449
+    }
+  },
+  {
+    "id": "30693",
+    "name": "ESSO",
+    "brand": "Esso",
+    "address": "VIA VENOSTA Oris 44 39023",
+    "city": "LASA",
+    "lat": "46.630490143531034",
+    "lon": "10.637524639878848",
+    "prices": {
+      "Benzina (Self)": 2.199,
+      "Gasolio (Self)": 2.44,
+      "HVO (Self)": 2.39
+    }
+  },
+  {
+    "id": "9668",
+    "name": "DISTRIBUTORE KASER",
+    "brand": "Pompe Bianche",
+    "address": "VIA LUESEN 7 39040",
+    "city": "LUSON",
+    "lat": "46.749013808099285",
+    "lon": "11.742802262306213",
+    "prices": {
+      "Benzina (Servito)": 2.249,
+      "Benzina (Self)": 2.249,
+      "Gasolio (Servito)": 2.459,
+      "Gasolio (Self)": 2.459
+    }
+  },
+  {
+    "id": "49169",
+    "name": "Kostner - Malles Venosta",
+    "brand": "Kostner",
+    "address": "Staatsstraße 50 39024",
+    "city": "MALLES VENOSTA",
+    "lat": "46.69495064127975",
+    "lon": "10.539409906745924",
+    "prices": {
+      "Benzina (Servito)": 2.249,
+      "Benzina (Self)": 2.249,
+      "Gasolio (Servito)": 2.459,
+      "Gasolio (Self)": 2.459,
+      "Benzina speciale (Servito)": 2.389,
+      "Benzina speciale (Self)": 2.389,
+      "HVO eco diesel (Servito)": 2.519,
+      "HVO eco diesel (Self)": 2.519
+    }
+  },
+  {
+    "id": "46393",
+    "name": "distributore q8",
+    "brand": "Q8",
+    "address": "STR CATARINA LANZ 2 39030",
+    "city": "MAREBBE",
+    "lat": "46.70109164675827",
+    "lon": "11.929118454830132",
+    "prices": {
+      "Benzina (Servito)": 2.239,
+      "Benzina (Self)": 2.239,
+      "Gasolio (Servito)": 2.419,
+      "Gasolio (Self)": 2.419,
+      "HiQ Perform+ (Servito)": 2.499,
+      "HiQ Perform+ (Self)": 2.499
+    }
+  },
+  {
+    "id": "23643",
+    "name": "Q8 Lanthaler",
+    "brand": "Q8",
+    "address": "VIA PALADE 10/1 39020",
+    "city": "MARLENGO",
+    "lat": "46.65645855016317",
+    "lon": "11.145279297438265",
+    "prices": {
+      "Benzina (Self)": 2.199,
+      "Gasolio (Self)": 2.469,
+      "Hi-Q Diesel (Self)": 2.719,
+      "HiQ Perform+ (Self)": 2.469
+    }
+  },
+  {
+    "id": "62513",
+    "name": "13168 ENI MERANO",
+    "brand": "Agip Eni",
+    "address": "Via Roma 280  39012",
+    "city": "MERANO",
+    "lat": "46.6563544",
+    "lon": "11.1682605",
+    "prices": {
+      "Benzina (Servito)": 2.219,
+      "Benzina (Self)": 2.219,
+      "Gasolio (Servito)": 2.449,
+      "Gasolio (Self)": 2.449
+    }
+  },
+  {
+    "id": "59162",
+    "name": "3147 MERANO",
+    "brand": "Agip Eni",
+    "address": "VIA PIAVE  20",
+    "city": "MERANO",
+    "lat": "46.666126",
+    "lon": "11.158507",
+    "prices": {
+      "Benzina (Servito)": 2.369,
+      "Benzina (Self)": 2.149,
+      "Gasolio (Servito)": 2.559,
+      "Gasolio (Self)": 2.339,
+      "Blue Diesel (Servito)": 2.659,
+      "Blue Diesel (Self)": 2.439
+    }
+  },
+  {
+    "id": "56652",
+    "name": "ENI STATION DI ARBEN SHERA",
+    "brand": "Agip Eni",
+    "address": "Via Goethe 74  39012",
+    "city": "MERANO",
+    "lat": "46.6769574",
+    "lon": "11.1491013",
+    "prices": {
+      "Benzina (Servito)": 2.379,
+      "Benzina (Self)": 2.159,
+      "Gasolio (Servito)": 2.629,
+      "Gasolio (Self)": 2.409,
+      "Blue Diesel (Servito)": 2.729,
+      "Blue Diesel (Self)": 2.509
+    }
+  },
+  {
+    "id": "40006",
+    "name": "ESSO",
+    "brand": "Esso",
+    "address": "VIA ROMA 5 39012",
+    "city": "MERANO",
+    "lat": "46.667517717877786",
+    "lon": "11.162794377979253",
+    "prices": {
+      "Benzina (Servito)": 2.199,
+      "Benzina (Self)": 2.199,
+      "Gasolio (Servito)": 2.46,
+      "Gasolio (Self)": 2.46,
+      "HVO (Servito)": 2.46,
+      "HVO (Self)": 2.46
+    }
+  },
+  {
+    "id": "38801",
+    "name": "Q8",
+    "brand": "Q8",
+    "address": "VIA NAZIONALE 134 39012",
+    "city": "MERANO",
+    "lat": "46.62314611314064",
+    "lon": "11.186077542327894",
+    "prices": {
+      "Benzina (Servito)": 2.354,
+      "Benzina (Self)": 2.204,
+      "Gasolio (Servito)": 2.584,
+      "Gasolio (Self)": 2.434,
+      "GPL (Servito)": 0.779,
+      "Hi-Q Diesel (Servito)": 2.634,
+      "HiQ Perform+ (Servito)": 2.394
+    }
+  },
+  {
+    "id": "14021",
+    "name": "SAFFIOTI Q8",
+    "brand": "Q8",
+    "address": "VIA PIAVE 28 39012",
+    "city": "MERANO",
+    "lat": "46.665377069055246",
+    "lon": "11.158716499336265",
+    "prices": {
+      "Benzina (Self)": 2.179,
+      "Gasolio (Self)": 2.449,
+      "Hi-Q Diesel (Self)": 2.699
+    }
+  },
+  {
+    "id": "39097",
+    "name": "TAMOIL 6897",
+    "brand": "Tamoil",
+    "address": "VIA NAZIONALE 6 39012",
+    "city": "MERANO",
+    "lat": "46.64678431735931",
+    "lon": "11.17706560978695",
+    "prices": {
+      "Benzina (Self)": 2.199,
+      "Gasolio (Self)": 2.459,
+      "GPL (Servito)": 0.779,
+      "Benzina WR 100 (Self)": 2.349,
+      "HVO (Self)": 2.429
+    }
+  },
+  {
+    "id": "15777",
+    "name": "Oberhammer Renate",
+    "brand": "Api-Ip",
+    "address": "via Pusteria 2 39035",
+    "city": "MONGUELFO-TESIDO",
+    "lat": "46.758442560515604",
+    "lon": "12.102804332971573",
+    "prices": {
+      "Benzina (Servito)": 2.199,
+      "Benzina (Self)": 2.199,
+      "Gasolio (Servito)": 2.459,
+      "Gasolio (Self)": 2.459
+    }
+  },
+  {
+    "id": "53513",
+    "name": "EUM",
+    "brand": "Pompe Bianche",
+    "address": "VIA AUE 2 39013",
+    "city": "MOSO IN PASSIRIA",
+    "lat": "46.82706164574933",
+    "lon": "11.1783367395401",
+    "prices": {
+      "Benzina (Self)": 2.148,
+      "Gasolio (Self)": 2.308,
+      "Benzina speciale (Self)": 2.328,
+      "Gasolio speciale (Self)": 2.428
+    }
+  },
+  {
+    "id": "33467",
+    "name": "Kostner - Nals",
+    "brand": "Kostner",
+    "address": "Vilpianerstraße 26 39010",
+    "city": "NALLES",
+    "lat": "46.552090842780245",
+    "lon": "11.212681782864365",
+    "prices": {
+      "Benzina (Servito)": 2.249,
+      "Benzina (Self)": 2.249,
+      "Gasolio (Servito)": 2.459,
+      "Gasolio (Self)": 2.459,
+      "Benzina speciale (Servito)": 2.389,
+      "Benzina speciale (Self)": 2.389
+    }
+  },
+  {
+    "id": "62314",
+    "name": "Esso",
+    "brand": "Esso",
+    "address": "Via Nazionale 19  39025",
+    "city": "NATURNO",
+    "lat": "46.6585335",
+    "lon": "11.0321507",
+    "prices": {
+      "Benzina (Self)": 2.199,
+      "Gasolio (Self)": 2.44,
+      "Gasolio Premium (Self)": 2.62
+    }
+  },
+  {
+    "id": "30801",
+    "name": "Tamoil",
+    "brand": "Tamoil",
+    "address": "Via Nazionale 39 39025",
+    "city": "NATURNO",
+    "lat": "46.66288283641046",
+    "lon": "11.04326605796814",
+    "prices": {
+      "Benzina (Self)": 2.159,
+      "Gasolio (Self)": 2.419,
+      "Metano (Servito)": 1.859,
+      "Benzina WR 100 (Self)": 2.309,
+      "HVO (Self)": 2.389
+    }
+  },
+  {
+    "id": "61929",
+    "name": "51292 NAZ-SCIAVES",
+    "brand": "Agip Eni",
+    "address": "LADESTATT, VIA NAZIONALE  94",
+    "city": "NAZ-SCIAVES",
+    "lat": "46.76961",
+    "lon": "11.655286",
+    "prices": {
+      "Benzina (Servito)": 2.189,
+      "Benzina (Self)": 2.179,
+      "Gasolio (Servito)": 2.455,
+      "Gasolio (Self)": 2.445,
+      "Blue Diesel (Servito)": 2.555,
+      "Blue Diesel (Self)": 2.545
+    }
+  },
+  {
+    "id": "52763",
+    "name": "Esso - Welschnofen",
+    "brand": "Esso",
+    "address": "Via Carezza 61 39056",
+    "city": "NOVA LEVANTE",
+    "lat": "46.4262781",
+    "lon": "11.5492058",
+    "prices": {
+      "Benzina (Self)": 2.199,
+      "Gasolio (Self)": 2.46,
+      "Gasolio artico (Self)": 2.46,
+      "Supreme Diesel (Self)": 2.64
+    }
+  },
+  {
+    "id": "31375",
+    "name": "GNP NOVA PONENTE",
+    "brand": "GNP",
+    "address": "VIA PRINCIPALE 52 39050, NOVA PONENTE (BZ) 52 39050",
+    "city": "NOVA PONENTE",
+    "lat": "46.41093468547959",
+    "lon": "11.433165491587033",
+    "prices": {
+      "Benzina (Self)": 2.197,
+      "Gasolio (Self)": 2.397
+    }
+  },
+  {
+    "id": "34545",
+    "name": "Kostner – Deutschnofen",
+    "brand": "Kostner",
+    "address": "Lihnwies 1 39050",
+    "city": "NOVA PONENTE",
+    "lat": "46.40912376786726",
+    "lon": "11.433820500969887",
+    "prices": {
+      "Benzina (Servito)": 2.249,
+      "Benzina (Self)": 2.249,
+      "Gasolio (Servito)": 2.459,
+      "Gasolio (Self)": 2.459,
+      "Benzina speciale (Servito)": 2.389,
+      "Benzina speciale (Self)": 2.389
+    }
+  },
+  {
+    "id": "46723",
+    "name": "eni 03149 ORA (BZ)",
+    "brand": "Agip Eni",
+    "address": "VIA NAZIONALE 32 39040",
+    "city": "ORA",
+    "lat": "46.345614180534085",
+    "lon": "11.294593499036182",
+    "prices": {
+      "Benzina (Servito)": 2.215,
+      "Benzina (Self)": 1.995,
+      "Gasolio (Servito)": 2.415,
+      "Gasolio (Self)": 2.195,
+      "Blue Super (Servito)": 2.365,
+      "Blue Super (Self)": 2.145,
+      "Blue Diesel (Servito)": 2.515,
+      "Blue Diesel (Self)": 2.295,
+      "Gasolio Alpino (Servito)": 2.415,
+      "Gasolio Alpino (Self)": 2.195,
+      "Blu Diesel Alpino (Servito)": 2.515,
+      "Blu Diesel Alpino (Self)": 2.295,
+      "HVOlution (Self)": 2.195
+    }
+  },
+  {
+    "id": "27291",
+    "name": "Stazione di servizio ESSO di VERBER ANDREA",
+    "brand": "Esso",
+    "address": "VIA NAZIONALE 66 39040, ORA (BZ) 66 39040",
+    "city": "ORA",
+    "lat": "46.353697422415095",
+    "lon": "11.311056173610723",
+    "prices": {
+      "Benzina (Servito)": 2.409,
+      "Benzina (Self)": 2.219,
+      "Gasolio (Servito)": 2.65,
+      "Gasolio (Self)": 2.46,
+      "HVO (Servito)": 2.65,
+      "HVO (Self)": 2.46
+    }
+  },
+  {
+    "id": "27752",
+    "name": "ENI INSAM",
+    "brand": "Agip Eni",
+    "address": "Statale 242 di Val Gardena e Passo Sella, Km. 14, dir. CHIUSA - 39046",
+    "city": "ORTISEI",
+    "lat": "46.567915115175445",
+    "lon": "11.685368120670319",
+    "prices": {
+      "Benzina (Servito)": 2.189,
+      "Benzina (Self)": 2.189,
+      "Gasolio (Servito)": 2.455,
+      "Gasolio (Self)": 2.455,
+      "Metano (Servito)": 1.809,
+      "Blue Diesel (Servito)": 2.555,
+      "Blue Diesel (Self)": 2.555,
+      "HVOlution (Servito)": 2.455,
+      "HVOlution (Self)": 2.455
+    }
+  },
+  {
+    "id": "59407",
+    "name": "13110  PARCINES",
+    "brand": "Agip Eni",
+    "address": "LOC.TELL, VIA VENOSTA 53 (SS.38 - KM.191,875)  53",
+    "city": "PARCINES",
+    "lat": "46.67275",
+    "lon": "11.07501",
+    "prices": {
+      "Benzina (Servito)": 2.379,
+      "Benzina (Self)": 2.159,
+      "Gasolio (Servito)": 2.63,
+      "Gasolio (Self)": 2.41,
+      "Blue Super (Servito)": 2.529,
+      "Blue Super (Self)": 2.309,
+      "Blue Diesel (Servito)": 2.73,
+      "Blue Diesel (Self)": 2.51
+    }
+  },
+  {
+    "id": "8776",
+    "name": "Tamoil Percha",
+    "brand": "Tamoil",
+    "address": "Statale 49 della Pusteria, Km. 3,9, dir. ovest - 39030",
+    "city": "PERCA",
+    "lat": "46.7928908489882",
+    "lon": "11.972152590751648",
+    "prices": {
+      "Benzina (Servito)": 2.339,
+      "Benzina (Self)": 2.339,
+      "Gasolio (Servito)": 2.539,
+      "Gasolio (Self)": 2.539,
+      "Benzina WR 100 (Servito)": 2.489,
+      "Benzina WR 100 (Self)": 2.489,
+      "Gasolio Gelo (Servito)": 2.539,
+      "Gasolio Gelo (Self)": 2.539
+    }
+  },
+  {
+    "id": "61726",
+    "name": "SMP POSTAL",
+    "brand": "San Marco Petroli",
+    "address": "Via Stazione 21  39014",
+    "city": "POSTAL",
+    "lat": "46.609467",
+    "lon": "11.184479",
+    "prices": {
+      "Benzina (Self)": 2.249,
+      "Gasolio (Self)": 2.449,
+      "REHVO (Self)": 2.434
+    }
+  },
+  {
+    "id": "7597",
+    "name": "Esso - Garage Olympia Sas",
+    "brand": "Esso",
+    "address": "Statale 38 dello Stelvio, Km. VIII149, dir. Merano - 634890214",
+    "city": "PRATO ALLO STELVIO",
+    "lat": "46.62059286834926",
+    "lon": "10.598187159596137",
+    "prices": {
+      "Benzina (Self)": 2.199,
+      "Gasolio (Self)": 2.44,
+      "Gasolio Premium (Self)": 2.62
+    }
+  },
+  {
+    "id": "8427",
+    "name": "Hofer Jessica - distributore Tamoil",
+    "brand": "Tamoil",
+    "address": "Statale 38 dello Stelvio, Km. 149+498, dir. Passo Stelvio - 39026",
+    "city": "PRATO ALLO STELVIO",
+    "lat": "46.61812384925141",
+    "lon": "10.595257279134557",
+    "prices": {
+      "Benzina (Servito)": 2.159,
+      "Benzina (Self)": 2.159,
+      "Gasolio (Servito)": 2.419,
+      "Gasolio (Self)": 2.419,
+      "Benzina WR 100 (Servito)": 2.309,
+      "Benzina WR 100 (Self)": 2.309
+    }
+  },
+  {
+    "id": "18861",
+    "name": "Agip Tankstelle Rasen",
+    "brand": "Agip Eni",
+    "address": "EXTRA URBANO S.P. 44 0044 160 39030, RASUN ANTERSELVA (BZ)  39030",
+    "city": "RASUN-ANTERSELVA",
+    "lat": "46.77494739920092",
+    "lon": "12.043606061266852",
+    "prices": {
+      "Benzina (Servito)": 2.189,
+      "Benzina (Self)": 2.189,
+      "Gasolio (Servito)": 2.455,
+      "Gasolio (Self)": 2.455,
+      "Blue Diesel (Servito)": 2.555,
+      "Blue Diesel (Self)": 2.555,
+      "Gasolio Alpino (Servito)": 1.749,
+      "Gasolio Alpino (Self)": 1.749
+    }
+  },
+  {
+    "id": "29121",
+    "name": "Kostner - Ritten",
+    "brand": "Kostner",
+    "address": "Weber im Moos 5 39054",
+    "city": "RENON",
+    "lat": "46.52797572098347",
+    "lon": "11.45052932202816",
+    "prices": {
+      "Benzina (Servito)": 2.249,
+      "Benzina (Self)": 2.249,
+      "Gasolio (Servito)": 2.459,
+      "Gasolio (Self)": 2.459,
+      "Benzina speciale (Servito)": 2.389,
+      "Benzina speciale (Self)": 2.389
+    }
+  },
+  {
+    "id": "58979",
+    "name": "PV 13128 RENON",
+    "brand": "Agip Eni",
+    "address": "VIA CAMPODAZZO 3 39040",
+    "city": "RENON",
+    "lat": "46.51456",
+    "lon": "11.47769",
+    "prices": {
+      "Benzina (Servito)": 2.339,
+      "Benzina (Self)": 2.159,
+      "Gasolio (Servito)": 2.449,
+      "Gasolio (Self)": 2.419,
+      "HVOlution (Servito)": 2.449,
+      "HVOlution (Self)": 2.419
+    }
+  },
+  {
+    "id": "24864",
+    "name": "Schweigkofler Florian",
+    "brand": "Esso",
+    "address": "VIA PETER MAYR 36, 39054 - -",
+    "city": "RENON",
+    "lat": "46.540170893842344",
+    "lon": "11.45503744482994",
+    "prices": {
+      "Benzina (Self)": 2.219,
+      "Gasolio (Self)": 2.48,
+      "Gasolio Premium (Self)": 2.66
+    }
+  },
+  {
+    "id": "47894",
+    "name": "ENI Weger",
+    "brand": "Agip Eni",
+    "address": "Via Val Pusteria 26  39037",
+    "city": "RIO DI PUSTERIA",
+    "lat": "46.7969231",
+    "lon": "11.6686512",
+    "prices": {
+      "Benzina (Servito)": 2.189,
+      "Benzina (Self)": 2.189,
+      "Gasolio (Servito)": 2.455,
+      "Gasolio (Self)": 2.455,
+      "Blue Super (Servito)": 2.339,
+      "Blue Super (Self)": 2.339,
+      "Blue Diesel (Servito)": 2.555,
+      "Blue Diesel (Self)": 2.555
+    }
+  },
+  {
+    "id": "62429",
+    "name": "3174 SALORNO",
+    "brand": "Agip Eni",
+    "address": "VIA NAZIONALE,  42",
+    "city": "SALORNO SULLA STRADA DEL VINO",
+    "lat": "46.24023",
+    "lon": "11.20656",
+    "prices": {
+      "Benzina (Servito)": 2.379,
+      "Benzina (Self)": 2.159,
+      "Gasolio (Servito)": 2.63,
+      "Gasolio (Self)": 2.41,
+      "HVOlution (Servito)": 2.41,
+      "HVOlution (Self)": 2.41
+    }
+  },
+  {
+    "id": "62175",
+    "name": "FIRMIN",
+    "brand": "Firmin",
+    "address": "Via nazionale 9/8 39040",
+    "city": "SALORNO SULLA STRADA DEL VINO",
+    "lat": "46.2457747",
+    "lon": "11.211943",
+    "prices": {
+      "Benzina (Servito)": 2.269,
+      "Benzina (Self)": 2.149,
+      "Gasolio (Servito)": 2.519,
+      "Gasolio (Self)": 2.399,
+      "Metano (Servito)": 1.789,
+      "GPL (Servito)": 0.884,
+      "Benzina speciale (Servito)": 2.445,
+      "Benzina speciale (Self)": 2.325,
+      "HVO (Servito)": 2.279,
+      "HVO (Self)": 2.159
+    }
+  },
+  {
+    "id": "57756",
+    "name": "ESSO SAN CANDIDO",
+    "brand": "Esso",
+    "address": "Via Pusteria 1/A 39038",
+    "city": "SAN CANDIDO",
+    "lat": "46.73049501791008",
+    "lon": "12.266350962743369",
+    "prices": {
+      "Benzina (Self)": 2.199,
+      "Gasolio (Self)": 2.46,
+      "HVO (Self)": 2.46
+    }
+  },
+  {
+    "id": "57847",
+    "name": "SAN CANDIDO",
+    "brand": "Retitalia",
+    "address": "Via Pusteria 10  39030",
+    "city": "SAN CANDIDO",
+    "lat": "46.733805507472034",
+    "lon": "12.28989351328501",
+    "prices": {
+      "Benzina (Self)": 2.199,
+      "Gasolio (Self)": 2.46
+    }
+  },
+  {
+    "id": "47053",
+    "name": "Eni Folie Michael",
+    "brand": "Agip Eni",
+    "address": "VIA PASSIRIA 47 39015",
+    "city": "SAN LEONARDO IN PASSIRIA",
+    "lat": "46.807881214814905",
+    "lon": "11.245480566409833",
+    "prices": {
+      "Benzina (Servito)": 2.379,
+      "Benzina (Self)": 2.159,
+      "Gasolio (Servito)": 2.589,
+      "Gasolio (Self)": 2.369,
+      "Blue Super (Servito)": 2.0,
+      "Blue Super (Self)": 2.0,
+      "Blue Diesel (Servito)": 2.639,
+      "Blue Diesel (Self)": 2.419
+    }
+  },
+  {
+    "id": "56986",
+    "name": "Enilive Mantana",
+    "brand": "Agip Eni",
+    "address": "S.S. 244 KM 1+747 1 39030",
+    "city": "SAN LORENZO DI SEBATO",
+    "lat": "46.77632",
+    "lon": "11.87779",
+    "prices": {
+      "Benzina (Servito)": 1.99,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.19,
+      "Gasolio (Self)": 2.19,
+      "GPL (Servito)": 0.899
+    }
+  },
+  {
+    "id": "35939",
+    "name": "Auto Alta Badia - Tamoil - San Martino in Badia",
+    "brand": "Tamoil",
+    "address": "Statale 244 della Val Badia, Km. 15, dir. Brunico - 39030",
+    "city": "SAN MARTINO IN BADIA",
+    "lat": "46.680068278505054",
+    "lon": "11.902342898147594",
+    "prices": {
+      "Benzina (Servito)": 2.319,
+      "Benzina (Self)": 2.319,
+      "Gasolio (Servito)": 2.459,
+      "Gasolio (Self)": 2.459,
+      "Benzina WR 100 (Servito)": 2.519,
+      "Benzina WR 100 (Self)": 2.519,
+      "Gasolio Gelo (Servito)": 2.459,
+      "Gasolio Gelo (Self)": 2.459
+    }
+  },
+  {
+    "id": "29122",
+    "name": "Kostner - Passeier",
+    "brand": "Kostner",
+    "address": "Jaufenstraße  10 39010",
+    "city": "SAN MARTINO IN PASSIRIA",
+    "lat": "46.78519847381902",
+    "lon": "11.229740145997994",
+    "prices": {
+      "Benzina (Servito)": 2.249,
+      "Benzina (Self)": 2.249,
+      "Gasolio (Servito)": 2.459,
+      "Gasolio (Self)": 2.459,
+      "Benzina speciale (Servito)": 2.389,
+      "Benzina speciale (Self)": 2.389,
+      "HVO eco diesel (Servito)": 2.519,
+      "HVO eco diesel (Self)": 2.519
+    }
+  },
+  {
+    "id": "15507",
+    "name": "Q8",
+    "brand": "Q8",
+    "address": "VIA PASSIRIA 16 39010",
+    "city": "SAN MARTINO IN PASSIRIA",
+    "lat": "46.744425635012",
+    "lon": "11.204984486103058",
+    "prices": {
+      "Benzina (Servito)": 2.199,
+      "Gasolio (Servito)": 2.419,
+      "HiQ Perform+ (Servito)": 2.469
+    }
+  },
+  {
+    "id": "35013",
+    "name": "FIRMIN - S. CRISTINA",
+    "brand": "Firmin",
+    "address": "242 di Val Gardena e Passo Sella, Km. 14+500,   - 39047",
+    "city": "SANTA CRISTINA VALGARDENA",
+    "lat": "46.56511692678294",
+    "lon": "11.693509116170048",
+    "prices": {
+      "Benzina (Servito)": 2.189,
+      "Benzina (Self)": 2.189,
+      "Gasolio (Servito)": 2.394,
+      "Gasolio (Self)": 2.394,
+      "GPL (Servito)": 0.897,
+      "Benzina speciale (Servito)": 2.569,
+      "Benzina speciale (Self)": 2.569,
+      "Gasolio speciale (Servito)": 2.459,
+      "Gasolio speciale (Self)": 2.459
+    }
+  },
+  {
+    "id": "48606",
+    "name": "49450",
+    "brand": "Api-Ip",
+    "address": "Strada Statale, Km. 508, Località Ponticino 37  39100",
+    "city": "SARENTINO",
+    "lat": "46.62215897403142",
+    "lon": "11.37338830307578",
+    "prices": {
+      "Benzina (Self)": 2.179,
+      "Gasolio (Self)": 2.44
+    }
+  },
+  {
+    "id": "59901",
+    "name": "ENI3109",
+    "brand": "Agip Eni",
+    "address": "Frazione Campolasta 67 39058",
+    "city": "SARENTINO",
+    "lat": "46.6658155",
+    "lon": "11.3661183",
+    "prices": {
+      "Benzina (Servito)": 2.189,
+      "Benzina (Self)": 2.189,
+      "Gasolio (Servito)": 2.455,
+      "Gasolio (Self)": 2.455,
+      "Blue Diesel (Servito)": 2.555,
+      "Blue Diesel (Self)": 2.555,
+      "Gasolio Alpino (Servito)": 1.714,
+      "Gasolio Alpino (Self)": 1.714,
+      "Blu Diesel Alpino (Servito)": 1.814,
+      "Blu Diesel Alpino (Self)": 1.814
+    }
+  },
+  {
+    "id": "40144",
+    "name": "GNP - SARENTINO RIO BIANCO",
+    "brand": "GNP",
+    "address": "LOCALITA' RIO BIANCO 24 39058, SARENTINO (BZ) 24 39058",
+    "city": "SARENTINO",
+    "lat": "46.77066910771632",
+    "lon": "11.36789783835411",
+    "prices": {
+      "Benzina (Self)": 2.187,
+      "Gasolio (Self)": 2.377
+    }
+  },
+  {
+    "id": "4400",
+    "name": "GNP SARENTINO",
+    "brand": "GNP",
+    "address": "VIA STETTO 81 39058, SARENTINO (BZ) 81 39058",
+    "city": "SARENTINO",
+    "lat": "46.635261621608485",
+    "lon": "11.358959376811981",
+    "prices": {
+      "Benzina (Self)": 2.197,
+      "Gasolio (Self)": 2.397,
+      "Benzina speciale (Self)": 2.347
+    }
+  },
+  {
+    "id": "5324",
+    "name": "Kostner - Schnals",
+    "brand": "Kostner",
+    "address": "Karthaus 60 39020",
+    "city": "SENALES",
+    "lat": "46.70971707461494",
+    "lon": "10.902877314596935",
+    "prices": {
+      "Benzina (Servito)": 2.249,
+      "Benzina (Self)": 2.249,
+      "Gasolio (Servito)": 2.459,
+      "Gasolio (Self)": 2.459
+    }
+  },
+  {
+    "id": "8817",
+    "name": "HAPPACHER LEO S.A.S.",
+    "brand": "Agip Eni",
+    "address": "VIA FERRARA 44 39030",
+    "city": "SESTO",
+    "lat": "46.71134662071792",
+    "lon": "12.326672471790289",
+    "prices": {
+      "Benzina (Servito)": 2.189,
+      "Gasolio (Servito)": 2.455,
+      "Blue Diesel (Servito)": 2.555
+    }
+  },
+  {
+    "id": "21435",
+    "name": "AGIP IM 3108",
+    "brand": "Agip Eni",
+    "address": "Statale 38 dello Stelvio, Km. 38, dir. resia - 39028",
+    "city": "SILANDRO",
+    "lat": "46.62562013414036",
+    "lon": "10.793766975402832",
+    "prices": {
+      "Benzina (Self)": 2.159,
+      "Gasolio (Self)": 2.409,
+      "Blue Super (Self)": 2.0,
+      "Blue Diesel (Self)": 2.509
+    }
+  },
+  {
+    "id": "35825",
+    "name": "Blasbichler",
+    "brand": "Pompe Bianche",
+    "address": "STRADA DEL SOLE 25 39030",
+    "city": "TERENTO",
+    "lat": "46.829808449203256",
+    "lon": "11.787906976559043",
+    "prices": {
+      "Benzina (Servito)": 2.249,
+      "Benzina (Self)": 2.249,
+      "Gasolio (Servito)": 2.459,
+      "Gasolio (Self)": 2.459,
+      "Diesel HVO (Servito)": 2.459,
+      "Diesel HVO (Self)": 2.459
+    }
+  },
+  {
+    "id": "24044",
+    "name": "ESSO",
+    "brand": "Esso",
+    "address": "Via principale n. 102 - -",
+    "city": "TERLANO",
+    "lat": "46.539416681670204",
+    "lon": "11.239912915344235",
+    "prices": {
+      "Benzina (Servito)": 2.219,
+      "Benzina (Self)": 2.219,
+      "Gasolio (Servito)": 2.46,
+      "Gasolio (Self)": 2.46,
+      "Gasolio Premium (Servito)": 2.64,
+      "Gasolio Premium (Self)": 2.64,
+      "Gasolio artico (Servito)": 2.64,
+      "Gasolio artico (Self)": 2.64
+    }
+  },
+  {
+    "id": "4960",
+    "name": "Mebo Stop & Go",
+    "brand": "Q8",
+    "address": "VIA NALLES 28 39018",
+    "city": "TERLANO",
+    "lat": "46.56239093753774",
+    "lon": "11.216000318527222",
+    "prices": {
+      "Benzina (Self)": 2.179,
+      "Gasolio (Self)": 2.439,
+      "GPL (Servito)": 0.759,
+      "Hi-Q Diesel (Self)": 2.689,
+      "Gasolio artico (Self)": 2.439
+    }
+  },
+  {
+    "id": "56586",
+    "name": "MeBo Sud",
+    "brand": "Q8",
+    "address": "VIA NALLES 30 39018",
+    "city": "TERLANO",
+    "lat": "46.563861844399305",
+    "lon": "11.21428370475769",
+    "prices": {
+      "Benzina (Self)": 2.199,
+      "Gasolio (Self)": 2.429,
+      "Hi-Q Diesel (Self)": 2.469,
+      "HiQ Perform+ (Self)": 2.379
+    }
+  },
+  {
+    "id": "30062",
+    "name": "Q8 Eisenstecken Termeno",
+    "brand": "Q8",
+    "address": "Strada del Vino 142 39040",
+    "city": "TERMENO SULLA STRADA DEL VINO",
+    "lat": "46.34469039723465",
+    "lon": "11.250060221426338",
+    "prices": {
+      "Benzina (Self)": 2.169,
+      "Gasolio (Self)": 2.439
+    }
+  },
+  {
+    "id": "4398",
+    "name": "GNP TESIMO",
+    "brand": "GNP",
+    "address": "VIA NARAUN 17 39010, TESIMO (BZ) 17 39010",
+    "city": "TESIMO",
+    "lat": "46.57515713915162",
+    "lon": "11.161733865737915",
+    "prices": {
+      "Benzina (Self)": 2.197,
+      "Gasolio (Self)": 2.427
+    }
+  },
+  {
+    "id": "30627",
+    "name": "TIRES - SP 65 S. CIPRIANO",
+    "brand": "Api-Ip",
+    "address": "SP 65 S. CIPRIANO KM. 13,500  39100",
+    "city": "TIRES",
+    "lat": "46.465085220033075",
+    "lon": "11.539708046627084",
+    "prices": {
+      "Benzina (Self)": 2.139,
+      "Gasolio (Self)": 2.359
+    }
+  },
+  {
+    "id": "19654",
+    "name": "SMP Tankstelle Rohrer",
+    "brand": "Som/Omv",
+    "address": "Via principale 37 39019",
+    "city": "TIROLO",
+    "lat": "46.687973767637146",
+    "lon": "11.156361332926508",
+    "prices": {
+      "Benzina (Servito)": 2.249,
+      "Benzina (Self)": 2.249,
+      "Gasolio (Servito)": 2.439,
+      "Gasolio (Self)": 2.439
+    }
+  },
+  {
+    "id": "26478",
+    "name": "Esso di Ebner Johann",
+    "brand": "Esso",
+    "address": "VIA VAL DI FIEMME 13 39040",
+    "city": "TRODENA NEL PARCO NATURALE",
+    "lat": "46.328799139680804",
+    "lon": "11.376895308494568",
+    "prices": {
+      "Benzina (Self)": 2.199,
+      "Gasolio (Self)": 2.459,
+      "Gasolio Premium (Self)": 2.519,
+      "Gasolio artico (Self)": 2.459
+    }
+  },
+  {
+    "id": "5322",
+    "name": "Kostner - Ulten",
+    "brand": "Kostner",
+    "address": "St. Walburg 172 39016",
+    "city": "ULTIMO",
+    "lat": "46.54743755151406",
+    "lon": "11.001175992893536",
+    "prices": {
+      "Benzina (Servito)": 2.249,
+      "Benzina (Self)": 2.249,
+      "Gasolio (Servito)": 2.459,
+      "Gasolio (Self)": 2.459
+    }
+  },
+  {
+    "id": "41081",
+    "name": "LAIMBURG EST",
+    "brand": "Tamoil",
+    "address": "A22 BRENNERO-MODENA, Km. 220, NORD - 39051",
+    "city": "VADENA",
+    "lat": "46.386690810618845",
+    "lon": "11.294111609458923",
+    "prices": {
+      "Benzina (Servito)": 2.659,
+      "Benzina (Self)": 2.244,
+      "Gasolio (Servito)": 2.859,
+      "Gasolio (Self)": 2.458,
+      "Benzina WR 100 (Servito)": 2.809,
+      "Benzina WR 100 (Self)": 2.394
+    }
+  },
+  {
+    "id": "56474",
+    "name": "LAIMBURG OVEST",
+    "brand": "Esso",
+    "address": "Autostrada A22 BRENNERO-MODENA, dir. SUD",
+    "city": "VADENA",
+    "lat": "46.35954229044735",
+    "lon": "11.288291215896606",
+    "prices": {
+      "Benzina (Servito)": 2.739,
+      "Benzina (Self)": 2.339,
+      "Gasolio (Servito)": 2.799,
+      "Gasolio (Self)": 2.449,
+      "Supreme Diesel (Servito)": 2.899,
+      "Supreme Diesel (Self)": 2.649
+    }
+  },
+  {
+    "id": "61658",
+    "name": "IP TANKSTELLE KOFLER",
+    "brand": "Api-Ip",
+    "address": "VIA BRENNERO 22 39049",
+    "city": "VAL DI VIZZE",
+    "lat": "46.898945348609544",
+    "lon": "11.43486534303895",
+    "prices": {
+      "Benzina (Self)": 2.279,
+      "Gasolio (Self)": 2.459
+    }
+  },
+  {
+    "id": "36546",
+    "name": "Q8 Valdaora",
+    "brand": "Q8",
+    "address": "VIA STAZIONE 7 39030",
+    "city": "VALDAORA",
+    "lat": "46.76318865556949",
+    "lon": "12.031981945037842",
+    "prices": {
+      "Benzina (Servito)": 2.199,
+      "Benzina (Self)": 2.199,
+      "Gasolio (Servito)": 2.429,
+      "Gasolio (Self)": 2.429,
+      "Gasolio artico (Servito)": 2.429,
+      "Gasolio artico (Self)": 2.429
+    }
+  },
+  {
+    "id": "8167",
+    "name": "A-Service Lutago",
+    "brand": "Agip Eni",
+    "address": "Statale 621 della Valle Aurina, Km. 1, dir. Distributore - 39030",
+    "city": "VALLE AURINA",
+    "lat": "46.94694443197587",
+    "lon": "11.922783851623535",
+    "prices": {
+      "Benzina (Servito)": 2.379,
+      "Benzina (Self)": 2.159,
+      "Gasolio (Servito)": 2.63,
+      "Gasolio (Self)": 2.41,
+      "Blue Super (Servito)": 2.529,
+      "Blue Super (Self)": 2.309,
+      "Blue Diesel (Servito)": 2.73,
+      "Blue Diesel (Self)": 2.51,
+      "Gasolio Alpino (Self)": 1.719
+    }
+  },
+  {
+    "id": "47626",
+    "name": "Distributore Q8 Vandoies",
+    "brand": "Q8",
+    "address": "49 della Pusteria, Km. 13,60, Brunico - 39030",
+    "city": "VANDOIES",
+    "lat": "46.814124834691384",
+    "lon": "11.72189254756131",
+    "prices": {
+      "Benzina (Self)": 2.229,
+      "Gasolio (Self)": 2.479,
+      "Metano (Servito)": 1.999,
+      "GPL (Servito)": 0.949,
+      "V-Power (Self)": 2.419
+    }
+  },
+  {
+    "id": "5319",
+    "name": "Kostner - Vahrn",
+    "brand": "Kostner",
+    "address": "Forchstraße 2 39040",
+    "city": "VARNA",
+    "lat": "46.75956236516725",
+    "lon": "11.637813023548688",
+    "prices": {
+      "Benzina (Servito)": 2.249,
+      "Benzina (Self)": 2.249,
+      "Gasolio (Servito)": 2.459,
+      "Gasolio (Self)": 2.459,
+      "Benzina speciale (Servito)": 2.389,
+      "Benzina speciale (Self)": 2.389,
+      "HVO eco diesel (Servito)": 2.519,
+      "HVO eco diesel (Self)": 2.519
+    }
+  },
+  {
+    "id": "46748",
+    "name": "PLOSE EST",
+    "brand": "Pompe Bianche",
+    "address": "A22 BRENNERO-MODENA, Km. 271,00, NORD - 39040",
+    "city": "VARNA",
+    "lat": "46.73229771185635",
+    "lon": "11.641673093747613",
+    "prices": {
+      "Benzina (Servito)": 2.659,
+      "Benzina (Self)": 2.244,
+      "Gasolio (Servito)": 2.859,
+      "Gasolio (Self)": 2.399,
+      "Gasolio speciale (Servito)": 2.959,
+      "Gasolio speciale (Self)": 2.549
+    }
+  },
+  {
+    "id": "46791",
+    "name": "PLOSE OVEST",
+    "brand": "Tamoil",
+    "address": "A22 BRENNERO-MODENA, Km. 42, Sud - 39040",
+    "city": "VARNA",
+    "lat": "46.729677760983805",
+    "lon": "11.642483584390106",
+    "prices": {
+      "Benzina (Servito)": 2.278,
+      "Benzina (Self)": 2.278,
+      "Gasolio (Servito)": 2.448,
+      "Gasolio (Self)": 2.448,
+      "Gasolio Ecoplus (Servito)": 2.497,
+      "Gasolio Ecoplus (Self)": 2.448
+    }
+  },
+  {
+    "id": "50885",
+    "name": "Q8 STATION SAS",
+    "brand": "Q8",
+    "address": "VIA BRENNERO 28 39040",
+    "city": "VARNA",
+    "lat": "46.73310546073396",
+    "lon": "11.64954226714898",
+    "prices": {
+      "Benzina (Self)": 2.239,
+      "Gasolio (Self)": 2.449,
+      "Hi-Q Diesel (Self)": 2.699
+    }
+  },
+  {
+    "id": "4401",
+    "name": "GNP VELTURNO",
+    "brand": "GNP",
+    "address": "VIA PAESE 2 39040, VELTURNO (BZ) 2 39040",
+    "city": "VELTURNO",
+    "lat": "46.670913723147144",
+    "lon": "11.601199717041368",
+    "prices": {
+      "Benzina (Self)": 2.197,
+      "Gasolio (Self)": 2.397
+    }
+  },
+  {
+    "id": "57851",
+    "name": "03176 VIPITENO",
+    "brand": "Agip Eni",
+    "address": "Via Brennero 4  39100",
+    "city": "VIPITENO",
+    "lat": "46.88873",
+    "lon": "11.441102",
+    "prices": {
+      "Benzina (Servito)": 2.379,
+      "Benzina (Self)": 2.159,
+      "Gasolio (Servito)": 2.63,
+      "Gasolio (Self)": 2.41,
+      "Blue Diesel (Self)": 2.51,
+      "HVOlution (Self)": 2.41
+    }
+  },
+  {
+    "id": "56880",
+    "name": "6898",
+    "brand": "Tamoil",
+    "address": "Via Brennero 4  39049",
+    "city": "VIPITENO",
+    "lat": "46.889618",
+    "lon": "11.430629",
+    "prices": {
+      "Benzina (Servito)": 2.159,
+      "Benzina (Self)": 2.159,
+      "Gasolio (Servito)": 2.399,
+      "Gasolio (Self)": 2.399,
+      "GPL (Servito)": 0.799,
+      "Benzina WR 100 (Servito)": 2.309,
+      "Benzina WR 100 (Self)": 2.309
+    }
+  },
+  {
+    "id": "32819",
+    "name": "Kostner - Sterzing",
+    "brand": "Kostner",
+    "address": "Brennerstraße  8 39049",
+    "city": "VIPITENO",
+    "lat": "46.89392080584685",
+    "lon": "11.435986284655769",
+    "prices": {
+      "Benzina (Servito)": 2.249,
+      "Benzina (Self)": 2.249,
+      "Gasolio (Servito)": 2.459,
+      "Gasolio (Self)": 2.459,
+      "Benzina speciale (Servito)": 2.389,
+      "Benzina speciale (Self)": 2.389
+    }
+  }
+]
