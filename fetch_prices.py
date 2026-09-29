@@ -3,7 +3,6 @@ import json
 import io
 import urllib.request
 
-# Offizielle MIMIT Open Data CSV-URLs
 URL_ANAGRAFICA = "https://www.mimit.gov.it/images/exportCSV/anagrafica_impianti_attivi.csv"
 URL_PREZZI = "https://www.mimit.gov.it/images/exportCSV/prezzo_alle_8.csv"
 
@@ -11,59 +10,73 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 }
 
-def download_csv(url):
+def get_csv_dict_reader(url):
     req = urllib.request.Request(url, headers=HEADERS)
     with urllib.request.urlopen(req, timeout=60) as response:
         content = response.read().decode('utf-8', errors='ignore')
-    return list(csv.reader(io.StringIO(content), delimiter=';'))
+    
+    # Eventuelle Leerzeilen oder Einleitungszeilen überspringen, bis der echte Header kommt
+    lines = content.splitlines()
+    header_index = 0
+    for idx, line in enumerate(lines[:10]):
+        if "idImpianto" in line:
+            header_index = idx
+            break
+            
+    clean_csv_content = "\n".join(lines[header_index:])
+    return list(csv.DictReader(io.StringIO(clean_csv_content), delimiter=';'))
 
 def process_data():
     print("1. Lade Tankstellen-Stammdaten herunter...")
-    anagrafica_rows = download_csv(URL_ANAGRAFICA)
+    anagrafica_rows = get_csv_dict_reader(URL_ANAGRAFICA)
     
     bz_stations = {}
     for row in anagrafica_rows:
-        # idImpianto;Gestore;Bandiera;Tipo Impianto;Nome Impianto;Indirizzo;Comune;Provincia;Latitudine;Longitudine
-        if len(row) >= 8 and row[7].strip().upper() == "BZ":
-            station_id = row[0].strip()
-            bz_stations[station_id] = {
-                "id": station_id,
-                "name": row[4].strip() or row[2].strip(),
-                "brand": row[2].strip(),
-                "address": row[5].strip(),
-                "city": row[6].strip(),
-                "lat": row[8].strip() if len(row) > 8 else "",
-                "lon": row[9].strip() if len(row) > 9 else "",
-                "prices": {}
-            }
+        # Sicherer Zugriff auf Spaltennamen (ignoriert Groß/Kleinschreibung und Leerzeichen)
+        clean_row = {k.strip(): v.strip() for k, v in row.items() if k}
+        
+        provincia = clean_row.get("Provincia", "").upper()
+        if provincia == "BZ":
+            station_id = clean_row.get("idImpianto")
+            if station_id:
+                bz_stations[station_id] = {
+                    "id": station_id,
+                    "name": clean_row.get("Nome Impianto") or clean_row.get("Bandiera") or "Tankstelle",
+                    "brand": clean_row.get("Bandiera") or "Freie Tankstelle",
+                    "address": clean_row.get("Indirizzo", ""),
+                    "city": clean_row.get("Comune", ""),
+                    "lat": clean_row.get("Latitudine", ""),
+                    "lon": clean_row.get("Longitudine", ""),
+                    "prices": {}
+                }
             
-    print(f"{len(bz_stations)} Tankstellen in Südtirol (BZ) erfasst.")
+    print(f"{len(bz_stations)} Tankstellen in Südtirol (BZ) gefunden.")
 
     print("2. Lade Preisdaten herunter...")
-    prezzi_rows = download_csv(URL_PREZZI)
+    prezzi_rows = get_csv_dict_reader(URL_PREZZI)
     
     for row in prezzi_rows:
-        # idImpianto;descCarburante;prezzo;isSelf;dtComu
-        if len(row) >= 4:
-            station_id = row[0].strip()
-            if station_id in bz_stations:
-                fuel_type = row[1].strip()
-                try:
-                    price = float(row[2].strip().replace(",", "."))
-                except ValueError:
-                    continue
-                is_self = row[3].strip() == "1"
-                
-                fuel_key = f"{fuel_type} ({'Self' if is_self else 'Servito'})"
-                bz_stations[station_id]["prices"][fuel_key] = price
-
-    # Nur Tankstellen behalten, die auch gültige Preise gemeldet haben
-    active_stations = [s for s in bz_stations.values() if len(s["prices"]) > 0]
-
-    with open("spritpreise_bz.json", "w", encoding="utf-8") as f:
-        json.dump(active_stations, f, ensure_ascii=False, indent=2)
+        clean_row = {k.strip(): v.strip() for k, v in row.items() if k}
+        station_id = clean_row.get("idImpianto")
         
-    print(f"Fertig! {len(active_stations)} aktive Tankstellen mit Preisen gespeichert.")
+        if station_id and station_id in bz_stations:
+            fuel_desc = clean_row.get("descCarburante", "").strip()
+            price_str = clean_row.get("prezzo", "").replace(",", ".").strip()
+            is_self = clean_row.get("isSelf", "0").strip() == "1"
+            
+            try:
+                price = float(price_str)
+                mode_str = "Self" if is_self else "Servito"
+                fuel_key = f"{fuel_desc} ({mode_str})"
+                bz_stations[station_id]["prices"][fuel_key] = price
+            except ValueError:
+                continue
+
+    output_list = list(bz_stations.values())
+    with open("spritpreise_bz.json", "w", encoding="utf-8") as f:
+        json.dump(output_list, f, ensure_ascii=False, indent=2)
+        
+    print(f"Erfolgreich gespeichert! Gesamt: {len(output_list)} Tankstellen.")
 
 if __name__ == "__main__":
     process_data()
