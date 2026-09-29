@@ -21,7 +21,7 @@ def get_csv_lines(url):
     return [line.strip() for line in content.splitlines() if line.strip()]
 
 def main():
-    print("1. Lade Tankstellen-Stammdaten...")
+    print("1. Lade Stammdaten...")
     anagrafica_lines = get_csv_lines(URL_ANAGRAFICA)
     
     start_idx = 0
@@ -51,9 +51,9 @@ def main():
                     "prices": {}
                 }
 
-    print(f"Gefundene Stationen in Südtirol: {len(bz_stations)}")
+    print(f"Gefundene Stationen in BZ: {len(bz_stations)}")
 
-    print("2. Lade aktuelle Preise...")
+    print("2. Lade Preise...")
     prezzi_lines = get_csv_lines(URL_PREZZI)
     
     start_idx_p = 0
@@ -72,34 +72,28 @@ def main():
         if s_id in bz_stations:
             fuel = clean.get("descCarburante", "").strip()
             price_str = clean.get("prezzo", "").replace(",", ".").strip()
+            is_self_val = str(clean.get("isSelf", "0")).strip()
             
-            # Robuste Self/Servito Erkennung: '1', 'true', 's' bedeutet Self-Service
-            is_self_val = str(clean.get("isSelf", "0")).strip().lower()
-            is_self = is_self_val in ["1", "true", "s", "si", "self"]
+            # isSelf: 1 = Self, 0 = Servito
+            mode_key = "Self" if is_self_val == "1" else "Servito"
 
             try:
                 price_val = float(price_str)
-                # Unplausible Ausreißer oder Testpreise unter 1.00 € ignorieren
-                if price_val < 1.0:
+                if price_val < 0.9:
                     continue
 
-                mode_key = "Self" if is_self else "Servito"
                 full_key = f"{fuel} ({mode_key})"
 
-                # Falls mehrere Preise für dieselbe Sorte gemeldet sind (z.B. Normal vs Additiv),
-                # speichern wir für Self-Service immer den GÜNSTIGEREN Preis!
-                if full_key not in bz_stations[s_id]["prices"]:
-                    bz_stations[s_id]["prices"][full_key] = price_val
+                # Wenn für denselben Modus schon ein Preis existiert, behalte immer den GÜNSTIGEREN (Normalbenzin statt Spezialadditiv)
+                if full_key in bz_stations[s_id]["prices"]:
+                    bz_stations[s_id]["prices"][full_key] = min(bz_stations[s_id]["prices"][full_key], price_val)
                 else:
-                    if is_self:
-                        bz_stations[s_id]["prices"][full_key] = min(bz_stations[s_id]["prices"][full_key], price_val)
-                    else:
-                        bz_stations[s_id]["prices"][full_key] = price_val
+                    bz_stations[s_id]["prices"][full_key] = price_val
             except ValueError:
                 continue
 
     output = [s for s in bz_stations.values() if len(s["prices"]) > 0]
-    print(f"Ergebnis: {len(output)} Stationen mit gültigen Preisen.")
+    print(f"Ergebnis: {len(output)} Tankstellen gespeichert.")
 
     with open("spritpreise_bz.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
