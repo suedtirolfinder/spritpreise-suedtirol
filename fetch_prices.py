@@ -21,7 +21,7 @@ def get_lines(url):
     return [line.strip() for line in content.splitlines() if line.strip()]
 
 def main():
-    print("1. Lade Tankstellen-Stammdaten...")
+    print("1. Lade Stammdaten...")
     lines_ana = get_lines(URL_ANAGRAFICA)
     
     header_idx = 0
@@ -51,9 +51,9 @@ def main():
                     "prices": {}
                 }
 
-    print(f"Gefundene Stationen in Südtirol: {len(bz_stations)}")
+    print(f"Stationen BZ: {len(bz_stations)}")
 
-    print("2. Lade aktuelle Preise...")
+    print("2. Lade Preise...")
     lines_prez = get_lines(URL_PREZZI)
     
     p_header_idx = 0
@@ -66,47 +66,47 @@ def main():
 
     p_reader = csv.DictReader(lines_prez[p_header_idx:], delimiter=p_delimiter)
     
-    # Teure Premium-Treibstoffe ausschließen
-    EXCLUDE_KEYWORDS = ["special", "100", "plus", "optima", "v-power", "additiv", "hi-q", "supreme", "excellium"]
+    # Unerwünschte Additive / Luxussorten ignorieren
+    PREMIUM_BLACKLIST = ["100", "plus", "optima", "v-power", "racing", "additiv", "supreme", "excellium", "special"]
 
     for row in p_reader:
         c = {k.strip(): (v.strip() if v else "") for k, v in row.items() if k}
         sid = c.get("idImpianto")
         if sid in bz_stations:
-            fuel_raw = c.get("descCarburante", "").strip()
-            fuel_lower = fuel_raw.lower()
+            fuel_desc = c.get("descCarburante", "").lower().strip()
             price_raw = c.get("prezzo", "").replace(",", ".").strip()
-            is_self = str(c.get("isSelf", "0")).strip() == "1"
-            mode = "Self" if is_self else "Servito"
+            is_self_flag = str(c.get("isSelf", "0")).strip()
+            mode = "Self" if is_self_flag in ["1", "true", "True"] else "Servito"
 
-            # Ausschluss von Spezialkraftstoffen (z. B. 100 Oktan)
-            if any(k in fuel_lower for k in EXCLUDE_KEYWORDS):
+            # Teure Spezialsorten überspringen
+            if any(term in fuel_desc for term in PREMIUM_BLACKLIST):
                 continue
 
-            # Standard-Kategorisierung
+            # Standard zuweisen
             fuel_type = None
-            if "gasolio" in fuel_lower or "diesel" in fuel_lower:
+            if "diesel" in fuel_desc or "gasolio" in fuel_desc:
                 fuel_type = "Gasolio"
-            elif "benzina" in fuel_lower or "super" in fuel_lower:
+            elif "benzina" in fuel_desc:
                 fuel_type = "Benzina"
 
             if not fuel_type:
                 continue
 
             try:
-                pval = float(price_raw)
-                if pval > 0.5:
+                price_val = float(price_raw)
+                # Gültiger Preisbereich (alles unter 0.50 € oder über 2.60 € ignorieren)
+                if 0.50 < price_val < 2.60:
                     key = f"{fuel_type} ({mode})"
-                    # Falls mehrere Preise vorhanden sind, den günstigsten Standardpreis nehmen
                     if key in bz_stations[sid]["prices"]:
-                        bz_stations[sid]["prices"][key] = min(bz_stations[sid]["prices"][key], pval)
+                        bz_stations[sid]["prices"][key] = min(bz_stations[sid]["prices"][key], price_val)
                     else:
-                        bz_stations[sid]["prices"][key] = pval
+                        bz_stations[sid]["prices"][key] = price_val
             except ValueError:
                 pass
 
+    # Nur Stationen behalten, die mindestens einen Preis haben
     final_list = [s for s in bz_stations.values() if len(s["prices"]) > 0]
-    print(f"Gültige Tankstellen mit Preisen: {len(final_list)}")
+    print(f"Fertige Stationen: {len(final_list)}")
 
     with open("spritpreise_bz.json", "w", encoding="utf-8") as f:
         json.dump(final_list, f, ensure_ascii=False, indent=2)
