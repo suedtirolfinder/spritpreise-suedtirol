@@ -1,4 +1,3 @@
-import csv
 import json
 import urllib.request
 import ssl
@@ -14,99 +13,128 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 }
 
-def get_lines(url):
+def get_text(url):
     req = urllib.request.Request(url, headers=HEADERS)
     with urllib.request.urlopen(req, timeout=180, context=ctx) as resp:
-        content = resp.read().decode('utf-8', errors='ignore')
-    return [line.strip() for line in content.splitlines() if line.strip()]
+        return resp.read().decode('utf-8', errors='ignore')
 
 def main():
-    print("Lade Stammdaten...")
-    lines_ana = get_lines(URL_ANAGRAFICA)
-    
-    header_idx = 0
-    delimiter = ';'
-    for i, line in enumerate(lines_ana[:10]):
-        if "idImpianto" in line:
-            header_idx = i
-            delimiter = ';' if ';' in line else '|'
-            break
-
-    reader = csv.DictReader(lines_ana[header_idx:], delimiter=delimiter)
+    print("1. Lade Tankstellen...")
+    raw_ana = get_text(URL_ANAGRAFICA)
     bz_stations = {}
-    
-    for row in reader:
-        c = {k.strip(): (v.strip() if v else "") for k, v in row.items() if k}
-        if c.get("Provincia", "").upper() == "BZ":
-            sid = c.get("idImpianto")
-            if sid:
-                bz_stations[sid] = {
-                    "id": sid,
-                    "name": c.get("Nome Impianto") or c.get("Bandiera") or "Tankstelle",
-                    "brand": c.get("Bandiera") or "Freie Tankstelle",
-                    "address": c.get("Indirizzo", ""),
-                    "city": c.get("Comune", ""),
-                    "lat": c.get("Latitudine", "").replace(",", "."),
-                    "lon": c.get("Longitudine", "").replace(",", "."),
-                    "prices": {}
-                }
 
-    print("Lade Preise...")
-    lines_prez = get_lines(URL_PREZZI)
-    
-    p_header_idx = 0
-    p_delimiter = ';'
-    for i, line in enumerate(lines_prez[:10]):
-        if "idImpianto" in line:
-            p_header_idx = i
-            p_delimiter = ';' if ';' in line else '|'
-            break
+    for line in raw_ana.splitlines():
+        line = line.strip()
+        if not line or "idImpianto" in line:
+            continue
+        
+        # Trennzeichen bestimmen (entweder | oder ;)
+        parts = line.split('|') if '|' in line else line.split(';')
+        if len(parts) < 9:
+            continue
 
-    p_reader = csv.DictReader(lines_prez[p_header_idx:], delimiter=p_delimiter)
-    
-    EXCLUDE = ["100", "plus", "optima", "v-power", "racing", "additiv", "supreme", "excellium", "special", "hi-q"]
+        # Format: idImpianto|Gestore|Bandiera|Tipo Impianto|Nome Impianto|Indirizzo|Comune|Provincia|Latitudine|Longitudine
+        sid = parts[0].strip()
+        prov = parts[7].strip().upper()
 
-    for row in p_reader:
-        c = {k.strip(): (v.strip() if v else "") for k, v in row.items() if k}
-        sid = c.get("idImpianto")
+        if prov == "BZ" and sid:
+            bandiera = parts[2].strip() or "Freie Tankstelle"
+            nome = parts[4].strip() or bandiera
+            indirizzo = parts[5].strip()
+            comune = parts[6].strip()
+            lat = parts[8].strip().replace(",", ".")
+            lon = parts[9].strip().replace(",", ".") if len(parts) > 9 else ""
+
+            bz_stations[sid] = {
+                "id": sid,
+                "name": nome,
+                "brand": bandiera,
+                "address": indirizzo,
+                "city": comune,
+                "lat": lat,
+                "lon": lon,
+                "prices_diesel": [],
+                "prices_benzin": []
+            }
+
+    print(f"Stationen in Südtirol: {len(bz_stations)}")
+
+    print("2. Lade Preise...")
+    raw_prez = get_text(URL_PREZZI)
+
+    # Blacklist für Additive & 100 Oktan
+    BLACKLIST = ["100", "plus", "optima", "v-power", "racing", "additiv", "supreme", "excellium", "special", "hi-q"]
+
+    for line in raw_prez.splitlines():
+        line = line.strip()
+        if not line or "idImpianto" in line:
+            continue
+
+        parts = line.split('|') if '|' in line else line.split(';')
+        if len(parts) < 3:
+            continue
+
+        # Format: idImpianto|descCarburante|prezzo|isSelf|dtComu
+        sid = parts[0].strip()
         if sid in bz_stations:
-            fuel_raw = c.get("descCarburante", "").lower()
-            price_str = c.get("prezzo", "").replace(",", ".").strip()
-            is_self = str(c.get("isSelf", "0")).strip() in ["1", "true", "True"]
+            fuel = parts[1].strip().lower()
+            price_str = parts[2].strip().replace(",", ".")
 
-            # Luxussorten ignorieren
-            if any(x in fuel_raw for x in EXCLUDE):
+            if any(b in fuel for b in BLACKLIST):
                 continue
 
             try:
-                price = float(price_str)
+                pval = float(price_str)
             except ValueError:
                 continue
 
-            if not (0.80 < price < 2.70):
+            # Realistische Preisgrenzen (1.20 € bis 2.60 €)
+            if not (1.20 <= pval <= 2.60):
                 continue
 
-            # Kategorie bestimmen
-            cat = None
-            if "diesel" in fuel_raw or "gasolio" in fuel_raw:
-                cat = "Gasolio"
-            elif "benzina" in fuel_raw or "senza piombo" in fuel_raw:
-                cat = "Benzina"
+            if "diesel" in fuel or "gasolio" in fuel:
+                bz_stations[sid]["prices_diesel"].append(pval)
+            elif "benzina" in fuel or "senza piombo" in fuel:
+                bz_stations[sid]["prices_benzin"].append(pval)
 
-            if cat:
-                mode = "Self" if is_self else "Servito"
-                key = f"{cat} ({mode})"
-                
-                # Immer den billigsten Preis für diese Kategorie behalten
-                if key in bz_stations[sid]["prices"]:
-                    bz_stations[sid]["prices"][key] = min(bz_stations[sid]["prices"][key], price)
-                else:
-                    bz_stations[sid]["prices"][key] = price
+    final_list = []
+    for sid, s in bz_stations.items():
+        prices = {}
 
-    # Speichern
-    result = [s for s in bz_stations.values() if len(s["prices"]) > 0]
+        # DIESEL: Niedrigster gemeldeter Preis = Self, höchster = Servito
+        if s["prices_diesel"]:
+            d_sorted = sorted(s["prices_diesel"])
+            prices["Gasolio (Self)"] = d_sorted[0]
+            if len(d_sorted) > 1 and d_sorted[-1] > d_sorted[0]:
+                prices["Gasolio (Servito)"] = d_sorted[-1]
+            else:
+                prices["Gasolio (Servito)"] = d_sorted[0]
+
+        # BENZIN: Niedrigster gemeldeter Preis = Self, höchster = Servito
+        if s["prices_benzin"]:
+            b_sorted = sorted(s["prices_benzin"])
+            prices["Benzina (Self)"] = b_sorted[0]
+            if len(b_sorted) > 1 and b_sorted[-1] > b_sorted[0]:
+                prices["Benzina (Servito)"] = b_sorted[-1]
+            else:
+                prices["Benzina (Servito)"] = b_sorted[0]
+
+        if prices:
+            final_list.append({
+                "id": s["id"],
+                "name": s["name"],
+                "brand": s["brand"],
+                "address": s["address"],
+                "city": s["city"],
+                "lat": s["lat"],
+                "lon": s["lon"],
+                "prices": prices
+            })
+
+    print(f"Fertige Stationen mit Preisen: {len(final_list)}")
+
     with open("spritpreise_bz.json", "w", encoding="utf-8") as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
+        json.dump(final_list, f, ensure_ascii=False, indent=2)
 
 if __name__ == "__main__":
     main()
