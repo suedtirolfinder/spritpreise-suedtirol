@@ -36,9 +36,10 @@
     "lat": "46.4566",
     "lon": "11.26901",
     "prices": {
-      "Benzina (Servito)": 2.379,
-      "Benzina (Self)": 2.159,
-      "Gasolio (Self)": 2.41
+      "Benzina (Servito)": 2.2,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.4,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -108,10 +109,10 @@
     "lat": "46.5879",
     "lon": "11.90316",
     "prices": {
-      "Benzina (Servito)": 2.179,
-      "Benzina (Self)": 2.179,
-      "Gasolio (Servito)": 2.384,
-      "Gasolio (Self)": 2.384
+      "Benzina (Servito)": 1.99,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.19,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -137,9 +138,10 @@
     "lat": "46.48756",
     "lon": "11.34316",
     "prices": {
-      "Benzina (Servito)": 2.379,
-      "Benzina (Self)": 2.159,
-      "Gasolio (Self)": 2.41
+      "Benzina (Servito)": 2.2,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.4,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -169,19 +171,6 @@
     }
   },
   {
-    "id": "8686",
-    "name": "ENI",
-    "brand": "Agip Eni",
-    "address": "Via Merano 90 39100",
-    "city": "BOLZANO",
-    "lat": "46.503859071801095",
-    "lon": "11.296142041683197",
-    "prices": {
-      "Benzina (Self)": 2.229,
-      "Gasolio (Self)": 2.439
-    }
-  },
-  {
     "id": "34578",
     "name": "eni",
     "brand": "Agip Eni",
@@ -190,9 +179,23 @@
     "lat": "46.477396693284966",
     "lon": "11.338259428739548",
     "prices": {
-      "Benzina (Servito)": 2.379,
-      "Benzina (Self)": 2.159,
-      "Gasolio (Self)": 2.41
+      "Benzina (Servito)": 2.2,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.4,
+      "Gasolio (Self)": 2.19
+    }
+  },
+  {
+    "id": "8686",
+    "name": "ENI",
+    "brand": "Agip Eni",
+    "address": "Via Merano 90 39100",
+    "city": "BOLZANO",
+    "lat": "46.503859071801095",
+    "lon": "11.296142041683197",
+    "prices": {
+      "Benzina (Self)": 1.99,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -217,9 +220,10 @@
     "lat": "46.50296514419775",
     "lon": "11.327220797538757",
     "prices": {
-      "Benzina (Servito)": 2.379,
-      "Benzina (Self)": 2.159,
-      "Gasolio (Self)": 2.41
+      "Benzina (Servito)": 2.21,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.41,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -231,9 +235,10 @@
     "lat": "46.48984439192596",
     "lon": "11.316667646169662",
     "prices": {
-      "Benzina (Servito)": 2.379,
-      "Benzina (Self)": 2.159,
-      "Gasolio (Self)": 2.41
+      "Benzina (Servito)": 2.2,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.4,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -246,7 +251,7 @@
     "lon": "11.340146602437699",
     "prices": {
       "Benzina (Self)": 2.167,
-      "Gasolio (Self)": 2.347
+      "Gasolio (Self)": 2.377
     }
   },
   {
@@ -259,7 +264,7 @@
     "lon": "11.347757981614677",
     "prices": {
       "Benzina (Self)": 2.167,
-      "Gasolio (Self)": 2.347
+      "Gasolio (Self)": 2.377
     }
   },
   {
@@ -287,8 +292,8 @@
     "prices": {
       "Benzina (Servito)": 2.249,
       "Benzina (Self)": 2.249,
-      "Gasolio (Servito)": 2.469,
-      "Gasolio (Self)": 2.469
+      "Gasolio (Servito)": 2.519,
+      "Gasolio (Self)": 2.519
     }
   },
   {
@@ -301,9 +306,9 @@
     "lon": "11.3470886",
     "prices": {
       "Benzina (Servito)": 2.349,
-      "Benzina (Self)": 2.149,
+      "Benzina (Self)": 1.99,
       "Gasolio (Servito)": 2.459,
-      "Gasolio (Self)": 2.339
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -358,8 +363,8 @@
     "lat": "46.491688",
     "lon": "11.368114",
     "prices": {
-      "Benzina (Self)": 2.239,
-      "Gasolio (Self)": 2.439
+      "Benzina (Self)": 2.219,
+      "Gasolio (Self)": 2.449
     }
   },
   {
@@ -385,7 +390,7 @@
     "lon": "11.337214708328247",
     "prices": {
       "Benzina (Self)": 2.199,
-      "Gasolio (Self)": 2.44
+      "Gasolio (Self)": 2.429
     }
   },
   {
@@ -397,9 +402,10 @@
     "lat": "46.488757100961166",
     "lon": "11.299329578941979",
     "prices": {
-      "Benzina (Servito)": 2.379,
-      "Benzina (Self)": 2.159,
-      "Gasolio (Self)": 2.41
+      "Benzina (Servito)": 2.2,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.4,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -439,10 +445,10 @@
     "lat": "46.720299139720424",
     "lon": "11.655217409133911",
     "prices": {
-      "Benzina (Servito)": 2.189,
-      "Benzina (Self)": 2.189,
-      "Gasolio (Servito)": 2.455,
-      "Gasolio (Self)": 2.455
+      "Benzina (Servito)": 1.99,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.19,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -454,10 +460,10 @@
     "lat": "46.687079",
     "lon": "11.631142",
     "prices": {
-      "Benzina (Servito)": 2.189,
-      "Benzina (Self)": 2.189,
-      "Gasolio (Servito)": 2.455,
-      "Gasolio (Self)": 2.455
+      "Benzina (Servito)": 1.99,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.19,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -496,9 +502,9 @@
     "lat": "46.709992517136044",
     "lon": "11.661811475393733",
     "prices": {
-      "Benzina (Servito)": 2.189,
-      "Benzina (Self)": 2.189,
-      "Gasolio (Servito)": 2.455,
+      "Benzina (Servito)": 1.99,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.19,
       "Gasolio (Self)": 1.759
     }
   },
@@ -524,8 +530,8 @@
     "lat": "46.79797994470147",
     "lon": "11.92449166137692",
     "prices": {
-      "Benzina (Self)": 2.259,
-      "Gasolio (Self)": 2.479
+      "Benzina (Self)": 1.99,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -537,10 +543,10 @@
     "lat": "46.79325",
     "lon": "11.93093",
     "prices": {
-      "Benzina (Servito)": 2.189,
-      "Benzina (Self)": 2.189,
-      "Gasolio (Servito)": 2.455,
-      "Gasolio (Self)": 2.455
+      "Benzina (Servito)": 1.99,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.19,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -567,10 +573,10 @@
     "lat": "46.79075330560733",
     "lon": "11.927236318588257",
     "prices": {
-      "Benzina (Servito)": 2.189,
-      "Benzina (Self)": 2.189,
-      "Gasolio (Servito)": 2.455,
-      "Gasolio (Self)": 2.455
+      "Benzina (Servito)": 1.99,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.19,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -595,8 +601,8 @@
     "lat": "46.41616987536346",
     "lon": "11.249281167984009",
     "prices": {
-      "Benzina (Self)": 2.189,
-      "Gasolio (Self)": 2.389
+      "Benzina (Self)": 2.159,
+      "Gasolio (Self)": 2.399
     }
   },
   {
@@ -661,9 +667,10 @@
     "lat": "46.898403",
     "lon": "11.942931",
     "prices": {
-      "Benzina (Servito)": 2.379,
-      "Benzina (Self)": 2.159,
-      "Gasolio (Self)": 2.41
+      "Benzina (Servito)": 2.2,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.4,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -704,8 +711,8 @@
     "prices": {
       "Benzina (Servito)": 2.187,
       "Benzina (Self)": 2.187,
-      "Gasolio (Servito)": 2.429,
-      "Gasolio (Self)": 2.429
+      "Gasolio (Servito)": 2.394,
+      "Gasolio (Self)": 2.394
     }
   },
   {
@@ -717,8 +724,8 @@
     "lat": "46.5801188821698",
     "lon": "11.639565889549203",
     "prices": {
-      "Benzina (Self)": 2.229,
-      "Gasolio (Self)": 2.479
+      "Benzina (Self)": 2.199,
+      "Gasolio (Self)": 2.449
     }
   },
   {
@@ -743,8 +750,8 @@
     "lat": "46.56339306167539",
     "lon": "11.556902378797531",
     "prices": {
-      "Benzina (Self)": 2.177,
-      "Gasolio (Self)": 2.417
+      "Benzina (Self)": 2.197,
+      "Gasolio (Self)": 2.437
     }
   },
   {
@@ -756,8 +763,8 @@
     "lat": "46.570284457571574",
     "lon": "11.523084983243393",
     "prices": {
-      "Benzina (Self)": 1.999,
-      "Gasolio (Self)": 2.199
+      "Benzina (Self)": 1.99,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -769,7 +776,7 @@
     "lat": "46.570284457571574",
     "lon": "11.523084983243393",
     "prices": {
-      "Gasolio (Self)": 2.199
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -781,10 +788,10 @@
     "lat": "46.570284457571574",
     "lon": "11.523084983243393",
     "prices": {
-      "Benzina (Servito)": 2.299,
-      "Benzina (Self)": 2.099,
-      "Gasolio (Servito)": 2.419,
-      "Gasolio (Self)": 2.299
+      "Benzina (Servito)": 2.29,
+      "Benzina (Self)": 2.09,
+      "Gasolio (Servito)": 2.41,
+      "Gasolio (Self)": 2.29
     }
   },
   {
@@ -796,9 +803,10 @@
     "lat": "46.495003",
     "lon": "11.337799",
     "prices": {
-      "Benzina (Servito)": 2.379,
-      "Benzina (Self)": 2.159,
-      "Gasolio (Self)": 2.41
+      "Benzina (Servito)": 2.2,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.4,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -810,10 +818,10 @@
     "lat": "46.803231696141864",
     "lon": "11.842818819079639",
     "prices": {
-      "Benzina (Servito)": 2.189,
-      "Benzina (Self)": 2.189,
-      "Gasolio (Servito)": 2.455,
-      "Gasolio (Self)": 2.455
+      "Benzina (Servito)": 1.99,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.19,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -825,10 +833,10 @@
     "lat": "46.637713253933285",
     "lon": "11.561108082532883",
     "prices": {
-      "Benzina (Servito)": 2.189,
-      "Benzina (Self)": 2.189,
-      "Gasolio (Servito)": 2.455,
-      "Gasolio (Self)": 2.455
+      "Benzina (Servito)": 1.99,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.19,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -929,8 +937,8 @@
     "lon": "11.28087",
     "prices": {
       "Benzina (Servito)": 2.379,
-      "Benzina (Self)": 2.159,
-      "Gasolio (Self)": 2.41
+      "Benzina (Self)": 1.995,
+      "Gasolio (Self)": 2.195
     }
   },
   {
@@ -972,7 +980,7 @@
     "prices": {
       "Benzina (Servito)": 2.389,
       "Benzina (Self)": 2.199,
-      "Gasolio (Self)": 2.439
+      "Gasolio (Self)": 2.429
     }
   },
   {
@@ -1039,9 +1047,9 @@
     "lon": "10.86322009563446",
     "prices": {
       "Benzina (Servito)": 2.229,
-      "Benzina (Self)": 2.229,
+      "Benzina (Self)": 1.99,
       "Gasolio (Servito)": 2.419,
-      "Gasolio (Self)": 2.419
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -1053,7 +1061,7 @@
     "lat": "46.62013535083936",
     "lon": "10.84369881107341",
     "prices": {
-      "Benzina (Self)": 2.209,
+      "Benzina (Self)": 2.199,
       "Gasolio (Self)": 1.759
     }
   },
@@ -1066,8 +1074,8 @@
     "lat": "46.671631",
     "lon": "11.134912",
     "prices": {
-      "Benzina (Self)": 2.249,
-      "Gasolio (Self)": 2.439
+      "Benzina (Self)": 2.219,
+      "Gasolio (Self)": 2.419
     }
   },
   {
@@ -1079,8 +1087,8 @@
     "lat": "46.60201743626545",
     "lon": "11.559184938669205",
     "prices": {
-      "Benzina (Self)": 2.177,
-      "Gasolio (Self)": 2.417
+      "Benzina (Self)": 2.197,
+      "Gasolio (Self)": 2.437
     }
   },
   {
@@ -1162,10 +1170,10 @@
     "lat": "46.62855206078613",
     "lon": "11.171120889801955",
     "prices": {
-      "Benzina (Servito)": 2.249,
-      "Benzina (Self)": 2.249,
-      "Gasolio (Servito)": 2.459,
-      "Gasolio (Self)": 2.459
+      "Benzina (Servito)": 2.239,
+      "Benzina (Self)": 2.239,
+      "Gasolio (Servito)": 2.419,
+      "Gasolio (Self)": 2.419
     }
   },
   {
@@ -1191,7 +1199,7 @@
     "lon": "10.637524639878848",
     "prices": {
       "Benzina (Self)": 2.199,
-      "Gasolio (Self)": 2.44
+      "Gasolio (Self)": 2.429
     }
   },
   {
@@ -1218,10 +1226,10 @@
     "lat": "46.69495064127975",
     "lon": "10.539409906745924",
     "prices": {
-      "Benzina (Servito)": 2.249,
-      "Benzina (Self)": 2.249,
-      "Gasolio (Servito)": 2.459,
-      "Gasolio (Self)": 2.459
+      "Benzina (Servito)": 2.239,
+      "Benzina (Self)": 2.239,
+      "Gasolio (Servito)": 2.419,
+      "Gasolio (Self)": 2.419
     }
   },
   {
@@ -1249,7 +1257,7 @@
     "lon": "11.145279297438265",
     "prices": {
       "Benzina (Self)": 2.199,
-      "Gasolio (Self)": 2.469
+      "Gasolio (Self)": 2.489
     }
   },
   {
@@ -1322,8 +1330,7 @@
     "prices": {
       "Benzina (Servito)": 2.354,
       "Benzina (Self)": 2.204,
-      "Gasolio (Servito)": 2.584,
-      "Gasolio (Self)": 2.434
+      "Gasolio (Self)": 2.465
     }
   },
   {
@@ -1349,7 +1356,7 @@
     "lon": "11.17706560978695",
     "prices": {
       "Benzina (Self)": 2.199,
-      "Gasolio (Self)": 2.459
+      "Gasolio (Self)": 2.439
     }
   },
   {
@@ -1389,10 +1396,10 @@
     "lat": "46.552090842780245",
     "lon": "11.212681782864365",
     "prices": {
-      "Benzina (Servito)": 2.249,
-      "Benzina (Self)": 2.249,
-      "Gasolio (Servito)": 2.459,
-      "Gasolio (Self)": 2.459
+      "Benzina (Servito)": 2.239,
+      "Benzina (Self)": 2.239,
+      "Gasolio (Servito)": 2.419,
+      "Gasolio (Self)": 2.419
     }
   },
   {
@@ -1430,10 +1437,10 @@
     "lat": "46.76961",
     "lon": "11.655286",
     "prices": {
-      "Benzina (Servito)": 2.189,
-      "Benzina (Self)": 2.179,
-      "Gasolio (Servito)": 2.455,
-      "Gasolio (Self)": 2.445
+      "Benzina (Servito)": 1.99,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.19,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -1446,7 +1453,7 @@
     "lon": "11.5492058",
     "prices": {
       "Benzina (Self)": 2.199,
-      "Gasolio (Self)": 2.46
+      "Gasolio (Self)": 2.429
     }
   },
   {
@@ -1458,8 +1465,8 @@
     "lat": "46.41093468547959",
     "lon": "11.433165491587033",
     "prices": {
-      "Benzina (Self)": 2.197,
-      "Gasolio (Self)": 2.397
+      "Benzina (Self)": 2.239,
+      "Gasolio (Self)": 2.449
     }
   },
   {
@@ -1472,9 +1479,9 @@
     "lon": "11.433820500969887",
     "prices": {
       "Benzina (Servito)": 2.249,
-      "Benzina (Self)": 2.249,
+      "Benzina (Self)": 2.239,
       "Gasolio (Servito)": 2.459,
-      "Gasolio (Self)": 2.459
+      "Gasolio (Self)": 2.419
     }
   },
   {
@@ -1486,10 +1493,10 @@
     "lat": "46.345614180534085",
     "lon": "11.294593499036182",
     "prices": {
-      "Benzina (Servito)": 2.215,
-      "Benzina (Self)": 1.995,
-      "Gasolio (Servito)": 2.415,
-      "Gasolio (Self)": 2.195
+      "Benzina (Servito)": 2.2,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.4,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -1501,9 +1508,9 @@
     "lat": "46.353697422415095",
     "lon": "11.311056173610723",
     "prices": {
-      "Benzina (Servito)": 2.409,
-      "Benzina (Self)": 2.219,
-      "Gasolio (Self)": 2.46
+      "Benzina (Servito)": 2.389,
+      "Benzina (Self)": 2.199,
+      "Gasolio (Self)": 2.429
     }
   },
   {
@@ -1515,10 +1522,10 @@
     "lat": "46.567915115175445",
     "lon": "11.685368120670319",
     "prices": {
-      "Benzina (Servito)": 2.189,
-      "Benzina (Self)": 2.189,
-      "Gasolio (Servito)": 2.455,
-      "Gasolio (Self)": 2.455
+      "Benzina (Servito)": 1.99,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.19,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -1530,9 +1537,10 @@
     "lat": "46.67275",
     "lon": "11.07501",
     "prices": {
-      "Benzina (Servito)": 2.379,
-      "Benzina (Self)": 2.159,
-      "Gasolio (Self)": 2.41
+      "Benzina (Servito)": 2.2,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.4,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -1546,8 +1554,8 @@
     "prices": {
       "Benzina (Servito)": 2.339,
       "Benzina (Self)": 2.339,
-      "Gasolio (Servito)": 2.539,
-      "Gasolio (Self)": 2.539
+      "Gasolio (Servito)": 2.499,
+      "Gasolio (Self)": 2.499
     }
   },
   {
@@ -1559,7 +1567,7 @@
     "lat": "46.609467",
     "lon": "11.184479",
     "prices": {
-      "Benzina (Self)": 2.249,
+      "Benzina (Self)": 2.239,
       "Gasolio (Self)": 2.449
     }
   },
@@ -1573,7 +1581,7 @@
     "lon": "10.598187159596137",
     "prices": {
       "Benzina (Self)": 2.199,
-      "Gasolio (Self)": 2.44
+      "Gasolio (Self)": 2.429
     }
   },
   {
@@ -1600,8 +1608,8 @@
     "lat": "46.77494739920092",
     "lon": "12.043606061266852",
     "prices": {
-      "Benzina (Servito)": 2.189,
-      "Benzina (Self)": 2.189,
+      "Benzina (Servito)": 1.99,
+      "Benzina (Self)": 1.99,
       "Gasolio (Servito)": 1.749,
       "Gasolio (Self)": 1.749
     }
@@ -1615,10 +1623,10 @@
     "lat": "46.52797572098347",
     "lon": "11.45052932202816",
     "prices": {
-      "Benzina (Servito)": 2.249,
-      "Benzina (Self)": 2.249,
-      "Gasolio (Servito)": 2.459,
-      "Gasolio (Self)": 2.459
+      "Benzina (Servito)": 2.239,
+      "Benzina (Self)": 2.239,
+      "Gasolio (Servito)": 2.419,
+      "Gasolio (Self)": 2.419
     }
   },
   {
@@ -1631,9 +1639,9 @@
     "lon": "11.47769",
     "prices": {
       "Benzina (Servito)": 2.339,
-      "Benzina (Self)": 2.159,
+      "Benzina (Self)": 1.99,
       "Gasolio (Servito)": 2.449,
-      "Gasolio (Self)": 2.419
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -1658,10 +1666,10 @@
     "lat": "46.7969231",
     "lon": "11.6686512",
     "prices": {
-      "Benzina (Servito)": 2.189,
-      "Benzina (Self)": 2.189,
-      "Gasolio (Servito)": 2.455,
-      "Gasolio (Self)": 2.455
+      "Benzina (Servito)": 1.99,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.19,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -1673,9 +1681,10 @@
     "lat": "46.24023",
     "lon": "11.20656",
     "prices": {
-      "Benzina (Servito)": 2.379,
-      "Benzina (Self)": 2.159,
-      "Gasolio (Self)": 2.41
+      "Benzina (Servito)": 2.2,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.4,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -1703,7 +1712,7 @@
     "lon": "12.266350962743369",
     "prices": {
       "Benzina (Self)": 2.199,
-      "Gasolio (Self)": 2.46
+      "Gasolio (Self)": 2.399
     }
   },
   {
@@ -1716,7 +1725,7 @@
     "lon": "12.28989351328501",
     "prices": {
       "Benzina (Self)": 2.199,
-      "Gasolio (Self)": 2.46
+      "Gasolio (Self)": 2.399
     }
   },
   {
@@ -1728,10 +1737,10 @@
     "lat": "46.807881214814905",
     "lon": "11.245480566409833",
     "prices": {
-      "Benzina (Servito)": 2.379,
-      "Benzina (Self)": 2.159,
-      "Gasolio (Servito)": 2.589,
-      "Gasolio (Self)": 2.369
+      "Benzina (Servito)": 2.2,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.4,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -1773,10 +1782,10 @@
     "lat": "46.78519847381902",
     "lon": "11.229740145997994",
     "prices": {
-      "Benzina (Servito)": 2.249,
-      "Benzina (Self)": 2.249,
-      "Gasolio (Servito)": 2.459,
-      "Gasolio (Self)": 2.459
+      "Benzina (Servito)": 2.239,
+      "Benzina (Self)": 2.239,
+      "Gasolio (Servito)": 2.419,
+      "Gasolio (Self)": 2.419
     }
   },
   {
@@ -1831,8 +1840,8 @@
     "lat": "46.6658155",
     "lon": "11.3661183",
     "prices": {
-      "Benzina (Servito)": 2.189,
-      "Benzina (Self)": 2.189,
+      "Benzina (Servito)": 1.99,
+      "Benzina (Self)": 1.99,
       "Gasolio (Servito)": 1.714,
       "Gasolio (Self)": 1.714
     }
@@ -1859,8 +1868,8 @@
     "lat": "46.635261621608485",
     "lon": "11.358959376811981",
     "prices": {
-      "Benzina (Self)": 2.197,
-      "Gasolio (Self)": 2.397
+      "Benzina (Self)": 2.239,
+      "Gasolio (Self)": 2.449
     }
   },
   {
@@ -1872,10 +1881,10 @@
     "lat": "46.70971707461494",
     "lon": "10.902877314596935",
     "prices": {
-      "Benzina (Servito)": 2.249,
-      "Benzina (Self)": 2.249,
-      "Gasolio (Servito)": 2.459,
-      "Gasolio (Self)": 2.459
+      "Benzina (Servito)": 2.239,
+      "Benzina (Self)": 2.239,
+      "Gasolio (Servito)": 2.419,
+      "Gasolio (Self)": 2.419
     }
   },
   {
@@ -1902,8 +1911,8 @@
     "lat": "46.62562013414036",
     "lon": "10.793766975402832",
     "prices": {
-      "Benzina (Self)": 2.159,
-      "Gasolio (Self)": 2.409
+      "Benzina (Self)": 1.99,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -1932,8 +1941,8 @@
     "prices": {
       "Benzina (Servito)": 2.219,
       "Benzina (Self)": 2.219,
-      "Gasolio (Servito)": 2.46,
-      "Gasolio (Self)": 2.46
+      "Gasolio (Servito)": 2.429,
+      "Gasolio (Self)": 2.429
     }
   },
   {
@@ -1958,8 +1967,8 @@
     "lat": "46.563861844399305",
     "lon": "11.21428370475769",
     "prices": {
-      "Benzina (Self)": 2.199,
-      "Gasolio (Self)": 2.429
+      "Benzina (Self)": 2.189,
+      "Gasolio (Self)": 2.449
     }
   },
   {
@@ -1985,7 +1994,7 @@
     "lon": "11.161733865737915",
     "prices": {
       "Benzina (Self)": 2.197,
-      "Gasolio (Self)": 2.427
+      "Gasolio (Self)": 2.457
     }
   },
   {
@@ -1997,8 +2006,8 @@
     "lat": "46.465085220033075",
     "lon": "11.539708046627084",
     "prices": {
-      "Benzina (Self)": 2.139,
-      "Gasolio (Self)": 2.359
+      "Benzina (Self)": 1.99,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -2039,9 +2048,9 @@
     "lon": "11.001175992893536",
     "prices": {
       "Benzina (Servito)": 2.249,
-      "Benzina (Self)": 2.249,
+      "Benzina (Self)": 2.239,
       "Gasolio (Servito)": 2.459,
-      "Gasolio (Self)": 2.459
+      "Gasolio (Self)": 2.419
     }
   },
   {
@@ -2054,7 +2063,7 @@
     "lon": "11.294111609458923",
     "prices": {
       "Benzina (Self)": 2.244,
-      "Gasolio (Self)": 2.458
+      "Gasolio (Self)": 2.473
     }
   },
   {
@@ -2107,8 +2116,9 @@
     "lat": "46.94694443197587",
     "lon": "11.922783851623535",
     "prices": {
-      "Benzina (Servito)": 2.379,
-      "Benzina (Self)": 2.159,
+      "Benzina (Servito)": 2.2,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.4,
       "Gasolio (Self)": 1.719
     }
   },
@@ -2134,10 +2144,10 @@
     "lat": "46.75956236516725",
     "lon": "11.637813023548688",
     "prices": {
-      "Benzina (Servito)": 2.249,
-      "Benzina (Self)": 2.249,
-      "Gasolio (Servito)": 2.459,
-      "Gasolio (Self)": 2.459
+      "Benzina (Servito)": 2.239,
+      "Benzina (Self)": 2.239,
+      "Gasolio (Servito)": 2.419,
+      "Gasolio (Self)": 2.419
     }
   },
   {
@@ -2149,8 +2159,8 @@
     "lat": "46.73229771185635",
     "lon": "11.641673093747613",
     "prices": {
-      "Benzina (Self)": 2.244,
-      "Gasolio (Self)": 2.399
+      "Benzina (Self)": 1.989,
+      "Gasolio (Self)": 2.189
     }
   },
   {
@@ -2190,8 +2200,8 @@
     "lat": "46.670913723147144",
     "lon": "11.601199717041368",
     "prices": {
-      "Benzina (Self)": 2.197,
-      "Gasolio (Self)": 2.397
+      "Benzina (Self)": 2.239,
+      "Gasolio (Self)": 2.449
     }
   },
   {
@@ -2203,9 +2213,10 @@
     "lat": "46.88873",
     "lon": "11.441102",
     "prices": {
-      "Benzina (Servito)": 2.379,
-      "Benzina (Self)": 2.159,
-      "Gasolio (Self)": 2.41
+      "Benzina (Servito)": 2.2,
+      "Benzina (Self)": 1.99,
+      "Gasolio (Servito)": 2.4,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -2232,10 +2243,10 @@
     "lat": "46.89392080584685",
     "lon": "11.435986284655769",
     "prices": {
-      "Benzina (Servito)": 2.249,
-      "Benzina (Self)": 2.249,
-      "Gasolio (Servito)": 2.459,
-      "Gasolio (Self)": 2.459
+      "Benzina (Servito)": 2.239,
+      "Benzina (Self)": 2.239,
+      "Gasolio (Servito)": 2.419,
+      "Gasolio (Self)": 2.419
     }
   }
 ]
