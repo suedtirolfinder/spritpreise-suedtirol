@@ -2,7 +2,6 @@ import csv
 import json
 import urllib.request
 import ssl
-import io
 
 URL_ANAGRAFICA = "https://www.mimit.gov.it/images/exportCSV/anagrafica_impianti_attivi.csv"
 URL_PREZZI = "https://www.mimit.gov.it/images/exportCSV/prezzo_alle_8.csv"
@@ -24,10 +23,7 @@ def main():
     print("1. Lade Tankstellen...")
     text_ana = fetch_data(URL_ANAGRAFICA)
     
-    # Trennzeichen ermitteln
     sep_ana = ';' if ';' in text_ana[:500] else '|'
-    
-    # Erste Zeile überspringen falls Datumsstempel
     lines_ana = [l for l in text_ana.splitlines() if l.strip()]
     start_ana = 0
     for idx, l in enumerate(lines_ana[:5]):
@@ -68,8 +64,8 @@ def main():
 
     reader_prez = csv.DictReader(lines_prez[start_prez:], delimiter=sep_prez)
 
-    # Blacklist für Premium- und Spezialkraftstoffe (jetzt inklusive alpino)
-    BLACKLIST = ["100", "plus", "optima", "v-power", "racing", "additiv", "supreme", "excellium", "special", "hi-q", "alpino"]
+    # Blacklist für generische Premiumkraftstoffe
+    BLACKLIST = ["100", "plus", "optima", "v-power", "racing", "additiv", "supreme", "excellium", "special", "hi-q"]
 
     for row in reader_prez:
         row = {k.strip(): (v.strip() if v else "") for k, v in row.items() if k}
@@ -78,9 +74,6 @@ def main():
             fuel = row.get("descCarburante", "").lower()
             price_raw = row.get("prezzo", "").replace(",", ".")
             is_self = row.get("isSelf", "0").strip()
-
-            if any(b in fuel for b in BLACKLIST):
-                continue
 
             try:
                 pval = float(price_raw)
@@ -91,35 +84,25 @@ def main():
                 continue
 
             cat = None
-            if "diesel" in fuel or "gasolio" in fuel:
+            if "alpino" in fuel:
+                cat = "Alpino"
+            elif any(b in fuel for b in BLACKLIST):
+                continue
+            elif "diesel" in fuel or "gasolio" in fuel:
                 cat = "Gasolio"
             elif "benzina" in fuel or "senza piombo" in fuel:
                 cat = "Benzina"
 
             if cat:
-                # In Italien gilt: isSelf == 1 -> Self, isSelf == 0 -> Servito
                 mode = "Self" if is_self == "1" else "Servito"
                 key = f"{cat} ({mode})"
 
-                # Immer den niedrigsten Preis für diesen Modus speichern
                 if key in bz_stations[sid]["prices"]:
                     bz_stations[sid]["prices"][key] = min(bz_stations[sid]["prices"][key], pval)
                 else:
                     bz_stations[sid]["prices"][key] = pval
 
-    # Falls eine Station für Self keinen Preis gemeldet hat, aber Servito existiert (oder umgekehrt)
-    for sid, s in bz_stations.items():
-        for cat in ["Gasolio", "Benzina"]:
-            self_k = f"{cat} (Self)"
-            serv_k = f"{cat} (Servito)"
-            # Wenn Self fehlt, nimm Servito
-            if self_k not in s["prices"] and serv_k in s["prices"]:
-                s["prices"][self_k] = s["prices"][serv_k]
-            # Wenn beides da ist, stelle sicher, dass Self niemals teurer ist als Servito
-            if self_k in s["prices"] and serv_k in s["prices"]:
-                if s["prices"][self_k] > s["prices"][serv_k]:
-                    s["prices"][self_k], s["prices"][serv_k] = s["prices"][serv_k], s["prices"][self_k]
-
+    # WICHTIG: Kein künstliches Kopieren von teurem Servito in Self mehr!
     final_list = [s for s in bz_stations.values() if len(s["prices"]) > 0]
     print(f"Gültige Tankstellen mit Preisen: {len(final_list)}")
 
