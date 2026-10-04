@@ -68,8 +68,8 @@ def main():
 
     reader_prez = csv.DictReader(lines_prez[start_prez:], delimiter=sep_prez)
 
-    # Blacklist für Premiumkraftstoffe
-    BLACKLIST = ["100", "plus", "optima", "v-power", "racing", "additiv", "supreme", "excellium", "special", "hi-q"]
+    # Blacklist für Premium- und Spezialkraftstoffe (jetzt inklusive alpino)
+    BLACKLIST = ["100", "plus", "optima", "v-power", "racing", "additiv", "supreme", "excellium", "special", "hi-q", "alpino"]
 
     for row in reader_prez:
         row = {k.strip(): (v.strip() if v else "") for k, v in row.items() if k}
