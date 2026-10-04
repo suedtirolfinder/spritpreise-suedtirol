@@ -64,7 +64,7 @@ def main():
 
     reader_prez = csv.DictReader(lines_prez[start_prez:], delimiter=sep_prez)
 
-    # Blacklist für generische Premiumkraftstoffe
+    # Blacklist für teure Premium-Zusatzkraftstoffe
     BLACKLIST = ["100", "plus", "optima", "v-power", "racing", "additiv", "supreme", "excellium", "special", "hi-q"]
 
     for row in reader_prez:
@@ -94,6 +94,7 @@ def main():
                 cat = "Benzina"
 
             if cat:
+                # 1 = Self, alles andere = Servito
                 mode = "Self" if is_self == "1" else "Servito"
                 key = f"{cat} ({mode})"
 
@@ -102,7 +103,7 @@ def main():
                 else:
                     bz_stations[sid]["prices"][key] = pval
 
-    # WICHTIG: Kein künstliches Kopieren von teurem Servito in Self mehr!
+    # Nur Stationen behalten, die mindestens einen gültigen Preis haben
     final_list = [s for s in bz_stations.values() if len(s["prices"]) > 0]
     print(f"Gültige Tankstellen mit Preisen: {len(final_list)}")
 
