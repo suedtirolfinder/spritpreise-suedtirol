@@ -22,7 +22,6 @@ def fetch_data(url):
 def main():
     print("1. Lade Tankstellen...")
     text_ana = fetch_data(URL_ANAGRAFICA)
-    
     sep_ana = ';' if ';' in text_ana[:500] else '|'
     lines_ana = [l for l in text_ana.splitlines() if l.strip()]
     start_ana = 0
@@ -64,7 +63,6 @@ def main():
 
     reader_prez = csv.DictReader(lines_prez[start_prez:], delimiter=sep_prez)
 
-    # Blacklist für teure Premium-Zusatzkraftstoffe
     BLACKLIST = ["100", "plus", "optima", "v-power", "racing", "additiv", "supreme", "excellium", "special", "hi-q"]
 
     for row in reader_prez:
@@ -83,27 +81,39 @@ def main():
             if not (1.0 < pval < 2.60):
                 continue
 
-            cat = None
+            mode = "Self" if is_self == "1" else "Servito"
+
+            # 1. Alpino separat erfassen
             if "alpino" in fuel:
-                cat = "Alpino"
-            elif any(b in fuel for b in BLACKLIST):
-                continue
-            elif "diesel" in fuel or "gasolio" in fuel:
-                cat = "Gasolio"
-            elif "benzina" in fuel or "senza piombo" in fuel:
-                cat = "Benzina"
-
-            if cat:
-                # 1 = Self, alles andere = Servito
-                mode = "Self" if is_self == "1" else "Servito"
-                key = f"{cat} ({mode})"
-
+                key = f"Alpino ({mode})"
                 if key in bz_stations[sid]["prices"]:
                     bz_stations[sid]["prices"][key] = min(bz_stations[sid]["prices"][key], pval)
                 else:
                     bz_stations[sid]["prices"][key] = pval
 
-    # Nur Stationen behalten, die mindestens einen gültigen Preis haben
+                # Falls der gemeldete Alpin-Preis günstiger ist als ein fehlerhafter Diesel-Preis:
+                # Trage ihn auch als Standard-Diesel ein, damit die Tankstelle nicht mit 2.19 gelistet wird
+                d_key = f"Gasolio ({mode})"
+                if d_key not in bz_stations[sid]["prices"] or pval < bz_stations[sid]["prices"][d_key]:
+                    bz_stations[sid]["prices"][d_key] = pval
+
+            elif any(b in fuel for b in BLACKLIST):
+                continue
+
+            elif "diesel" in fuel or "gasolio" in fuel:
+                key = f"Gasolio ({mode})"
+                if key in bz_stations[sid]["prices"]:
+                    bz_stations[sid]["prices"][key] = min(bz_stations[sid]["prices"][key], pval)
+                else:
+                    bz_stations[sid]["prices"][key] = pval
+
+            elif "benzina" in fuel or "senza piombo" in fuel:
+                key = f"Benzina ({mode})"
+                if key in bz_stations[sid]["prices"]:
+                    bz_stations[sid]["prices"][key] = min(bz_stations[sid]["prices"][key], pval)
+                else:
+                    bz_stations[sid]["prices"][key] = pval
+
     final_list = [s for s in bz_stations.values() if len(s["prices"]) > 0]
     print(f"Gültige Tankstellen mit Preisen: {len(final_list)}")
 
