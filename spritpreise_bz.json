@@ -507,7 +507,7 @@
       "Benzina (Servito)": 1.99,
       "Benzina (Self)": 1.99,
       "Gasolio (Servito)": 2.19,
-      "Gasolio (Self)": 1.759
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -1620,8 +1620,8 @@
     "prices": {
       "Benzina (Servito)": 1.99,
       "Benzina (Self)": 1.99,
-      "Gasolio (Servito)": 1.749,
-      "Gasolio (Self)": 1.749
+      "Gasolio (Servito)": 2.19,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -1852,8 +1852,8 @@
     "prices": {
       "Benzina (Servito)": 1.99,
       "Benzina (Self)": 1.99,
-      "Gasolio (Servito)": 1.714,
-      "Gasolio (Self)": 1.714
+      "Gasolio (Servito)": 2.19,
+      "Gasolio (Self)": 2.19
     }
   },
   {
@@ -2130,7 +2130,7 @@
       "Benzina (Servito)": 2.2,
       "Benzina (Self)": 1.99,
       "Gasolio (Servito)": 2.4,
-      "Gasolio (Self)": 1.719
+      "Gasolio (Self)": 2.19
     }
   },
   {
