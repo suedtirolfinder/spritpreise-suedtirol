@@ -2,6 +2,7 @@ import csv
 import json
 import urllib.request
 import ssl
+from datetime import datetime
 
 URL_ANAGRAFICA = "https://www.mimit.gov.it/images/exportCSV/anagrafica_impianti_attivi.csv"
 URL_PREZZI = "https://www.mimit.gov.it/images/exportCSV/prezzo_alle_8.csv"
@@ -18,6 +19,17 @@ def fetch_data(url):
     req = urllib.request.Request(url, headers=HEADERS)
     with urllib.request.urlopen(req, timeout=180, context=ctx) as resp:
         return resp.read().decode('utf-8', errors='ignore')
+
+def parse_mimit_date(date_str):
+    """Parst das MIMIT Datumsformat (oft 'YYYY-MM-DD HH:MM:SS' oder 'DD/MM/YYYY HH:MM:SS')"""
+    if not date_str:
+        return datetime.min
+    for fmt in ("%Y-%m-%d %H:%M:%S", "%d/%m/%Y %H:%M:%S", "%Y-%m-%d", "%d/%m/%Y"):
+        try:
+            return datetime.strptime(date_str.strip(), fmt)
+        except ValueError:
+            pass
+    return datetime.min
 
 def main():
     print("1. Lade Tankstellen...")
@@ -46,7 +58,8 @@ def main():
                     "city": row.get("Comune", ""),
                     "lat": row.get("Latitudine", "").replace(",", "."),
                     "lon": row.get("Longitudine", "").replace(",", "."),
-                    "prices": {}
+                    "prices": {},
+                    "_price_dates": {} # Interner Zwischenspeicher für Datumsabgleich
                 }
 
     print(f"Südtirol-Stationen gefunden: {len(bz_stations)}")
@@ -72,6 +85,7 @@ def main():
             fuel = row.get("descCarburante", "").lower()
             price_raw = row.get("prezzo", "").replace(",", ".")
             is_self = row.get("isSelf", "0").strip()
+            dt_raw = row.get("dtComu", "")
 
             try:
                 pval = float(price_raw)
@@ -82,34 +96,36 @@ def main():
                 continue
 
             mode = "Self" if is_self == "1" else "Servito"
+            msg_date = parse_mimit_date(dt_raw)
 
-            # 1. Alpino streng separat erfassen (wird NICHT in Gasolio gemischt)
+            key = None
+
+            # 1. Alpino separat erfassen
             if "alpino" in fuel:
                 key = f"Alpino ({mode})"
-                if key in bz_stations[sid]["prices"]:
-                    bz_stations[sid]["prices"][key] = min(bz_stations[sid]["prices"][key], pval)
-                else:
-                    bz_stations[sid]["prices"][key] = pval
 
             # Premium-Kraftstoffe überspringen
             elif any(b in fuel for b in BLACKLIST):
                 continue
 
-            # 2. Standard-Diesel nur aus echten Gasolio/Diesel-Meldungen
+            # 2. Standard-Diesel
             elif "diesel" in fuel or "gasolio" in fuel:
                 key = f"Gasolio ({mode})"
-                if key in bz_stations[sid]["prices"]:
-                    bz_stations[sid]["prices"][key] = min(bz_stations[sid]["prices"][key], pval)
-                else:
-                    bz_stations[sid]["prices"][key] = pval
 
             # 3. Benzin
             elif "benzina" in fuel or "senza piombo" in fuel:
                 key = f"Benzina ({mode})"
-                if key in bz_stations[sid]["prices"]:
-                    bz_stations[sid]["prices"][key] = min(bz_stations[sid]["prices"][key], pval)
-                else:
+
+            # WICHTIG: IMMER die aktuellste Meldung behalten, NICHT min()!
+            if key:
+                last_date = bz_stations[sid]["_price_dates"].get(key, datetime.min)
+                if key not in bz_stations[sid]["prices"] or msg_date >= last_date:
                     bz_stations[sid]["prices"][key] = pval
+                    bz_stations[sid]["_price_dates"][key] = msg_date
+
+    # Bereinige interne Hilfsdaten vor dem JSON-Export
+    for station in bz_stations.values():
+        del station["_price_dates"]
 
     final_list = [s for s in bz_stations.values() if len(s["prices"]) > 0]
     print(f"Gültige Tankstellen mit Preisen: {len(final_list)}")
