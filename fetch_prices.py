@@ -83,7 +83,7 @@ def main():
 
             mode = "Self" if is_self == "1" else "Servito"
 
-            # 1. Alpino separat erfassen
+            # 1. Alpino streng separat erfassen (wird NICHT in Gasolio gemischt)
             if "alpino" in fuel:
                 key = f"Alpino ({mode})"
                 if key in bz_stations[sid]["prices"]:
@@ -91,15 +91,11 @@ def main():
                 else:
                     bz_stations[sid]["prices"][key] = pval
 
-                # Falls der gemeldete Alpin-Preis günstiger ist als ein fehlerhafter Diesel-Preis:
-                # Trage ihn auch als Standard-Diesel ein, damit die Tankstelle nicht mit 2.19 gelistet wird
-                d_key = f"Gasolio ({mode})"
-                if d_key not in bz_stations[sid]["prices"] or pval < bz_stations[sid]["prices"][d_key]:
-                    bz_stations[sid]["prices"][d_key] = pval
-
+            # Premium-Kraftstoffe überspringen
             elif any(b in fuel for b in BLACKLIST):
                 continue
 
+            # 2. Standard-Diesel nur aus echten Gasolio/Diesel-Meldungen
             elif "diesel" in fuel or "gasolio" in fuel:
                 key = f"Gasolio ({mode})"
                 if key in bz_stations[sid]["prices"]:
@@ -107,6 +103,7 @@ def main():
                 else:
                     bz_stations[sid]["prices"][key] = pval
 
+            # 3. Benzin
             elif "benzina" in fuel or "senza piombo" in fuel:
                 key = f"Benzina ({mode})"
                 if key in bz_stations[sid]["prices"]:
