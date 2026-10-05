@@ -170,6 +170,19 @@
     }
   },
   {
+    "id": "8686",
+    "name": "ENI",
+    "brand": "Agip Eni",
+    "address": "Via Merano 90 39100",
+    "city": "BOLZANO",
+    "lat": "46.503859071801095",
+    "lon": "11.296142041683197",
+    "prices": {
+      "Benzina (Self)": 1.99,
+      "Gasolio (Self)": 2.19
+    }
+  },
+  {
     "id": "34578",
     "name": "eni",
     "brand": "Agip Eni",
@@ -181,19 +194,6 @@
       "Benzina (Servito)": 2.2,
       "Benzina (Self)": 1.99,
       "Gasolio (Servito)": 2.4,
-      "Gasolio (Self)": 2.19
-    }
-  },
-  {
-    "id": "8686",
-    "name": "ENI",
-    "brand": "Agip Eni",
-    "address": "Via Merano 90 39100",
-    "city": "BOLZANO",
-    "lat": "46.503859071801095",
-    "lon": "11.296142041683197",
-    "prices": {
-      "Benzina (Self)": 1.99,
       "Gasolio (Self)": 2.19
     }
   },
@@ -289,10 +289,10 @@
     "lat": "46.49800122465863",
     "lon": "11.337797857256874",
     "prices": {
-      "Benzina (Servito)": 2.249,
-      "Benzina (Self)": 2.249,
-      "Gasolio (Servito)": 2.519,
-      "Gasolio (Self)": 2.519
+      "Benzina (Servito)": 1.994,
+      "Benzina (Self)": 1.994,
+      "Gasolio (Servito)": 2.194,
+      "Gasolio (Self)": 2.194
     }
   },
   {
@@ -966,8 +966,8 @@
     "lat": "46.3113181936087",
     "lon": "11.272401253967246",
     "prices": {
-      "Benzina (Servito)": 2.199,
-      "Gasolio (Servito)": 2.449
+      "Benzina (Servito)": 1.999,
+      "Gasolio (Servito)": 2.199
     }
   },
   {
@@ -1174,7 +1174,7 @@
     "lat": "46.62855206078613",
     "lon": "11.171120889801955",
     "prices": {
-      "Benzina (Servito)": 2.229,
+      "Benzina (Servito)": 2.209,
       "Benzina (Self)": 2.209,
       "Gasolio (Servito)": 2.399,
       "Gasolio (Self)": 2.399
@@ -1335,8 +1335,8 @@
     "prices": {
       "Benzina (Servito)": 2.384,
       "Benzina (Self)": 2.234,
-      "Gasolio (Servito)": 2.554,
-      "Gasolio (Self)": 2.404
+      "Gasolio (Servito)": 2.344,
+      "Gasolio (Self)": 2.194
     }
   },
   {
@@ -1484,7 +1484,7 @@
     "lat": "46.40912376786726",
     "lon": "11.433820500969887",
     "prices": {
-      "Benzina (Servito)": 2.229,
+      "Benzina (Servito)": 2.209,
       "Benzina (Self)": 2.209,
       "Gasolio (Servito)": 2.399,
       "Gasolio (Self)": 2.399
@@ -1989,8 +1989,8 @@
     "lat": "46.34469039723465",
     "lon": "11.250060221426338",
     "prices": {
-      "Benzina (Self)": 2.169,
-      "Gasolio (Self)": 2.439
+      "Benzina (Self)": 1.999,
+      "Gasolio (Self)": 2.199
     }
   },
   {
