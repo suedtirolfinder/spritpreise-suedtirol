@@ -22,7 +22,6 @@ def fetch_data(url):
         return resp.read().decode('utf-8', errors='ignore')
 
 def parse_mimit_date(date_str):
-    """Parst das MIMIT Datumsformat ('YYYY-MM-DD HH:MM:SS' oder 'DD/MM/YYYY HH:MM:SS')"""
     if not date_str:
         return datetime.min
     for fmt in ("%d/%m/%Y %H:%M:%S", "%Y-%m-%d %H:%M:%S", "%d/%m/%Y", "%Y-%m-%d"):
@@ -56,4 +55,26 @@ def main():
             if sid:
                 bz_stations[sid] = {
                     "id": sid,
-                    "name": row.get
+                    "name": row.get("Nome Impianto") or row.get("Bandiera") or "Tankstelle",
+                    "brand": row.get("Bandiera") or "Freie Tankstelle",
+                    "address": row.get("Indirizzo", ""),
+                    "city": row.get("Comune", ""),
+                    "lat": row.get("Latitudine", "").replace(",", "."),
+                    "lon": row.get("Longitudine", "").replace(",", "."),
+                    "prices": {},
+                    "_price_dates": {}
+                }
+
+    print(f"Südtirol-Stationen gefunden: {len(bz_stations)}")
+
+    print("2. Lade Preise (Prezzi alle 8)...")
+    text_prez = fetch_data(URL_PREZZI)
+    sep_prez = ';' if ';' in text_prez[:500] else '|'
+    lines_prez = [l for l in text_prez.splitlines() if l.strip()]
+    start_prez = 0
+    for idx, l in enumerate(lines_prez[:5]):
+        if "idImpianto" in l:
+            start_prez = idx
+            break
+
+    reader_prez = csv.DictReader(lines_prez[start_prez:], delimiter
