@@ -401,8 +401,11 @@ def main():
     json.dump(out, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     json.dump({"sources": sources}, open(CACHE, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     say(f"Gesamt: {len(films)} Filme, {sum(len(f['shows']) for f in films)} Eintraege, {len(soon)} in der Vorschau. Datei {os.path.getsize(OUT)//1024} KB")
+    bad = [k for k, v in sources.items() if not v["ok"]]
+    if bad:
+        say("WARNUNG: Quelle(n) nicht aktualisiert: " + ", ".join(bad))
     open(REPORT, "w", encoding="utf-8").write("\n".join(log) + "\n")
-    return 0
+    return 2 if bad else 0   # 2 = mindestens ein Kino ausgefallen (Workflow wird rot, Mail von GitHub)
 
 if __name__ == "__main__":
     sys.exit(main())
