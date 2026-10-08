@@ -5,7 +5,7 @@ fuer heute + 13 Tage, und schreibt:
   events_dauer.json        Dauerausstellungen & Co. (laufen >14 Tage), nur einmal je Eintrag
   events_report.txt        Auswertung: Anzahl pro Ort, Lizenzen, Quellen, Dauerausstellungen (zum Pruefen)
 Nur Python-Standardbibliothek. Bei einem Fehler bleiben die alten Dateien unveraendert."""
-import json, sys, time, urllib.request, urllib.parse
+import html, json, re, sys, time, urllib.request, urllib.parse
 from collections import Counter
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
@@ -68,6 +68,21 @@ def place_of(e):
                 mun = c
                 break
     return mun, tr((li.get("DistrictInfo") or {}).get("Name")), tr((li.get("TvInfo") or {}).get("Name"))
+
+def info_of(e, n=170):
+    """Kurze Beschreibung (Intro- oder Basistext), ohne HTML, auf n Zeichen gekuerzt."""
+    det = e.get("Detail") or {}
+    for l in ("de", "it", "en"):
+        d = det.get(l) or {}
+        for key in ("IntroText", "BaseText", "AdditionalText"):
+            t = d.get(key) or ""
+            t = re.sub(r"<[^>]*>", " ", str(t))
+            t = re.sub(r"\s+", " ", html.unescape(t)).strip()
+            if len(t) >= 20:
+                if len(t) > n:
+                    t = t[:n].rsplit(" ", 1)[0].rstrip(",;:.- ") + "..."
+                return t
+    return ""
 
 def contact(e):
     ci = e.get("ContactInfos") or {}
@@ -201,7 +216,7 @@ def main():
                 return None
         rec = {"id": eid, "titel": title, "ort": mun, "bezirk": dist,
                "adresse": ((adr + ", " if adr else "") + (plz + " " if plz else "") + mun).strip(", "),
-               "url": url, "lat": rnd(gps.get("Latitude")), "lng": rnd(gps.get("Longitude"))}
+               "url": url, "info": info_of(e), "lat": rnd(gps.get("Latitude")), "lng": rnd(gps.get("Longitude"))}
         if dauer:
             rec["ab"] = long_from.isoformat()
             rec["bis_tag"] = long_to.isoformat()
