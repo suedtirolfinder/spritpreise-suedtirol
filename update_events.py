@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Holt Veranstaltungen fuer Suedtirol aus dem Open Data Hub (Tourism API, Endpunkt /v1/Event),
 fuer heute + 13 Tage, und schreibt:
-  events_south_tyrol.json  schlanke Daten fuer Startseite / Event-Seite
+  events_south_tyrol.json  Termine pro Tag (ohne Dauerausstellungen) fuer Startseite / Event-Seite
+  events_dauer.json        Dauerausstellungen & Co. (laufen >14 Tage), nur einmal je Eintrag
   events_report.txt        Auswertung: Anzahl pro Ort, Lizenzen, Quellen, Dauerausstellungen (zum Pruefen)
 Nur Python-Standardbibliothek. Bei einem Fehler bleiben die alten Dateien unveraendert."""
 import json, sys, time, urllib.request, urllib.parse
@@ -14,6 +15,7 @@ DAYS = 14
 PAGESIZE = 200
 MAX_PAGES = 30
 OUT = "events_south_tyrol.json"
+OUT_DAUER = "events_dauer.json"
 REPORT = "events_report.txt"
 ORTE = {"Bozen": ("bozen", "bolzano"), "Meran": ("meran", "merano"),
         "Brixen": ("brixen", "bressanone"), "Bruneck": ("bruneck", "brunico")}
@@ -138,8 +140,8 @@ def main():
         print("FEHLER: keine Veranstaltungen erhalten", file=sys.stderr)
         sys.exit(1)
 
-    seen, by_day = set(), {}
-    lic, src, per_place = Counter(), Counter(), Counter()
+    seen, by_day, dauer_list = set(), {}, []
+    lic, src, per_place, per_place_real = Counter(), Counter(), Counter(), Counter()
     no_mun = long_running = no_title = kept = 0
     other_mun = Counter()
     for e in items:
@@ -157,13 +159,30 @@ def main():
         adr, plz, url = contact(e)
         lic[str((e.get("LicenseInfo") or {}).get("License") or "?")] += 1
         src[str(e.get("Source") or "?")] += 1
-        span = (datetime.strptime(day(e.get("DateEnd")), "%Y-%m-%d").date() -
-                datetime.strptime(day(e.get("DateBegin")), "%Y-%m-%d").date()).days if day(e.get("DateBegin")) and day(e.get("DateEnd")) else 0
-        dauer = span > 14
+        # Dauerausstellung = ein einzelner Terminblock laeuft laenger als 14 Tage
+        def dd(x):
+            try:
+                return datetime.strptime(day(x), "%Y-%m-%d").date()
+            except Exception:
+                return None
+        long_from = long_to = None
+        eds = e.get("EventDate") or []
+        for ed in eds:
+            f, t = dd(ed.get("From") or ed.get("Begin")), dd(ed.get("To"))
+            if f and t and (t - f).days > 14:
+                long_from, long_to = f, t
+                break
+        if not eds:
+            f, t = dd(e.get("DateBegin")), dd(e.get("DateEnd"))
+            if f and t and (t - f).days > 14:
+                long_from, long_to = f, t
+        dauer = long_from is not None
         if dauer:
             long_running += 1
-        occ = occurrences(e, first, last)
-        if not occ:
+            if long_to < first or long_from > last:
+                continue
+        occ = [] if dauer else occurrences(e, first, last)
+        if not occ and not dauer:
             continue
         kept += 1
         low = (mun or "").lower()
@@ -175,19 +194,34 @@ def main():
         if not hit and mun:
             other_mun[mun] += 1
         gps = (e.get("GpsInfo") or [{}])[0] if isinstance(e.get("GpsInfo"), list) and e.get("GpsInfo") else {}
-        rec = {"id": eid, "titel": title, "ort": mun, "bezirk": dist, "region": tv,
+        def rnd(x):
+            try:
+                return round(float(x), 5)
+            except Exception:
+                return None
+        rec = {"id": eid, "titel": title, "ort": mun, "bezirk": dist,
                "adresse": ((adr + ", " if adr else "") + (plz + " " if plz else "") + mun).strip(", "),
-               "url": url, "dauer": dauer,
-               "lat": gps.get("Latitude"), "lng": gps.get("Longitude")}
+               "url": url, "lat": rnd(gps.get("Latitude")), "lng": rnd(gps.get("Longitude"))}
+        if dauer:
+            rec["ab"] = long_from.isoformat()
+            rec["bis_tag"] = long_to.isoformat()
+            dauer_list.append(rec)
+            continue
+        for name, keys in ORTE.items():
+            if any(k in low for k in keys):
+                per_place_real[name] += 1
         for d, v, b in occ:
             by_day.setdefault(d, []).append(dict(rec, von=v, bis=b))
     for d in by_day:
-        by_day[d].sort(key=lambda x: (x["dauer"], x["von"] or "99:99", x["titel"]))
+        by_day[d].sort(key=lambda x: (x["von"] or "99:99", x["titel"]))
 
     result = {"stand": datetime.now(ZoneInfo("Europe/Rome")).strftime("%Y-%m-%dT%H:%M:%S%z"),
               "quelle": "Open Data Hub Suedtirol, Tourism API (Event)", "tage": dict(sorted(by_day.items()))}
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, separators=(",", ":"))
+    dauer_list.sort(key=lambda x: (x["ort"], x["titel"]))
+    with open(OUT_DAUER, "w", encoding="utf-8") as f:
+        json.dump({"stand": result["stand"], "quelle": result["quelle"], "liste": dauer_list}, f, ensure_ascii=False, separators=(",", ":"))
 
     sample = items[0] if items else {}
     lines = ["EVENT-AUSWERTUNG  Stand %s" % result["stand"],
@@ -197,12 +231,12 @@ def main():
              "Ohne Titel: %d, ohne Gemeinde: %d, Dauerausstellungen (>14 Tage): %d" % (no_title, no_mun, long_running),
              "", "Veranstaltungen pro Ort (nur Termine im Zeitraum):"]
     for name in ORTE:
-        lines.append("  %-8s %d" % (name, per_place[name]))
+        lines.append("  %-8s %d  (davon echte Termine ohne Dauerausstellungen: %d)" % (name, per_place[name], per_place_real[name]))
     lines += ["", "Lizenzen: " + json.dumps(dict(lic), ensure_ascii=False),
               "Quellen:  " + json.dumps(dict(src), ensure_ascii=False),
-              "", "Termine pro Tag:"]
+              "", "Termine pro Tag (ohne Dauerausstellungen):"]
     for d, v in sorted(by_day.items()):
-        lines.append("  %s  %d (davon ohne Dauerausstellungen: %d)" % (d, len(v), sum(1 for x in v if not x["dauer"])))
+        lines.append("  %s  %d" % (d, len(v)))
     lines += ["", "Haeufigste weitere Gemeinden: " + ", ".join("%s (%d)" % kv for kv in other_mun.most_common(15)),
               "", "Felder des ersten Eintrags: " + ", ".join(sorted(sample.keys())),
               "Beispiel EventDate: " + json.dumps((sample.get("EventDate") or [None])[0], ensure_ascii=False)[:300]]
