@@ -18,6 +18,8 @@ jobs:
         with:
           python-version: "3.12"
       - name: Kinoprogramm holen
+        id: holen
+        continue-on-error: true
         run: python update_kino.py
       - name: Aenderungen speichern
         run: |
@@ -25,3 +27,8 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add kino_suedtirol.json kino_cache.json kino_report.txt
           git diff --cached --quiet || (git commit -m "Kino aktualisiert" && git push)
+      - name: Rot melden, wenn ein Kino ausgefallen ist
+        if: steps.holen.outcome == 'failure'
+        run: |
+          echo "Mindestens ein Kino konnte nicht gelesen werden. Details in kino_report.txt"
+          exit 1
