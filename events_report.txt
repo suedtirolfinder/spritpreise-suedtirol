@@ -1,4 +1,4 @@
-EVENT-AUSWERTUNG  Stand 2026-10-08T05:05:24+0200
+EVENT-AUSWERTUNG  Stand 2026-10-08T05:20:46+0200
 Zeitraum: 2026-10-08 bis 2026-10-21
 Gemeldet von der API: 1491, geladen: 1491 (Seiten: 8)
 Eindeutige Veranstaltungen mit Termin im Zeitraum: 1438
