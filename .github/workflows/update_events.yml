@@ -22,5 +22,5 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@users.noreply.github.com"
-          git add events_south_tyrol.json events_report.txt
+          git add events_south_tyrol.json events_dauer.json events_report.txt
           git diff --cached --quiet || (git commit -m "Events aktualisiert" && git push)
