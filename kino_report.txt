@@ -1,6 +1,6 @@
-odeon: OK, 5 Filme, 8 Vorstellungen/Tage, 3 Vorschau
-stella: OK, 5 Filme, 11 Vorstellungen/Tage, 0 Vorschau
-filmclub: OK, 6 Filme, 12 Vorstellungen/Tage, 0 Vorschau
+odeon: OK, 8 Filme, 32 Vorstellungen/Tage, 3 Vorschau
+stella: OK, 4 Filme, 10 Vorstellungen/Tage, 0 Vorschau
+filmclub: OK, 6 Filme, 37 Vorstellungen/Tage, 0 Vorschau
 kaltern: OK, 7 Filme, 15 Vorstellungen/Tage, 0 Vorschau
-cineplexx: OK, 33 Filme, 94 Vorstellungen/Tage, 12 Vorschau
-Gesamt: 36 Filme, 106 Eintraege, 16 in der Vorschau. Datei 40 KB
+cineplexx: OK, 41 Filme, 242 Vorstellungen/Tage, 12 Vorschau
+Gesamt: 42 Filme, 306 Eintraege, 16 in der Vorschau. Datei 75 KB
