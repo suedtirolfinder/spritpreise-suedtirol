@@ -1,20 +1,19 @@
-EVENT-AUSWERTUNG  Stand 2026-10-25T05:10:22+0100
-Zeitraum: 2026-10-25 bis 2026-11-07
-Gemeldet von der API: 1163, geladen: 1163 (Seiten: 6)
-Eindeutige Veranstaltungen mit Termin im Zeitraum: 1123
-Ohne Titel: 22, ohne Gemeinde: 15, Dauerausstellungen (>14 Tage): 19
+EVENT-AUSWERTUNG  Stand 2026-10-26T05:14:02+0100
+Zeitraum: 2026-10-26 bis 2026-11-08
+Gemeldet von der API: 1120, geladen: 1120 (Seiten: 6)
+Eindeutige Veranstaltungen mit Termin im Zeitraum: 1086
+Ohne Titel: 25, ohne Gemeinde: 15, Dauerausstellungen (>14 Tage): 19
 
 Veranstaltungen pro Ort (nur Termine im Zeitraum):
-  Bozen    86  (davon echte Termine ohne Dauerausstellungen: 85)
-  Meran    57  (davon echte Termine ohne Dauerausstellungen: 57)
-  Brixen   40  (davon echte Termine ohne Dauerausstellungen: 40)
+  Bozen    80  (davon echte Termine ohne Dauerausstellungen: 79)
+  Meran    54  (davon echte Termine ohne Dauerausstellungen: 54)
+  Brixen   39  (davon echte Termine ohne Dauerausstellungen: 39)
   Bruneck  11  (davon echte Termine ohne Dauerausstellungen: 11)
 
-Lizenzen: {"CC0": 1141}
-Quellen:  {"lts": 1126, "peer": 2, "momentus": 5, "noi": 4, "nobis": 4}
+Lizenzen: {"CC0": 1095}
+Quellen:  {"lts": 1080, "peer": 2, "momentus": 5, "noi": 4, "nobis": 4}
 
 Termine pro Tag (ohne Dauerausstellungen):
-  2026-10-25  138
   2026-10-26  195
   2026-10-27  276
   2026-10-28  304
@@ -28,8 +27,9 @@ Termine pro Tag (ohne Dauerausstellungen):
   2026-11-05  194
   2026-11-06  176
   2026-11-07  138
+  2026-11-08  85
 
-Haeufigste weitere Gemeinden: Kaltern an der Weinstraße (63), Schenna (39), Naturns (34), Algund (32), Tramin an der Weinstraße (32), Eppan an der Weinstraße (28), Ritten (26), Lana (25), Sterzing (24), Kastelruth (24), Partschins (21), Feldthurns (19), Mals (19), Sexten (18), Marling (18)
+Haeufigste weitere Gemeinden: Kaltern an der Weinstraße (58), Schenna (40), Naturns (34), Algund (31), Tramin an der Weinstraße (31), Eppan an der Weinstraße (28), Ritten (26), Sterzing (25), Lana (24), Kastelruth (22), Partschins (21), Feldthurns (19), Mals (17), Sexten (17), Marling (17)
 
 Felder des ersten Eintrags: Active, AltitudeUnitofMeasure, ContactInfos, DateBegin, DateBeginUTC, DateEnd, DateEndUTC, Detail, DistanceInfo, DistrictId, DistrictIds, Districts, EventAdditionalInfos, EventDate, EventDateCounter, EventDatesBegin, EventDatesEnd, EventProperty, FirstImport, GpsInfo, GpsPoints, Gpstype, HasLanguage, Id, LastChange, Latitude, LicenseInfo, LocationInfo, Longitude, Mapping, OdhActive, Self, Shortname, SmgActive, Source, Ticket, _Meta
 Beispiel EventDate: {"To": "2026-09-13T00:00:00", "End": "18:30:00", "From": "2026-09-13T00:00:00", "Begin": "10:00:00", "ToUTC": 1789317000000.0, "FromUTC": 1789286400000.0, "Cancelled": "0", "SingleDays": false, "EventCalculatedDay": {"Day": "0001-01-01T00:00:00", "Begin": "10:00:00"}, "EventCalculatedDays": [{"Day":
