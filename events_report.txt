@@ -1,35 +1,35 @@
-EVENT-AUSWERTUNG  Stand 2026-11-04T12:31:46+0100
-Zeitraum: 2026-11-04 bis 2026-11-17
-Gemeldet von der API: 735, geladen: 735 (Seiten: 4)
-Eindeutige Veranstaltungen mit Termin im Zeitraum: 696
-Ohne Titel: 24, ohne Gemeinde: 14, Dauerausstellungen (>14 Tage): 13
+EVENT-AUSWERTUNG  Stand 2026-11-05T12:28:15+0100
+Zeitraum: 2026-11-05 bis 2026-11-18
+Gemeldet von der API: 725, geladen: 725 (Seiten: 4)
+Eindeutige Veranstaltungen mit Termin im Zeitraum: 681
+Ohne Titel: 25, ohne Gemeinde: 16, Dauerausstellungen (>14 Tage): 13
 
 Veranstaltungen pro Ort (nur Termine im Zeitraum):
-  Bozen    93  (davon echte Termine ohne Dauerausstellungen: 92)
-  Meran    40  (davon echte Termine ohne Dauerausstellungen: 40)
-  Brixen   34  (davon echte Termine ohne Dauerausstellungen: 34)
-  Bruneck  7  (davon echte Termine ohne Dauerausstellungen: 7)
+  Bozen    95  (davon echte Termine ohne Dauerausstellungen: 94)
+  Meran    39  (davon echte Termine ohne Dauerausstellungen: 39)
+  Brixen   33  (davon echte Termine ohne Dauerausstellungen: 33)
+  Bruneck  9  (davon echte Termine ohne Dauerausstellungen: 9)
 
-Lizenzen: {"CC0": 711}
-Quellen:  {"lts": 696, "trevilab": 1, "momentus": 5, "noi": 5, "peer": 1, "nobis": 3}
+Lizenzen: {"CC0": 700}
+Quellen:  {"lts": 684, "momentus": 6, "noi": 6, "peer": 1, "nobis": 3}
 
 Termine pro Tag (ohne Dauerausstellungen):
-  2026-11-04  173
-  2026-11-05  207
-  2026-11-06  193
+  2026-11-05  205
+  2026-11-06  195
   2026-11-07  163
   2026-11-08  98
   2026-11-09  101
-  2026-11-10  114
-  2026-11-11  143
-  2026-11-12  152
-  2026-11-13  170
-  2026-11-14  141
-  2026-11-15  68
-  2026-11-16  84
+  2026-11-10  115
+  2026-11-11  145
+  2026-11-12  155
+  2026-11-13  172
+  2026-11-14  142
+  2026-11-15  70
+  2026-11-16  86
   2026-11-17  96
+  2026-11-18  113
 
-Haeufigste weitere Gemeinden: Kaltern an der Weinstraße (48), Naturns (26), Ritten (24), Schenna (24), Lana (19), Leifers (17), Algund (15), Feldthurns (13), Mölten (13), Tramin an der Weinstraße (13), Sterzing (13), Vahrn (12), Tscherms (11), Schlanders (11), Neumarkt (10)
+Haeufigste weitere Gemeinden: Kaltern an der Weinstraße (48), Naturns (27), Ritten (22), Schenna (20), Leifers (18), Algund (18), Lana (18), Tramin an der Weinstraße (13), Sterzing (13), Feldthurns (12), Mölten (12), Vahrn (11), Schlanders (11), Neumarkt (10), Eppan an der Weinstraße (10)
 
 Felder des ersten Eintrags: Active, AltitudeUnitofMeasure, ContactInfos, DateBegin, DateBeginUTC, DateEnd, DateEndUTC, Detail, DistanceInfo, DistrictId, DistrictIds, Districts, EventAdditionalInfos, EventDate, EventDateCounter, EventDatesBegin, EventDatesEnd, EventProperty, FirstImport, GpsInfo, GpsPoints, Gpstype, HasLanguage, Id, LastChange, Latitude, LicenseInfo, LocationInfo, Longitude, Mapping, OdhActive, Self, Shortname, SmgActive, Source, Ticket, _Meta
 Beispiel EventDate: {"To": "2026-09-13T00:00:00", "End": "18:30:00", "From": "2026-09-13T00:00:00", "Begin": "10:00:00", "ToUTC": 1789317000000.0, "FromUTC": 1789286400000.0, "Cancelled": "0", "SingleDays": false, "EventCalculatedDay": {"Day": "0001-01-01T00:00:00", "Begin": "10:00:00"}, "EventCalculatedDays": [{"Day":
