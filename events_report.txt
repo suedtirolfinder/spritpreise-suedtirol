@@ -1,35 +1,35 @@
-EVENT-AUSWERTUNG  Stand 2026-11-13T12:29:34+0100
-Zeitraum: 2026-11-13 bis 2026-11-26
-Gemeldet von der API: 691, geladen: 691 (Seiten: 4)
-Eindeutige Veranstaltungen mit Termin im Zeitraum: 602
-Ohne Titel: 22, ohne Gemeinde: 21, Dauerausstellungen (>14 Tage): 13
+EVENT-AUSWERTUNG  Stand 2026-11-14T11:53:07+0100
+Zeitraum: 2026-11-14 bis 2026-11-27
+Gemeldet von der API: 724, geladen: 724 (Seiten: 4)
+Eindeutige Veranstaltungen mit Termin im Zeitraum: 629
+Ohne Titel: 21, ohne Gemeinde: 18, Dauerausstellungen (>14 Tage): 14
 
 Veranstaltungen pro Ort (nur Termine im Zeitraum):
-  Bozen    101  (davon echte Termine ohne Dauerausstellungen: 100)
-  Meran    38  (davon echte Termine ohne Dauerausstellungen: 38)
-  Brixen   43  (davon echte Termine ohne Dauerausstellungen: 43)
-  Bruneck  12  (davon echte Termine ohne Dauerausstellungen: 12)
+  Bozen    96  (davon echte Termine ohne Dauerausstellungen: 95)
+  Meran    41  (davon echte Termine ohne Dauerausstellungen: 41)
+  Brixen   46  (davon echte Termine ohne Dauerausstellungen: 46)
+  Bruneck  14  (davon echte Termine ohne Dauerausstellungen: 14)
 
-Lizenzen: {"CC0": 669}
-Quellen:  {"lts": 648, "momentus": 10, "nobis": 6, "noi": 5}
+Lizenzen: {"CC0": 703}
+Quellen:  {"lts": 685, "momentus": 8, "noi": 4, "nobis": 6}
 
 Termine pro Tag (ohne Dauerausstellungen):
-  2026-11-13  183
-  2026-11-14  152
+  2026-11-14  153
   2026-11-15  78
   2026-11-16  93
-  2026-11-17  106
-  2026-11-18  120
-  2026-11-19  149
-  2026-11-20  154
+  2026-11-17  107
+  2026-11-18  121
+  2026-11-19  150
+  2026-11-20  155
   2026-11-21  149
   2026-11-22  73
   2026-11-23  82
   2026-11-24  101
   2026-11-25  127
   2026-11-26  151
+  2026-11-27  198
 
-Haeufigste weitere Gemeinden: Kaltern an der Weinstraße (27), Naturns (25), Ritten (21), Leifers (17), Schlanders (17), Schenna (17), Vahrn (16), Algund (15), Sterzing (13), Lana (13), Mölten (12), Toblach (11), Neumarkt (10), Eppan an der Weinstraße (7), Tscherms (7)
+Haeufigste weitere Gemeinden: Kaltern an der Weinstraße (26), Naturns (24), Ritten (22), Lana (20), Leifers (17), Vahrn (17), Algund (17), Sterzing (16), Schlanders (16), Schenna (15), Mölten (12), Toblach (11), Neumarkt (10), Eppan an der Weinstraße (8), Mals (7)
 
 Felder des ersten Eintrags: Active, AltitudeUnitofMeasure, ContactInfos, DateBegin, DateBeginUTC, DateEnd, DateEndUTC, Detail, DistanceInfo, DistrictId, DistrictIds, Districts, EventAdditionalInfos, EventDate, EventDateCounter, EventDatesBegin, EventDatesEnd, EventProperty, FirstImport, GpsInfo, GpsPoints, Gpstype, HasLanguage, Id, LastChange, Latitude, LicenseInfo, LocationInfo, Longitude, Mapping, ODHTags, OdhActive, Self, Shortname, SmgActive, SmgTags, Source, Ticket, _Meta
 Beispiel EventDate: {"To": "2026-11-21T00:00:00", "End": "23:59:00", "From": "2026-11-21T00:00:00", "Begin": "17:00:00", "ToUTC": 1795301940000.0, "FromUTC": 1795276800000.0, "Cancelled": "0", "SingleDays": false, "EventCalculatedDay": {"Day": "0001-01-01T00:00:00", "Begin": "17:00:00"}, "EventCalculatedDays": [{"Day":
