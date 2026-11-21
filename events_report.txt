@@ -1,35 +1,35 @@
-EVENT-AUSWERTUNG  Stand 2026-11-20T13:08:07+0100
-Zeitraum: 2026-11-20 bis 2026-12-03
-Gemeldet von der API: 808, geladen: 808 (Seiten: 5)
-Eindeutige Veranstaltungen mit Termin im Zeitraum: 728
-Ohne Titel: 34, ohne Gemeinde: 18, Dauerausstellungen (>14 Tage): 19
+EVENT-AUSWERTUNG  Stand 2026-11-21T12:43:32+0100
+Zeitraum: 2026-11-21 bis 2026-12-04
+Gemeldet von der API: 863, geladen: 863 (Seiten: 5)
+Eindeutige Veranstaltungen mit Termin im Zeitraum: 742
+Ohne Titel: 29, ohne Gemeinde: 17, Dauerausstellungen (>14 Tage): 19
 
 Veranstaltungen pro Ort (nur Termine im Zeitraum):
-  Bozen    108  (davon echte Termine ohne Dauerausstellungen: 107)
-  Meran    45  (davon echte Termine ohne Dauerausstellungen: 45)
-  Brixen   51  (davon echte Termine ohne Dauerausstellungen: 51)
+  Bozen    105  (davon echte Termine ohne Dauerausstellungen: 104)
+  Meran    48  (davon echte Termine ohne Dauerausstellungen: 48)
+  Brixen   53  (davon echte Termine ohne Dauerausstellungen: 53)
   Bruneck  15  (davon echte Termine ohne Dauerausstellungen: 15)
 
-Lizenzen: {"CC0": 774}
-Quellen:  {"noi": 5, "lts": 756, "momentus": 10, "nobis": 3}
+Lizenzen: {"CC0": 834}
+Quellen:  {"noi": 5, "lts": 817, "momentus": 10, "nobis": 2}
 
 Termine pro Tag (ohne Dauerausstellungen):
-  2026-11-20  155
   2026-11-21  155
   2026-11-22  76
   2026-11-23  84
   2026-11-24  110
   2026-11-25  132
   2026-11-26  165
-  2026-11-27  220
+  2026-11-27  219
   2026-11-28  248
   2026-11-29  185
-  2026-11-30  130
+  2026-11-30  129
   2026-12-01  147
   2026-12-02  178
   2026-12-03  175
+  2026-12-04  223
 
-Haeufigste weitere Gemeinden: Kaltern an der Weinstraße (30), Lana (27), Ritten (22), Schlanders (19), Sterzing (18), Algund (18), Vahrn (16), Kastelruth (14), Naturns (13), Leifers (13), Sand in Taufers (12), Neumarkt (12), Mals (11), Mölten (10), Klausen (9)
+Haeufigste weitere Gemeinden: Kaltern an der Weinstraße (29), Ritten (25), Lana (25), Schlanders (19), Sterzing (18), Algund (18), Vahrn (16), Kastelruth (15), Mals (13), Sand in Taufers (13), Leifers (13), Naturns (12), Neumarkt (12), Mölten (10), Wolkenstein Gröden (10)
 
 Felder des ersten Eintrags: Active, AdditionalProperties, ClassificationRID, DateBegin, DateBeginUTC, DateEnd, DateEndUTC, Detail, Documents, EventBooking, EventDate, EventDateCounter, EventDatesBegin, EventDatesEnd, EventProperty, EventPublisher, EventUrls, EventVariants, FirstImport, HasLanguage, Id, ImageGallery, LastChange, Latitude, LicenseInfo, LocationInfo, Longitude, OdhActive, OrgRID, OrganizerInfos, PublishedOn, Self, SmgActive, Source, TagIds, Tags, VenueIds, VenueLink, _Meta
 Beispiel EventDate: {"To": "2026-12-04T00:00:00", "End": "14:30:00", "From": "2026-12-04T00:00:00", "Begin": "09:00:00", "ToUTC": 1796391000000.0, "Active": true, "FromUTC": 1796371200000.0, "VenueRoomDetailsIds": ["urn:venueroomid:noi:3f0b15bc-dac0-50ae-8b55-6edfcddd0405"]}
