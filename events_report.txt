@@ -1,35 +1,35 @@
-EVENT-AUSWERTUNG  Stand 2026-11-26T14:05:55+0100
-Zeitraum: 2026-11-26 bis 2026-12-09
-Gemeldet von der API: 1053, geladen: 1053 (Seiten: 6)
-Eindeutige Veranstaltungen mit Termin im Zeitraum: 983
-Ohne Titel: 29, ohne Gemeinde: 19, Dauerausstellungen (>14 Tage): 23
+EVENT-AUSWERTUNG  Stand 2026-11-27T14:03:58+0100
+Zeitraum: 2026-11-27 bis 2026-12-10
+Gemeldet von der API: 1096, geladen: 1096 (Seiten: 6)
+Eindeutige Veranstaltungen mit Termin im Zeitraum: 1020
+Ohne Titel: 27, ohne Gemeinde: 20, Dauerausstellungen (>14 Tage): 20
 
 Veranstaltungen pro Ort (nur Termine im Zeitraum):
-  Bozen    143  (davon echte Termine ohne Dauerausstellungen: 139)
-  Meran    57  (davon echte Termine ohne Dauerausstellungen: 57)
-  Brixen   56  (davon echte Termine ohne Dauerausstellungen: 56)
-  Bruneck  16  (davon echte Termine ohne Dauerausstellungen: 16)
+  Bozen    156  (davon echte Termine ohne Dauerausstellungen: 154)
+  Meran    53  (davon echte Termine ohne Dauerausstellungen: 53)
+  Brixen   57  (davon echte Termine ohne Dauerausstellungen: 57)
+  Bruneck  15  (davon echte Termine ohne Dauerausstellungen: 15)
 
-Lizenzen: {"CC0": 1024}
-Quellen:  {"noi": 6, "lts": 1000, "momentus": 11, "trevilab": 5, "peer": 1, "nobis": 1}
+Lizenzen: {"CC0": 1069}
+Quellen:  {"noi": 7, "lts": 1036, "momentus": 11, "trevilab": 13, "peer": 1, "nobis": 1}
 
 Termine pro Tag (ohne Dauerausstellungen):
-  2026-11-26  171
-  2026-11-27  224
-  2026-11-28  269
-  2026-11-29  205
-  2026-11-30  142
-  2026-12-01  161
-  2026-12-02  185
-  2026-12-03  185
-  2026-12-04  235
-  2026-12-05  291
-  2026-12-06  232
-  2026-12-07  219
-  2026-12-08  229
-  2026-12-09  184
+  2026-11-27  226
+  2026-11-28  272
+  2026-11-29  206
+  2026-11-30  143
+  2026-12-01  165
+  2026-12-02  190
+  2026-12-03  189
+  2026-12-04  237
+  2026-12-05  297
+  2026-12-06  234
+  2026-12-07  223
+  2026-12-08  232
+  2026-12-09  187
+  2026-12-10  201
 
-Haeufigste weitere Gemeinden: Lana (35), Kaltern an der Weinstraße (31), Ritten (28), Kastelruth (27), Wolkenstein Gröden (24), Algund (23), St.Ulrich (22), Sand in Taufers (20), Mals (19), Sterzing (16), Vahrn (15), Neumarkt (14), Naturns (13), Klausen (13), Eppan an der Weinstraße (13)
+Haeufigste weitere Gemeinden: Lana (35), Kaltern an der Weinstraße (31), Ritten (28), Wolkenstein Gröden (28), Kastelruth (27), St.Ulrich (26), Algund (22), Mals (20), Sand in Taufers (20), Sterzing (16), Eppan an der Weinstraße (15), St.Christina in Gröden (14), Vahrn (14), Neumarkt (14), Naturns (13)
 
 Felder des ersten Eintrags: Active, AdditionalProperties, ClassificationRID, DateBegin, DateBeginUTC, DateEnd, DateEndUTC, Detail, Documents, EventBooking, EventDate, EventDateCounter, EventDatesBegin, EventDatesEnd, EventProperty, EventPublisher, EventUrls, EventVariants, FirstImport, HasLanguage, Id, ImageGallery, LastChange, Latitude, LicenseInfo, LocationInfo, Longitude, OdhActive, OrgRID, OrganizerInfos, PublishedOn, Self, SmgActive, Source, TagIds, Tags, VenueIds, VenueLink, _Meta
 Beispiel EventDate: {"To": "2026-12-04T00:00:00", "End": "14:30:00", "From": "2026-12-04T00:00:00", "Begin": "09:00:00", "ToUTC": 1796391000000.0, "Active": true, "FromUTC": 1796371200000.0, "VenueRoomDetailsIds": ["urn:venueroomid:noi:3f0b15bc-dac0-50ae-8b55-6edfcddd0405"]}
